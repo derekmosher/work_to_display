@@ -10,7 +10,7 @@ function preInit() {
         startAd();
     // }
 }
-//test comment
+//test comment 08.2018
 function startAd() {
     setupDom();
      //set_tuneIns();
