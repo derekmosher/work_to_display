@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/work/bulletin-board/static/css/main.129ebed6.chunk.css",
+    "main.js": "/work/bulletin-board/static/js/main.a556758f.chunk.js",
+    "main.js.map": "/work/bulletin-board/static/js/main.a556758f.chunk.js.map",
+    "runtime~main.js": "/work/bulletin-board/static/js/runtime~main.280393e5.js",
+    "runtime~main.js.map": "/work/bulletin-board/static/js/runtime~main.280393e5.js.map",
+    "static/js/2.d0b547bc.chunk.js": "/work/bulletin-board/static/js/2.d0b547bc.chunk.js",
+    "static/js/2.d0b547bc.chunk.js.map": "/work/bulletin-board/static/js/2.d0b547bc.chunk.js.map",
+    "index.html": "/work/bulletin-board/index.html",
+    "precache-manifest.313c9a1e2f714d4665051a4cfa1ca976.js": "/work/bulletin-board/precache-manifest.313c9a1e2f714d4665051a4cfa1ca976.js",
+    "service-worker.js": "/work/bulletin-board/service-worker.js",
+    "static/css/main.129ebed6.chunk.css.map": "/work/bulletin-board/static/css/main.129ebed6.chunk.css.map"
+  }
+}
