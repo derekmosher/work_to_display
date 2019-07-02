@@ -17,50 +17,35 @@
       .body{
         margins:0px;
         padding:0px;
+      }
+      #iframe{
+        position: absolute;
         border: none;
+        width: 336px;
+        height: 280px;
+        overflow: hidden;
       }
       #ad1 {
-        border: none;
-        width: 336px;
-        height: 0px;
-        position: absolute;
         top: 0px;
         left: 0px;
-        overflow: hidden;
       }
       #ad2 {
-        border: none;
-        width: 336px;
-        height: 280px;
-        position: absolute;
         top: 0px;
-        left: 266px;
-        overflow: hidden;
+        left: 276px;
       }
       #ad3 {
-        border: none;
-        width: 336px;
-        height: 280px;
-        position: absolute;
         top: 290px;
         left: 0px;
-        overflow: hidden;
       }
       #ad4 {
-        border: none;
-        width: 336px;
-        height: 280px;
-        position: absolute;
         top: 290px;
         left: 266px;
-        overflow: hidden;
       }
     </style>
   </head>
 
   <body>
     <div id="header1">
-      <!-- <iframe id='h' src='/_global/header.php'></iframe> -->
       <div>
         <iframe id="ad1" src="v1/index.html"></iframe>
       </div>
@@ -75,11 +60,7 @@
       <div>
         <iframe id="ad4" src="v2/index.html"></iframe>
       </div>
-      <!-- <div >
-            <iframe id='ad5' src='v1/index.html'></iframe>
-        </div> -->
     </div>
-
     <script
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
