@@ -1,0 +1,280 @@
+
+body, body * {
+  vertical-align: baseline;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 9pt;
+  color: #000;
+}
+
+#main-container {
+  position: absolute;
+  left:0px;
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+  border: 1px solid #404040;  
+  /*border: 1px solid red; */
+  box-sizing: border-box;
+  background: #000;
+}
+
+
+
+/*/////////   ANIMATION     /////////*/
+#animation{
+  position: absolute;
+  width: 300px;
+  height: 250px;
+}
+#bg1{
+  position: absolute;
+}
+#t1a{
+  position: absolute;
+  /*border: 1px solid red;*/
+  width: 300px;
+  height: 250px;
+
+  -ms-transform:scale(6,6);
+  -webkit-transform:scale(6,6);
+  transform:scale(6,6); 
+
+  -ms-transform-origin: 50% 20%;
+  -webkit-transform-origin: 50% 20%; 
+  transform-origin: 50% 20%; 
+}
+#t1b{
+  position: absolute;
+  /*border: 1px solid red;*/
+  width: 300px;
+  height: 250px;
+  -ms-transform:scale(6,6);
+  -webkit-transform:scale(6,6);
+  transform:scale(6,6); 
+
+  -ms-transform-origin: 50% 80%;
+  -webkit-transform-origin: 50% 80%; 
+  transform-origin: 50% 80%; 
+}
+#titleGroup{
+    width: 300px;
+  height: 250px;
+  position: absolute;
+    -ms-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%; 
+  transform-origin: 50% 50%; 
+}
+        #title_p1,#title_p2,#title_tag,#title_tag2{
+          position: absolute;
+        }
+
+#dvdGroup{
+  position: absolute;
+  width: 300px;
+  height: 250px;
+    -ms-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%; 
+  transform-origin: 50% 50%; 
+}
+        #dvd{
+          position: absolute;
+          top:29px;
+          left:155px;
+          
+        }
+        #text_onlyOn{
+          position: absolute;
+          clip: rect(0px,300px,102px,0px);
+        }
+        #text_onlyOn2{
+          position: absolute;
+          clip: rect(102px,300px,129px,0px);
+          /*background: green;*/
+        }
+        #text_onlyOn3{
+          position: absolute;
+          clip: rect(126px,300px,250px,0px);
+        }
+
+#t2a{
+  position: absolute;
+  /*border: 1px solid red;*/
+ /* width: 300px;
+  height: 250px;*/
+
+/*  -ms-transform:scale(6,6);
+  -webkit-transform:scale(6,6);
+  transform:scale(6,6); 
+*/
+  -ms-transform-origin: 0% 100%;
+  -webkit-transform-origin: 0% 100%; 
+  transform-origin: 0% 100%; 
+}
+#t2b{
+  position: absolute;
+  /*border: 1px solid red;*/
+/*  width: 300px;
+  height: 250px;*/
+/*  -ms-transform:scale(6,6);
+  -webkit-transform:scale(6,6);
+  transform:scale(6,6); */
+
+  -ms-transform-origin: 100% 0%;
+  -webkit-transform-origin: 100% 0%; 
+  transform-origin: 100% 0%; 
+}
+#man{
+  position: absolute;
+  left:0px;
+  top:-50px;
+  -ms-transform-origin: 100% 100%;
+  -webkit-transform-origin: 100% 100%; 
+  transform-origin: 100% 100%; 
+
+
+}
+#girl{
+  position: absolute;
+  left:0px;
+  top:-30px;
+  -ms-transform-origin: 0% 100%;
+  -webkit-transform-origin: 0% 100%; 
+  transform-origin: 0% 100%; 
+}
+#t3Group{
+  position: absolute;
+  height: 350px;
+  width: 300px;
+
+}
+    #t3_text{
+      position: absolute;
+        -ms-transform-origin: 50% 80%;
+      -webkit-transform-origin: 50% 80%; 
+      transform-origin: 50% 80%; 
+        clip: rect(0px,300px,175px,0px);
+    }
+    #t3_text2{
+      position: absolute;
+        -ms-transform-origin: 50% 80%;
+      -webkit-transform-origin: 50% 80%; 
+      transform-origin: 50% 80%; 
+        clip: rect(175px,300px,200px,0px);
+    }#t3_text3{
+      position: absolute;
+        -ms-transform-origin: 50% 80%;
+      -webkit-transform-origin: 50% 80%; 
+      transform-origin: 50% 80%; 
+        clip: rect(200px,300px,250px,0px);
+    }
+
+/*#leaf1,#leaf2,#leaf3{
+  position:absolute;
+  height: 14px;
+  width: 8px;
+}*/
+
+/*-------------ENDFRAME------------- */
+#bg2{
+  position: absolute;
+}
+#t4a{
+  position: absolute;
+  /*(0%,0%) - left, top —————(100%,0%) - right, top 
+  (0% 100%) - left, bottom ————(100%,100%) - right, bottom*/
+  -ms-transform-origin: 0% 100%;
+  -webkit-transform-origin: 0% 100%; 
+  transform-origin: 0% 100%; 
+}
+#t4b{
+  position: absolute;
+  /*(0%,0%) - left, top —————(100%,0%) - right, top 
+  (0% 100%) - left, bottom ————(100% 100%) - right, bottom*/
+  -ms-transform-origin: 140% 0%;
+  -webkit-transform-origin: 140% 0%; 
+  transform-origin: 140% 0%; 
+}
+#t4_dvd{
+    position: absolute;
+    top:32px;
+    left:9px;
+    /*width: 137px;*/
+    /*height: 189px;*/
+    opacity: 1;
+}
+#t4_text{
+    position: absolute;
+    top:91px;
+    left:171px;
+}
+#cta{
+  position: absolute;
+  top:152px;
+  left:161px;
+  width: 118px;
+  height: 38px;
+}
+      #cta_off{
+        position: absolute;
+      }
+      #cta_on{
+        position: absolute;
+        opacity: 0;
+      }
+#legal{
+    position: absolute;
+    top:241px;
+    left:4px;
+    opacity: 0.7;
+}
+
+.dot{
+  position:absolute;
+  width:8px;
+  height:14px;
+  opacity: 0.9;
+  background: url(images/leaf.png);
+  background-size: 100% 100%;
+   /*border: 1px solid blue;*/
+}
+
+/*/////////   TOP     /////////*/
+#blackCover{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000; 
+}
+#whiteFlash{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #FFF; 
+  visibility: hidden;
+}
+#exit {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  cursor:pointer;
+  /*border: 1px solid blue;*/
+
+  /*z-index: 1;*/
+}
+#replay{
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  width: 18px;
+  height: 18px;
+  /*border: 1px solid red;*/
+  cursor: pointer;
+  visibility: hidden;
+}
+
+
