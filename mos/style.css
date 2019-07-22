@@ -1,0 +1,282 @@
+
+body, body * {
+  vertical-align: baseline;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 9pt;
+  color: #000;
+/*  width: 300px;
+  height: 250px;*/
+}
+
+#main-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+  border: 1px solid #404040;  
+  /*border: 1px solid red; */
+  box-sizing: border-box;
+  background: #000;
+}
+
+
+
+/*////////// INTRO VIDEO   ////////////*/
+
+#part1{
+  position: absolute;
+  pointer-events: none;
+}
+#video-container {
+  position: absolute;
+  background-color: none;
+  border: none;
+  visibility: hidden;
+}
+#video{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 198px;
+}
+
+.video-controls {   
+  position: absolute;
+  /*20x17  or 19x16  or 18x15*/
+  width: 20px;
+  height: 17px;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  z-index: 201;
+  background-color: #000;
+  /*visibility: hidden;*/
+  /*display:block;*/
+}
+#video-controls {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /*display:block;*/
+}
+#play-btn {
+  background-image:url(images/vid_play.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  top: 0px;
+  left: 260px;
+  visibility: hidden;
+}
+#progress-bar {
+  position: absolute;
+  background-color: #339933;
+  bottom: 18px;
+  height: 40px;
+}
+#pause-btn {
+  background-image:url(images/vid_pause.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  top:0px;
+  left: 260px;
+  visibility: hidden;
+}
+#stop-btn {
+  background-image:url(images/vid_stop.svg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  left: 20px;
+  visibility: hidden;
+}
+#unmute-btn {
+  background-image:url(images/vid_unmute.png);
+  background-size:cover;
+  background-repeat:no-repeat;
+  top:0px;
+  left:280px;
+  
+}
+#mute-btn{
+  background-image:url(images/vid_mute.png);
+  background-size:cover;
+  background-repeat:no-repeat;
+  visibility: hidden;
+  top: 0px;
+  left:280px;
+}
+#replay-btn{
+  background-image:url(images/vid_replay.png);
+  background-size:cover;
+  background-repeat:no-repeat;
+  visibility: hidden;
+  left: 0px;
+}
+
+#vid_bar{
+  position:absolute;
+  top:198px;
+  /*visibility: hidden;*/
+}
+/*#vid_tune_in{
+  position:absolute;
+  top:201px;
+  left:171px;
+  display: none;
+}
+    #vid_tune_in1{
+      position:absolute;
+      visibility: hidden;
+    }
+    #vid_tune_in2{
+      position:absolute;
+      visibility: hidden;
+    }
+    #vid_tune_in3{
+      position:absolute;
+      visibility: hidden;
+    }*/
+
+
+/* /////////   ENDFRAME  //////////// */
+#endframe{
+  position: absolute;
+  display: none;
+}
+#bg{
+    position: absolute;
+    z-index:1;
+    /*z-index: 96;*/
+}
+
+#kale_image{
+    position: absolute;
+    visibility: hidden;
+}
+#kale_image2{
+    position: absolute;
+    visibility: hidden;
+}
+#kale2{
+    position: absolute;
+    width:300px;
+    height:300px;
+    top:-40px;
+    opacity: 0;
+    z-index:2; 
+}
+#peeps{
+    position: absolute;
+    clip: rect(0px,300px,250px,0px);
+    z-index:auto;
+    z-index:3;
+}
+#cta{
+  position: absolute;
+  width: 300px;
+  height: 30px;
+  top:220px;
+  left:0px;
+  z-index:4;
+}
+        #cta_off{
+          position: absolute;
+        }
+        #cta_on{
+          position: absolute;
+          opacity: 0;
+        }
+
+
+#title{
+  position: absolute;
+  top:160px;
+  left:27px;
+  width: 126px;
+  height: 54px;
+  z-index:5;
+  /* border: 1px solid #FF0000;  */
+}
+#tagline{
+  position: absolute;
+  top:5px;
+  left:58px;
+  z-index:6;
+}
+#tune_in{
+  position:absolute;
+  top:169px;
+  left:166px;
+  width:112px;
+  height:45px;
+  z-index:7; 
+  /* border: 1px solid #FF0000;*/  
+}
+        #tune_in1{
+          position:absolute;
+          visibility: hidden;
+        }
+        #tune_in2{
+          position:absolute;
+          visibility: hidden;
+        }
+        #tune_in3{
+          position:absolute;
+          visibility: hidden;
+        }
+#kale{
+    position: absolute;
+    top:0px;
+    width:300px;
+    height:250px;
+    z-index:8; 
+}
+
+
+/*    TOP     */
+#blackCover{
+  position: absolute;
+  pointer-events: none;
+  width: 300px;
+  height: 250px;
+  background: #000; 
+
+}
+#whiteFlash{
+  position: absolute;
+  pointer-events: none;
+  width: 300px;
+  height: 250px;
+  background: #FFF; 
+  opacity: 0;
+  visibility: hidden;
+}
+#exit {
+  position: absolute;
+  cursor: pointer;
+  width: 300px;
+  height: 250px;
+  z-index: 200;
+  cursor:pointer;
+}
+#replay{
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 18px;
+  height: 18px;
+  opacity: 0.8;
+  z-index: 202;
+  /*border: 1px solid red;*/
+  cursor: pointer;
+  visibility: hidden;
+  display: none;
+}
+
+
