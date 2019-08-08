@@ -1,0 +1,189 @@
+{
+  "items_banner": [
+    {
+      "title": "Ice Age",
+      "description": "Adobe Edge. Nice smooth fun animation.",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/iceAge/thumb.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/iceAge/index.html",
+      "w": 300,
+      "h": 250
+    },
+    {
+      "title": "Sleepy Hollow",
+      "description": "HTML, css, javascript.",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/sleepyHollow/thumb.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/sleepyHollow/index.html",
+      "w": 300,
+      "h": 250
+    },
+    {
+      "title": "Creable",
+      "description": "Html, css, javascript. Concept, art, and animation.",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/creable/thumb2.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/creable/index.html",
+      "w": 700,
+      "h": 590
+    },
+    {
+      "title": "Masters of Sex ",
+      "description":  "Html, css, javascript. Interesting kaleidoscope effect",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/mos/thumbs_mos.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/mos/index.html",
+      "w": 300,
+      "h": 250
+    },
+    {
+      "title": "Bones",
+      "description": "Adobe Edge",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/bones/thumb_bones.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/bones/index.html",
+      "w": 300,
+      "h": 250
+    },
+    {
+      "title": "We TV",
+      "description": "Adobe Edge",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/wetv/thumb_wetv.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/wetv/wetv_300x250.html",
+      "w": 300,
+      "h": 250
+    },
+    {
+      "title": "The Magician",
+      "description": "HTML, css, javascript",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/magician/thumb.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/magician/index.html",
+      "w": 970,
+      "h": 250
+    },
+    {
+      "title": "The Last Ship",
+      "description": "Requires FLASH plugin",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/flash/tlc/thumb2.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/flash/tlc/TLS_battle_300x250.html",
+      "w": 300,
+      "h": 250
+    }
+  ],
+  "items_social": [
+    {
+      "title": "Constantine",
+      "description": "AE ink effect",
+      "thumbPath":"https://derekmosher.github.io/work_to_display/socialmedia/constantine/thumb_constantine.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/socialmedia/constantine/constantine_ink_gifs.html",
+      "w": 900,
+      "h": 500
+    },
+    {
+      "title": "Constantine",
+      "description": "AE fire & rain",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/socialmedia/gifs/thumb_constantine_fire.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/socialmedia/gifs/constantine_fire_403x403.gif",
+      "w": 403,
+      "h": 403
+    },
+    {
+      "title": "State of Affairs",
+      "description": "AE",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/socialmedia/soa/thumb_soa.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/socialmedia/soa/soa.html",
+      "w": 710,
+      "h": 394
+    },
+  {
+    "title": "Witch Drop",
+    "description": "AE 3d effect",
+    "thumbPath": "https://derekmosher.github.io/work_to_display/socialmedia/gifs/thumb_witchDrop.jpg",
+    "filePath": "https://derekmosher.github.io/work_to_display/socialmedia/gifs/witchDrop2.gif",
+    "w": 500,
+    "h": 272
+  },
+  {
+    "title": "Mcfarland",
+    "description": "AE video editing",
+    "thumbPath": "https://derekmosher.github.io/work_to_display/socialmedia/mcfarland/thumb_mcfarland.jpg",
+    "filePath": "https://derekmosher.github.io/work_to_display/socialmedia/mcfarland/mcfarland.html",
+    "w": 500,
+    "h": 500
+  },
+  {
+    "title": "Allegience",
+    "description": "AE Page Takeover",
+    "thumbPath": "https://derekmosher.github.io/work_to_display/socialmedia/allegience/thumb_allegience.jpg",
+    "filePath": "https://derekmosher.github.io/work_to_display/socialmedia/allegience/allegiance_wallpaper.html",
+    "w": 964,
+    "h": 540
+  }
+],
+  "items_youtube": [
+    {
+      "title": "Game of Bones - Ep2",
+      "description": "After Effects, Premiere",
+      "thumbPath": "thumb_gob.jpg",
+      "filePath": "https://www.youtube.com/embed/VqxZLu-K_jw",
+      "w": 560,
+      "h": 315
+    },
+    {
+      "title": "Game of Bones - Ep3",
+      "description": "After Effects, Premiere",
+      "thumbPath": "thumb_gob3.jpg",
+      "filePath": "https://www.youtube.com/embed/3HCSTWS8-aQ",
+      "w": 560,
+      "h": 315
+    },
+    {
+      "title": "Kindle Case",
+      "description": "After Effects, PhotoShop",
+      "thumbPath": "thumb_kindleCase.jpg",
+      "filePath": "https://www.youtube.com/embed/J-mF96EkSRM",
+      "w": 560,
+      "h": 315
+    },
+    {
+      "title": "Kindle Paperwhite",
+      "description": "After Effects, PhotoShop",
+      "thumbPath": "thumb_kindleReview.jpg",
+      "filePath": "https://www.youtube.com/embed/Pb_SUPVtjnA",
+      "w": 560,
+      "h": 315
+    }
+  ],
+  "items_book": [
+    {
+      "title": "Illustration 1",
+      "description": "",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/cltvg/thumb1.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/cltvg/pic1.jpg",
+      "w": 600,
+      "h": 447
+    },
+    {
+      "title": "Illustration 2",
+      "description": "",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/cltvg/thumb2.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/cltvg/pic2.jpg",
+      "w": 600,
+      "h": 447
+    },
+    {
+      "title": "Illustration 2",
+      "description": "",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/cltvg/thumb3.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/cltvg/pic3.jpg",
+      "w": 600,
+      "h": 447
+    },
+    {
+      "title": "Illustration 4",
+      "description": "",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/cltvg/thumb4.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/cltvg/pic4.jpg",
+      "w": 600,
+      "h": 447
+    }
+  ],
+  "book": "https://www.amazon.com/Creepy-Little-TV-Guy/dp/197586946X",
+  "string": "Hello World 222",
+  "example": "data.item[0].url"
+}
