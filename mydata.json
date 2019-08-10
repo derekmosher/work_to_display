@@ -63,6 +63,14 @@
       "filePath": "https://www.youtube.com/embed/4Sbj2uiF99M",
       "w": 853,
       "h": 505
+    },
+    {
+      "title": "The Last Ship",
+      "description": "After Effects",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/the_last_ship/thumb.jpg",
+      "filePath":  "https://derekmosher.github.io/work_to_display/the_last_ship/tls.html",
+      "w": 853,
+      "h": 505
     }
   ],
   "items_social": [
