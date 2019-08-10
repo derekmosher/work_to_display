@@ -71,6 +71,14 @@
       "filePath":  "https://derekmosher.github.io/work_to_display/the_last_ship/tls.html",
       "w": 853,
       "h": 505
+    },
+    {
+      "title": "Video Wall",
+      "description": "After Effects",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/videoWall/thumb.jpg",
+      "filePath":  "https://derekmosher.github.io/work_to_display/videoWall/videoWall.html",
+      "w": 960,
+      "h": 540
     }
   ],
   "items_social": [
