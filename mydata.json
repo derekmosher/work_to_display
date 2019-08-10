@@ -1,6 +1,22 @@
 {
   "items_banner": [
     {
+      "title": "How to Train your Dragon",
+      "description": "After Effects",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/howToTrainDragon/thumb.jpg",
+      "filePath":  "https://derekmosher.github.io/work_to_display/howToTrainDragon/dragonPawAll.html",
+      "w": 728,
+      "h": 458
+    },
+    {
+      "title": "Video Wall",
+      "description": "After Effects",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/videoWall/thumb.jpg",
+      "filePath":  "https://derekmosher.github.io/work_to_display/videoWall/videoWall.html",
+      "w": 960,
+      "h": 540
+    }
+    {
       "title": "Ice Age",
       "description": "Adobe Edge. Nice smooth fun animation.",
       "thumbPath": "https://derekmosher.github.io/work_to_display/iceAge/thumb.jpg",
@@ -18,7 +34,7 @@
     },
     {
       "title": "Creable",
-      "description": "Html, css, javascript. Concept, art, and animation.",
+      "description": "Html, css, javascript. Concepted, designed, and animated.",
       "thumbPath": "https://derekmosher.github.io/work_to_display/creable/thumb2.jpg",
       "filePath": "https://derekmosher.github.io/work_to_display/creable/index.html",
       "w": 700,
@@ -26,7 +42,7 @@
     },
     {
       "title": "Masters of Sex ",
-      "description":  "Html, css, javascript. Interesting kaleidoscope effect",
+      "description":  "Html, css, javascript. kaleidoscope effect",
       "thumbPath": "https://derekmosher.github.io/work_to_display/mos/thumbs_mos.jpg",
       "filePath": "https://derekmosher.github.io/work_to_display/mos/index.html",
       "w": 300,
@@ -57,14 +73,6 @@
       "h": 250
     },
     {
-      "title": "2012 Demo Reel",
-      "description": "After Effects, Flash, 3d, illustration, music",
-      "thumbPath": "https://derekmosher.github.io/work_to_display/misc/thumb_demo.jpg",
-      "filePath": "https://www.youtube.com/embed/4Sbj2uiF99M",
-      "w": 853,
-      "h": 505
-    },
-    {
       "title": "The Last Ship",
       "description": "After Effects",
       "thumbPath": "https://derekmosher.github.io/work_to_display/the_last_ship/thumb.jpg",
@@ -73,21 +81,13 @@
       "h": 505
     },
     {
-      "title": "Video Wall",
-      "description": "After Effects",
-      "thumbPath": "https://derekmosher.github.io/work_to_display/videoWall/thumb.jpg",
-      "filePath":  "https://derekmosher.github.io/work_to_display/videoWall/videoWall.html",
-      "w": 960,
-      "h": 540
+      "title": "2012 Demo Reel",
+      "description": "After Effects, Flash, 3d, illustration, music",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/misc/thumb_demo.jpg",
+      "filePath": "https://www.youtube.com/embed/4Sbj2uiF99M",
+      "w": 853,
+      "h": 505
     },
-    {
-      "title": "How to Train your Dragon",
-      "description": "After Effects",
-      "thumbPath": "https://derekmosher.github.io/work_to_display/howToTrainDragon/thumb.jpg",
-      "filePath":  "https://derekmosher.github.io/work_to_display/howToTrainDragon/dragonPawAll.html",
-      "w": 728,
-      "h": 458
-    }
   ],
   "items_social": [
     {
@@ -158,18 +158,18 @@
     },
     {
       "title": "Kindle Case",
-      "description": "After Effects, PhotoShop",
+      "description": "After Effects, PhotoShop, Premiere",
       "thumbPath": "thumb_kindleCase.jpg",
       "filePath": "https://www.youtube.com/embed/J-mF96EkSRM",
-      "w": 560,
+      "w": 556,
       "h": 315
     },
     {
       "title": "Kindle Paperwhite",
-      "description": "After Effects, PhotoShop",
+      "description": "After Effects, PhotoShop, Premiere",
       "thumbPath": "thumb_kindleReview.jpg",
       "filePath": "https://www.youtube.com/embed/Pb_SUPVtjnA",
-      "w": 560,
+      "w": 556,
       "h": 315
     }
   ],
