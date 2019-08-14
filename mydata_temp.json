@@ -22,12 +22,19 @@
       "w": 800,
       "h": 339
     },{
-      "title": "Masters of Sex ",
-      "description":  "Html, css, javascript. kaleidoscope effect",
-      "thumbPath": "https://derekmosher.github.io/work_to_display/mos/thumbs_mos.jpg",
-      "filePath": "https://derekmosher.github.io/work_to_display/mos/index.html",
-      "w": 300,
-      "h": 250
+      "title": "NFL - Moms Day",
+      "description":  "Static Banner Design",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/nfl/momBanner_thumb.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/nfl/momBanner.jpg",
+      "w": 750,
+      "h": 600
+    },{
+      "title": "Itunes Headers",
+      "description":  "Static Header Designs",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/nfl/itunes_concepts_thumb.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/nfl/itunes_concepts.jpg",
+      "w": 800,
+      "h": 450
     }
   ],
   "items_banner": [
