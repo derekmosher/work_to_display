@@ -2,7 +2,7 @@
   "items_design": [
     {
       "title": "Creable",
-      "description": "Concept, Design, and Animation",
+      "description": "Concept, Design, Animation",
       "thumbPath": "https://derekmosher.github.io/work_to_display/creable/thumb2.jpg",
       "filePath": "https://derekmosher.github.io/work_to_display/creable/index.html",
       "w": 700,
@@ -14,6 +14,13 @@
       "filePath": "https://derekmosher.github.io/work_to_display/mtv/mtv.html",
       "w": 1272,
       "h": 568
+    },{
+      "title": "Ted",
+      "description":  "Poster Concept, Design",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/ted/thumb.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/ted/ted.jpeg",
+      "w": 1101,
+      "h": 467
     },{
       "title": "Masters of Sex ",
       "description":  "Html, css, javascript. kaleidoscope effect",
