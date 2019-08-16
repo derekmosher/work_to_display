@@ -42,6 +42,13 @@
       "filePath": "https://derekmosher.github.io/work_to_display/nfl/itunes_concepts.jpg",
       "w": 800,
       "h": 450
+    },{
+      "title": "YouTube",
+      "description":  "20 thumbnails for my channel",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/yt_thumbs/thumb.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/yt_thumbs/pics.html",
+      "w": 960,
+      "h": 800
     }
   ],
   "items_banner": [
