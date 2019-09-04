@@ -130,6 +130,13 @@
       "filePath": "https://derekmosher.github.io/work_to_display/c4d/netflix.html",
       "w": 768,
       "h": 432
+    },{
+      "title": "3d Submarine",
+      "description": "Cinema 4d",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/c4d/sub_thumb.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/c4d/sub.html",
+      "w": 800 ,
+      "h": 600
     }
   ],
   "items_social": [
