@@ -35,13 +35,13 @@
       "filePath": "https://derekmosher.github.io/work_to_display/nfl/momBanner.jpg",
       "w": 750,
       "h": 600
-    },{
-      "title": "Itunes Headers",
-      "description":  "Static Header Designs",
-      "thumbPath": "https://derekmosher.github.io/work_to_display/nfl/itunes_concepts_thumb.jpg",
-      "filePath": "https://derekmosher.github.io/work_to_display/nfl/itunes_concepts.jpg",
-      "w": 800,
-      "h": 450
+          },{
+      "title": "MYIU Characters",
+      "description":  "Designed, illustrated, animated",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/myiu/thumb_myiu.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/yt_thumbs/myiu.html",
+      "w": 762,
+      "h": 294
     },{
       "title": "25 Thumbnails",
       "description":  "Concept, Design",
@@ -50,12 +50,12 @@
       "w": 500,
       "h": 500
     },{
-      "title": "Characters for MYIU.com",
-      "description":  "Designed, illustrated, animated",
-      "thumbPath": "https://derekmosher.github.io/work_to_display/myiu/thumb_myiu.jpg",
-      "filePath": "https://derekmosher.github.io/work_to_display/yt_thumbs/myiu.html",
-      "w": 762,
-      "h": 294
+      "title": "Itunes Headers",
+      "description":  "Static Header Designs",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/nfl/itunes_concepts_thumb.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/nfl/itunes_concepts.jpg",
+      "w": 800,
+      "h": 450
     }
   ],
   "items_banner": [
