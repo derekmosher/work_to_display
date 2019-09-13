@@ -59,7 +59,8 @@
           "w": 800,
           "h": 450
         }
-  ],
+    ],
+  },
   "book": "https://www.amazon.com/Creepy-Little-TV-Guy/dp/197586946X",
   "string": "Hello World 222",
   "example": "data.item[0].url"
