@@ -1,6 +1,27 @@
 {
   "items_design":[
-    
+    {
+      "bgcolor":"ff0000",
+      "title":"mytitle"
+    },{
+      "thumbs": [
+          {
+            "title": "Creable 23",
+            "description": "Concept, Design, Animation",
+            "thumbPath": "https://derekmosher.github.io/work_to_display/creable/thumb2.jpg",
+            "filePath": "https://derekmosher.github.io/work_to_display/creable/index.html",
+            "w": 700,
+            "h": 590
+          },{
+            "title": "MTV",
+            "description":  "Concept, Design, Animation",
+            "thumbPath": "https://derekmosher.github.io/work_to_display/mtv/thumb.jpg",
+            "filePath": "https://derekmosher.github.io/work_to_display/mtv/mtv.html",
+            "w": 600,
+            "h": 268 
+          }
+        ],
+      }
     ],
     "book": "https://www.amazon.com/Creepy-Little-TV-Guy/dp/197586946X",
     "string": "Hello World 222",
