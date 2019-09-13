@@ -1,8 +1,9 @@
 {
-  "section1":{ "title":"hello", "bg":"ff0000"},
-    "section2":{ "title":"hello 2", "bg":"ffffff"},
-    "section3":{ "title":"hello", "bg":"ff0000"},
-    "section4":{ "title":"hello", "bg":"ff0000"},
+  "section1":{ "title":"Design", "bg":"ff0000"},
+  "section2":{ "title":"Banner Animation + Misc", "bg":"ffffff"},
+  "section3":{ "title":"Social Media", "bg":"ff0000"},
+  "section4":{ "title":"YouTube Content Creation", "bg":"ff0000"},
+  "section5":{ "title":"Children's book", "bg":"ff0000"},
    
   "items_design": [
     {
