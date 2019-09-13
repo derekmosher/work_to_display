@@ -1,6 +1,9 @@
 {
   "items_design":[
-    "settings":[],
+    {
+      "bgcolor":'ff0000',
+      'title':' me title'
+    },{
     "thumbs": [
         {
           "title": "Creable223",
@@ -59,7 +62,7 @@
           "w": 800,
           "h": 450
         }
-    ],
+      },
   ],
   "book": "https://www.amazon.com/Creepy-Little-TV-Guy/dp/197586946X",
   "string": "Hello World 222",
