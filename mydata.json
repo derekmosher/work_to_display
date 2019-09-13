@@ -1,7 +1,66 @@
 {
+  "items_design": [
+    {
+      "title": "Creable222",
+      "description": "Concept, Design, Animation",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/creable/thumb2.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/creable/index.html",
+      "w": 700,
+      "h": 590
+    },{
+      "title": "MTV",
+      "description":  "Concept, Design, Animation",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/mtv/thumb.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/mtv/mtv.html",
+      "w": 600,
+      "h": 268 
+    },{
+      "title": "MTV",
+      "description":  "Concept, Design",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/mtv/videoWall_thumb.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/mtv/videoWall.jpg",
+      "w": 779,
+      "h": 670 
+    },{
+      "title": "Ted",
+      "description":  "Poster Concept, Design",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/ted/thumb.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/ted/ted.jpg",
+      "w": 800,
+      "h": 339
+    },{
+      "title": "NFL - Moms Day",
+      "description":  "Static Banner Design",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/nfl/momBanner_thumb.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/nfl/momBanner.jpg",
+      "w": 750,
+      "h": 600
+          },{
+      "title": "MYIU Characters",
+      "description":  "Designed, illustrated, animated",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/myiu/thumb_myiu.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/myiu/myiu.html",
+      "w": 762,
+      "h": 294
+    },{
+      "title": "25 Thumbnails",
+      "description":  "Concept, Design",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/yt_thumbs/thumb.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/yt_thumbs/pics.html",
+      "w": 500,
+      "h": 500
+    },{
+      "title": "Itunes Headers",
+      "description":  "Static Header Designs",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/nfl/itunes_concepts_thumb.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/nfl/itunes_concepts.jpg",
+      "w": 800,
+      "h": 450
+    }
+  ],
   "items_banner": [
     {
-      "title": "How to Train your Dragon",
+      "title": "How to Train your Dragon 22",
       "description": "After Effects",
       "thumbPath": "https://derekmosher.github.io/work_to_display/howToTrainDragon/thumb.jpg",
       "filePath":  "https://derekmosher.github.io/work_to_display/howToTrainDragon/dragonPawAll.html",
@@ -9,7 +68,7 @@
       "h": 458
     },{
       "title": "Video Wall",
-      "description": "After Effects",
+      "description": "After Effects Site Prototype",
       "thumbPath": "https://derekmosher.github.io/work_to_display/videoWall/thumb.jpg",
       "filePath":  "https://derekmosher.github.io/work_to_display/videoWall/videoWall.html",
       "w": 960,
@@ -19,43 +78,37 @@
       "description": "Adobe Edge. Nice smooth fun animation.",
       "thumbPath": "https://derekmosher.github.io/work_to_display/iceAge/thumb.jpg",
       "filePath": "https://derekmosher.github.io/work_to_display/iceAge/index.html",
-      "w": 306,
-      "h": 256
+      "w": 300,
+      "h": 250
     },{
       "title": "Sleepy Hollow",
       "description": "HTML, css, javascript.",
       "thumbPath": "https://derekmosher.github.io/work_to_display/sleepyHollow/thumb.jpg",
       "filePath": "https://derekmosher.github.io/work_to_display/sleepyHollow/index.html",
-      "w": 306,
-      "h": 256
-    },{
-      "title": "Creable",
-      "description": "Html, css, javascript. Concepted, designed, and animated.",
-      "thumbPath": "https://derekmosher.github.io/work_to_display/creable/thumb2.jpg",
-      "filePath": "https://derekmosher.github.io/work_to_display/creable/index.html",
-      "w": 700,
-      "h": 590
+      "w": 300,
+      "h": 250
+
     },{
       "title": "Masters of Sex ",
       "description":  "Html, css, javascript. kaleidoscope effect",
       "thumbPath": "https://derekmosher.github.io/work_to_display/mos/thumbs_mos.jpg",
       "filePath": "https://derekmosher.github.io/work_to_display/mos/index.html",
-      "w": 306,
-      "h": 256
+      "w": 300,
+      "h": 250
     },{
       "title": "Bones",
       "description": "Adobe Edge",
       "thumbPath": "https://derekmosher.github.io/work_to_display/bones/thumb_bones.jpg",
       "filePath": "https://derekmosher.github.io/work_to_display/bones/index.html",
-      "w": 306,
-      "h": 256
+      "w": 300,
+      "h": 250
     }, {
       "title": "We TV",
       "description": "Adobe Edge",
       "thumbPath": "https://derekmosher.github.io/work_to_display/wetv/thumb_wetv.jpg",
       "filePath": "https://derekmosher.github.io/work_to_display/wetv/wetv_300x250.html",
-      "w": 306,
-      "h": 256
+      "w": 300,
+      "h": 250
     },{
       "title": "The Magician",
       "description": "HTML, css, javascript",
@@ -65,7 +118,7 @@
       "h": 250
     },{
       "title": "The Last Ship",
-      "description": "After Effects",
+      "description": "After Effects Site Prototype",
       "thumbPath": "https://derekmosher.github.io/work_to_display/the_last_ship/thumb.jpg",
       "filePath":  "https://derekmosher.github.io/work_to_display/the_last_ship/tls.html",
       "w": 858,
@@ -77,6 +130,20 @@
       "filePath": "https://www.youtube.com/embed/4Sbj2uiF99M",
       "w": 846,
       "h": 505
+    },{
+      "title": "Netflix 3d logo",
+      "description": "After Effects, Cinema 4d",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/c4d/thumb_netflix.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/c4d/netflix.html",
+      "w": 768,
+      "h": 432
+    },{
+      "title": "3d Submarine",
+      "description": "Cinema 4d",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/c4d/sub_thumb.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/c4d/sub.html",
+      "w": 800 ,
+      "h": 600
     }
   ],
   "items_social": [
@@ -93,8 +160,8 @@
       "description": "AE fire & rain",
       "thumbPath": "https://derekmosher.github.io/work_to_display/socialmedia/gifs/thumb_constantine_fire.jpg",
       "filePath": "https://derekmosher.github.io/work_to_display/socialmedia/gifs/constantine_fire_403x403.gif",
-      "w": 403,
-      "h": 403
+      "w": 400,
+      "h": 400
     },
     {
       "title": "State of Affairs",
