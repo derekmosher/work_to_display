@@ -4,67 +4,26 @@
       "bgcolor":"ff0000",
       "title":"mytitle"
     },{
-    "thumbs": [
-        {
-          "title": "Creable 23",
-          "description": "Concept, Design, Animation",
-          "thumbPath": "https://derekmosher.github.io/work_to_display/creable/thumb2.jpg",
-          "filePath": "https://derekmosher.github.io/work_to_display/creable/index.html",
-          "w": 700,
-          "h": 590
-        },{
-          "title": "MTV",
-          "description":  "Concept, Design, Animation",
-          "thumbPath": "https://derekmosher.github.io/work_to_display/mtv/thumb.jpg",
-          "filePath": "https://derekmosher.github.io/work_to_display/mtv/mtv.html",
-          "w": 600,
-          "h": 268 
-        },{
-          "title": "MTV",
-          "description":  "Concept, Design",
-          "thumbPath": "https://derekmosher.github.io/work_to_display/mtv/videoWall_thumb.jpg",
-          "filePath": "https://derekmosher.github.io/work_to_display/mtv/videoWall.jpg",
-          "w": 779,
-          "h": 670 
-        },{
-          "title": "Ted",
-          "description":  "Poster Concept, Design",
-          "thumbPath": "https://derekmosher.github.io/work_to_display/ted/thumb.jpg",
-          "filePath": "https://derekmosher.github.io/work_to_display/ted/ted.jpg",
-          "w": 800,
-          "h": 339
-        },{
-          "title": "NFL - Moms Day",
-          "description":  "Static Banner Design",
-          "thumbPath": "https://derekmosher.github.io/work_to_display/nfl/momBanner_thumb.jpg",
-          "filePath": "https://derekmosher.github.io/work_to_display/nfl/momBanner.jpg",
-          "w": 750,
-          "h": 600
-         },{
-          "title": "MYIU Characters",
-          "description":  "Designed, illustrated, animated",
-          "thumbPath": "https://derekmosher.github.io/work_to_display/myiu/thumb_myiu.jpg",
-          "filePath": "https://derekmosher.github.io/work_to_display/myiu/myiu.html",
-          "w": 762,
-          "h": 294
-        },{
-          "title": "25 Thumbnails",
-          "description":  "Concept, Design",
-          "thumbPath": "https://derekmosher.github.io/work_to_display/yt_thumbs/thumb.jpg",
-          "filePath": "https://derekmosher.github.io/work_to_display/yt_thumbs/pics.html",
-          "w": 500,
-          "h": 500
-        },{
-          "title": "Itunes Headers",
-          "description":  "Static Header Designs",
-          "thumbPath": "https://derekmosher.github.io/work_to_display/nfl/itunes_concepts_thumb.jpg",
-          "filePath": "https://derekmosher.github.io/work_to_display/nfl/itunes_concepts.jpg",
-          "w": 800,
-          "h": 450
-        }
+      "thumbs": [
+          {
+            "title": "Creable 23",
+            "description": "Concept, Design, Animation",
+            "thumbPath": "https://derekmosher.github.io/work_to_display/creable/thumb2.jpg",
+            "filePath": "https://derekmosher.github.io/work_to_display/creable/index.html",
+            "w": 700,
+            "h": 590
+          },{
+            "title": "MTV",
+            "description":  "Concept, Design, Animation",
+            "thumbPath": "https://derekmosher.github.io/work_to_display/mtv/thumb.jpg",
+            "filePath": "https://derekmosher.github.io/work_to_display/mtv/mtv.html",
+            "w": 600,
+            "h": 268 
+          },
+        ],
       },
-  ],
-  "book": "https://www.amazon.com/Creepy-Little-TV-Guy/dp/197586946X",
-  "string": "Hello World 222",
-  "example": "data.item[0].url"
+    ],
+    "book": "https://www.amazon.com/Creepy-Little-TV-Guy/dp/197586946X",
+    "string": "Hello World 222",
+    "example": "data.item[0].url"
 }
