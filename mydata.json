@@ -3,7 +3,7 @@
     "title":"DEMO REEL", 
     "description": "2019 Motion Graphics ",
     "bg_color":"ff0000",
-    "demo_reel_url": "https://www.youtube.com/embed/BzNw3uPlNDg",
+    "url": "https://www.youtube.com/embed/BzNw3uPlNDg"
   },
   "section1":{ "title":"Design", "bg":"fff"},
   "section2":{ "title":"Banner Animation + Misc", "bg":"ff0000"},
