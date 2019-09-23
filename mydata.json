@@ -1,9 +1,10 @@
 {
-  "section1":{ "title":"Design", "bg":"ff0000"},
-  "section2":{ "title":"Banner Animation + Misc", "bg":"ffffff"},
-  "section3":{ "title":"Social Media", "bg":"ff0000"},
+  "section0":{ "title":"Demo Reel", "bg":"ff0000"},
+  "section1":{ "title":"Design", "bg":"fff"},
+  "section2":{ "title":"Banner Animation + Misc", "bg":"ff0000"},
+  "section3":{ "title":"Social Media", "bg":"fff"},
   "section4":{ "title":"YouTube Content Creation", "bg":"ff0000"},
-  "section5":{ "title":"Children's book", "bg":"ff0000"},
+  "section5":{ "title":"Children's book", "bg":"fff"},
    
   "items_design": [
     {
@@ -272,5 +273,8 @@
   ],
   "book": "https://www.amazon.com/Creepy-Little-TV-Guy/dp/197586946X",
   "string": "Hello World 222",
-  "example": "data.item[0].url"
+  "example": "data.item[0].url",
+  "demo_reel_url": "https://www.youtube.com/embed/BzNw3uPlNDg",
+  "demo_reel_text": "DEMO REEL"
+}
 }
