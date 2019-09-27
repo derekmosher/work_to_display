@@ -278,8 +278,5 @@
   ],
   "book": "https://www.amazon.com/Creepy-Little-TV-Guy/dp/197586946X",
   "string": "Hello World 222",
-  "example": "data.item[0].url",
-  "demo_reel_url": "https://derekmosher.github.io/work_to_display/demo_reel.mp4",
-  "demo_reel_text": "DEMO REEL"
-
+  "example": "data.item[0].url"
 }
