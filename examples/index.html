@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta data-template-name="300x250">
+  <meta name="ad.size" content="width=300,height=250">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <!-- <script type="text/javascript" src="https://secure-ds.serving-sys.com/BurstingcachedScripts/libraries/greensock/1_19_0/TweenMax.min.js"></script> -->
+
+  <script type="text/javascript">
+        var clickTag = "https://www.ultimatesoftware.com/"; 
+  </script>
+
+
+</head>
+<body>
+  <div id="main-container">
+    <img id="scream" style="display:none;visibility:hidden;" width="220" height="277" src="https://derekmosher.github.io/work_to_display/examples/img_scream.jpg" alt="The Scream">
+    <img id="img_maskme" style="display:none;visibility:hidden;" width="500" height="300" src="https://derekmosher.github.io/work_to_display/examples/img_maskme.jpg" alt="The Scream">
+    <img id="img_mask_with_alpha" style="display:none;visibility:hidden;" width="500" height="300" src="https://derekmosher.github.io/work_to_display/examples/img_mask_with_alpha.png" alt="The Scream">
+    <img id="image1" style="display:none;visibility:hidden;" width="250" height="150" src="img_maskme.jpg" alt="The Scream">
+    <img id="image2" style="display:none;visibility:hidden;" width="250" height="150" src="img_maskme_alpha.png" alt="The Scream">
+   
+   
+    <canvas id="myCanvas0" width=250 height=150 style="border:1px solid #02b302;">Show if No Browser Support</canvas>  
+    <canvas id="myCanvas1" width=250 height=150></canvas>
+    <canvas id="myCanvas2" width=250 height=150></canvas>
+    <canvas id="myCanvas3" width=250 height=150></canvas>
+    <canvas id="myCanvas4" width=250 height=150></canvas>  
+    <canvas id="myCanvas5" width=250 height=150></canvas>  
+    <canvas id="myCanvas6" width=250 height=150></canvas>  
+    <canvas id="myCanvas7" width=250 height=150></canvas>  
+    <canvas id="myCanvas8" width=250 height=150></canvas>  
+    <canvas id="myCanvas9" width=250 height=150></canvas>  
+   <canvas id="myCanvas10" width=250 height=150></canvas>  
+    <canvas id="myCanvas10b" width=250 height=150></canvas> 
+    <br/><a href="https://www.w3schools.com/tags/canvas_globalcompositeoperation.asp">Masking or Compositing - globalCompositeOperation Property</a>     
+    <br/><canvas id="myCanvas11" width=250 height=150 style="border:1px solid #02b302;"></canvas>  
+    <canvas id="myCanvas12" width=250 height=150 style="border:1px solid #02b302;"></canvas>  
+    <canvas id="myCanvas12a" width=250 height=150 style="border:5px solid #2202b3;"></canvas>  
+    
+    <div>
+      <canvas id="myCanvas13a" width="250" height="150" style="position: absolute; z-index: 0"></canvas>
+      <canvas id="myCanvas13b" width="250" height="150" style="position: absolute; z-index: 1"></canvas>
+    </div>
+    
+   
+   
+  </div>
+
+
+  <script>
+    //example 0
+        var c = document.getElementById("myCanvas0");
+        var ctx = c.getContext("2d");
+        ctx.font = "20px Arial";
+        ctx.fillText("Canvas Examples", 10, 50); //.fillText(text,x,y,maxWidth);
+        /////
+        ctx.font = "15px Verdana";
+        // Create gradient
+        var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+        gradient.addColorStop("0"," magenta");
+        gradient.addColorStop("0.5", "blue");
+        gradient.addColorStop("1.0", "red");
+        // Fill with gradient
+        ctx.fillStyle = gradient;
+        ctx.fillText("Dont Work in Explorer 8", 10, 90); //.fillText(text,x,y,maxWidth);
+
+
+    // example 1 - stroke - split inner/outer
+      var c = document.getElementById("myCanvas1");
+      var ctx = c.getContext("2d");
+      ctx.lineWidth = 10;
+      ctx.strokeStyle = "#000";
+      ctx.strokeRect(20, 20, 150, 100);
+      ctx.fillStyle = "#FF0000";
+      ctx.fillRect(30, 30, c.width, c.height);
+      ctx.strokeRect(0, 0, c.width, c.height); //note this is half the width of above
+
+
+
+    // example 2 - stroke - Trick for inside
+        var c = document.getElementById("myCanvas2");
+        var ctx = c.getContext("2d");
+
+        // default centered
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = "blue";
+        ctx.strokeRect(10, 10, 100, 100);
+
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "red";
+        ctx.strokeRect(10, 10, 100, 100);      
+        // inner
+        ctx.rect(140, 10, 100, 100);
+        ctx.rect(140+10, 10+10, 100-20, 100-20);  // offset position and size
+        ctx.fill("evenodd");                      // !important
+        ctx.strokeRect(140, 10, 100, 100);
+
+        ctx.strokeRect(0, 0, c.width, c.height); //note this is half the width of above
+
+    
+    //example 3 - simple fill
+        var c = document.getElementById("myCanvas3");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(20, 20, 150, 100);
+
+    //example 4
+        var c = document.getElementById("myCanvas4");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(20, 20, 150, 100);
+        ctx.strokeStyle = "#000000";
+        ctx.lineWidth = 25;
+        ctx.strokeRect(20, 20, 150, 100);
+
+
+    // //example 5 - stroke
+        var c = document.getElementById("myCanvas5");
+        var ctx = c.getContext("2d");
+        var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+        grd.addColorStop(0, "red"); //center
+        grd.addColorStop(1, "blue");// end gradient
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 150, 100);
+
+
+
+    //example 6 - gradient stroke
+        var c = document.getElementById("myCanvas6");
+        var ctx = c.getContext("2d");
+
+        var gradient = ctx.createLinearGradient(0, 0, 170, 0);
+        gradient.addColorStop("0", "magenta");
+        gradient.addColorStop("0.5" ,"blue");
+        gradient.addColorStop("1.0", "red");
+        // Fill with gradient
+        ctx.strokeStyle = gradient;
+        ctx.lineWidth = 5;
+        ctx.strokeRect(10, 10, 150, 100);
+        ctx.strokeRect(0, 0, c.width, c.height); //note this is half the width of above
+
+
+     //example 7 - circle
+        var c = document.getElementById("myCanvas7");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.strokeRect(0, 0, c.width, c.height); //note this is half the width of above
+
+
+      //example 8
+        var c = document.getElementById("myCanvas8");
+        var ctx = c.getContext("2d");
+        ctx.shadowBlur = 10;
+        ctx.shadowOffsetX = 20;
+        ctx.shadowOffsetY = 20;
+        ctx.shadowColor = "black";
+        ctx.fillStyle = "red";
+        ctx.fillRect(20, 20, 100, 80);
+        ctx.strokeRect(0, 0, c.width, c.height); //note this is half the width of above
+
+
+    //example  9 - lines
+        var c = document.getElementById("myCanvas9");
+        var ctx = c.getContext("2d");
+
+        ctx.beginPath();
+        ctx.lineWidth = 10;
+        ctx.lineCap = "butt";
+        ctx.moveTo(20, 20);
+        ctx.lineTo(200, 20);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.lineCap = "round";
+        ctx.moveTo(20, 40);
+        ctx.lineTo(200, 40);
+        ctx.strokeStyle = "#FF0000";
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.lineCap = "square";
+        ctx.moveTo(20, 60);
+        ctx.lineTo(200, 60);
+        ctx.stroke();
+        ctx.strokeRect(0, 0, c.width, c.height); //note this is half the width of above
+
+
+    //example 10 - image
+        window.onload = function() {
+          var c = document.getElementById("myCanvas10");
+          var ctx = c.getContext("2d");
+          ctx.drawImage(document.getElementById("scream"), 0, 0, 150, 150);
+          ctx.strokeRect(0, 0, c.width, c.height); //note this is half the width of above
+       }
+    
+       //example 10b - level
+          var c = document.getElementById("myCanvas10b");
+          var ctx = c.getContext("2d");
+
+          ctx.fillStyle = "red";
+          ctx.fillRect(20, 20, 75, 50);
+          ctx.globalCompositeOperation = "source-over";
+          ctx.fillStyle = "blue";
+          ctx.fillRect(50, 50, 75, 50);
+
+          ctx.fillStyle = "red";
+          ctx.fillRect(150, 20, 75, 50);
+          ctx.globalCompositeOperation = "destination-over";
+          ctx.fillStyle = "blue";
+          ctx.fillRect(180, 50, 75, 50);
+          ctx.strokeRect(0, 0, c.width, c.height); //note this is half the width of above
+
+
+    //example 11 - Masking / Compositing -  https://www.w3schools.com/tags/canvas_globalcompositeoperation.asp
+      // source-over - next item is source. it goes on top. no mask
+      // source-atop - next item is source. it is masked by first item. First item Still shows.
+      // source-in - next item is source. it is masked by first item. First NOT shown (traditional Mask).
+      // source-out - next item is source. it is masked but Outside by first item. First NOT shown.
+      // destination-over - next item is source. first item on top. no mask
+      // destination-atop - source item masked by first (destination) item. first item on top. First item Still shows.
+      // destination-in - THIS IS TRADITIONAL MASK imo
+      // destination-out
+
+        var c=document.getElementById('myCanvas11');
+        var ctx=c.getContext('2d');
+        ctx.fillStyle='blue';
+        ctx.fillRect(10,10,50,50);
+        ctx.globalCompositeOperation='destination-in';
+        ctx.beginPath();
+        ctx.fillStyle='red';
+        ctx.arc(50,50,30,0,2*Math.PI);
+        ctx.fill();
+    
+    //example 12 - masking multiple items
+        var c=document.getElementById('myCanvas12');
+        var ctx=c.getContext('2d');
+        ctx.fillStyle='blue';
+        ctx.fillRect(10,10,50,50);
+        ctx.fillStyle='green';
+        ctx.fillRect(50,50,30,30);
+        ctx.globalCompositeOperation='destination-in';
+        ctx.beginPath();
+        ctx.fillStyle='red';
+        ctx.arc(50,50,30,0,2*Math.PI);
+        ctx.fill();
+
+       //Example 12a - masking with images
+       window.onload = function() {
+          var c = document.getElementById("myCanvas12a");
+          var ctx = c.getContext("2d");
+          ctx.drawImage(document.getElementById("image1"), 0, 0, 250, 150);
+          ctx.globalCompositeOperation = 'destination-in';
+          ctx.drawImage(document.getElementById("image2"), 0, 0,250,150);
+       }
+
+
+      //example 13 - masking items but NOT all. layer canvases
+        var c=document.getElementById('myCanvas13a');
+        var ctx=c.getContext('2d');
+        ctx.strokeRect(0, 0, c.width, c.height); //note this is half the width of above
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(10, 10, 150, 100);
+       //
+       var c=document.getElementById('myCanvas13b');
+        var ctx=c.getContext('2d');
+        ctx.fillStyle='blue';
+        ctx.fillRect(10,10,50,50);
+        ctx.fillStyle='green';
+        ctx.fillRect(50,50,30,30);
+        ctx.globalCompositeOperation='destination-in';
+        ctx.beginPath();
+        ctx.fillStyle='red';
+        ctx.arc(50,50,30,0,2*Math.PI);
+        ctx.fill();
+
+       
+
+  </script>
+
+
+  <!-- <script src="logic.js"></script> -->
+</body>
+</html>
