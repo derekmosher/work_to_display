@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cursor follow Ball</title>
+    
+
+    <style>
+         #myCanvas {
+            border-style: solid;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #cw {
+                position: fixed;
+                z-index: -1;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: rgba(0,0,0,0.05);
+            }
+    </style>
+
+</head>
+
+<body>
+    <canvas id="myCanvas" width="800" height="400"></canvas>  
+    
+    <script>
+        var myCanvas = document.getElementById("myCanvas");
+        var ctx = myCanvas.getContext("2d");
+        var mouseX = ballX = myCanvas.width / 2;
+        var mouseY = ballY = myCanvas.height / 2;
+        var spd = 10;
+        var easeAmt = .11;
+  
+        window.onload = function() {
+            myCanvas.onmousemove = mouseMove;
+            loop();
+        }
+        //use `requestAnimationFrame` for the game loop
+        //so you stay sync with the browsers rendering
+        //makes it a smoother animation
+        function loop(){
+            moveBall();
+            requestAnimationFrame(loop);
+        }
+
+        function mouseMove(evt) {
+            mouseX = evt.clientX;
+            mouseY = evt.clientY;
+        }
+        function generateRandomColor() { 
+                var colorHexElements = "0123456789ABCDEF";
+                var newColor = "#";
+                for (var i = 0; i < 6; i++) {
+                    newColor += colorHexElements[Math.ceil(Math.random() * 15)]
+                }
+                return newColor
+            }
+        var myColor = generateRandomColor()
+
+        function moveBall() {
+            //get the distance between the mouse and the ball on both axes
+            //walk only the an eight of the distance to create a smooth fadeout
+            var dx = (mouseX - ballX) * easeAmt;
+            var dy = (mouseY - ballY) * easeAmt;
+            //calculate the distance this would move ...
+            var distance = Math.sqrt(dx*dx + dy*dy);
+            //... and cap it at spd
+            if(distance >spd){
+                dx *= spd/distance;
+                dy *= spd/distance;
+            }
+            //now move
+            ballX += dx;
+            ballY += dy;
+
+            ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
+            ctx.beginPath();
+            ctx.arc(ballX, ballY, 20, 0, 2 * Math.PI);
+            ctx.fillStyle = myColor ;//"red"
+            ctx.fill();
+            ctx.lineWidth = 5;
+            ctx.strokeStyle = "red";
+            ctx.stroke();
+        }
+    </script>
+</body>
+</html>
