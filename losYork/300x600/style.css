@@ -1,0 +1,101 @@
+
+body, body * {
+  vertical-align: baseline;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+/* GothamCond-Medium */
+@font-face {
+  font-family: font1;
+  src: url(GothamCond-Medium.otf);
+}
+
+@font-face {
+  font-family: font2;
+  src: url(Gotham-Bold.otf);
+}
+div,img,video,p,svg,canvas{
+    position: absolute;
+    top:0px;
+}
+#main-container {
+  width: 300px;
+  height: 600px;
+  overflow: hidden;
+  border: 1px solid #c7c8c8;
+  box-sizing: border-box;
+  background: black;
+  overflow: hidden;
+}
+/*///////////////*/
+
+
+#motoDot{ 
+  position:absolute;
+  top:95px;
+  left:119px;
+  width:72px;
+  height:auto;
+}
+#motoLogo{ 
+  position:absolute;
+  top:100px;
+  left:35px;
+  height:39px;
+  width:auto;
+
+}
+#textCam{
+      /* height: auto; */
+    /* width: 300px; */
+    /* white-space: normal; */
+    font-size: 36px;
+    letter-spacing: 0.2px;
+    top:87px;
+    line-height:1.08;
+    font-family: font1;
+    font-weight: 100;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+#motoLogo2{ 
+  position:absolute;
+  top:44px;
+  left:25px;
+  width:250px;
+  height:auto;
+}
+#txt_beast,#txt_beastGrp{
+    /* height: auto; */
+    /* width: 300px; */
+    /* white-space: normal; */
+    font-size: 38px;
+    /* letter-spacing: -1.9px; */
+    /* top:87px; */
+    line-height:1.08;
+    font-family: font2;
+    font-weight: 100;
+    color: #ffffff;
+    text-align: center;
+}
+
+/*    TOP     */
+#bannerCover{
+  /*visibility: hidden;*/
+  visibility: visible;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #000; 
+  pointer-events: none;
+}
+#exit {
+  top:0px;
+  cursor:pointer;
+  width: 100%;
+  height: 100%;
+}

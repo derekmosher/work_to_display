@@ -1,0 +1,73 @@
+/**
+* Smoke form validation and components for Bootstrap
+* @package Smoke
+* @version 3.0
+* @link https://github.com/alfredobarron/smoke The Smoke GitHub project
+* @author Alfredo Barron <alfredobarronc@gmail.com>
+* @copyright 2015 Alfredo Barron
+* @license https://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License
+* @note This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Lesser General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU Lesser General Public License for more details.
+*/
+/*  */
+  
+  .smk-sizing{
+	box-sizing: border-box;
+  }
+  
+  /* Transition */
+  .smk-transition1 {
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out; /* Chrome & Safari */
+	-moz-transition: all .2s ease-in-out; /* Firefox */
+	-o-transition: all .2s ease-in-out; /* Opera */
+	-ms-transition: all .2s ease-in-out; /* IE 9 */
+  }
+  .smk-transition2 {
+	transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out; /* Chrome & Safari */
+	-moz-transition: all .5s ease-in-out; /* Firefox */
+	-o-transition: all .5s ease-in-out; /* Opera */
+	-ms-transition: all .5s ease-in-out; /* IE 9 */
+  }
+  
+  /* Shadow */
+  .smk-shadow {
+	box-shadow: 3px 3px 5px 6px #ccc;
+	-webkit-box-shadow: 3px 3px 5px 6px #ccc; /* Chrome & Safari */
+	-moz-box-shadow: 3px 3px 5px 6px #ccc; /* Firefox */
+  }
+  
+  /* Animations */
+  .smk-animation {
+	animation: fadeOut 3.5s;
+	-webkit-animation: fadeOut 3.5s; /* Chrome & Safari */
+	-moz-animation: fadeOut 3.5s; /* Firefox */
+	-o-animation: fadeOut 3.5s; /* Opera */
+	-ms-animation: fadeOut 3.5s; /* IE 9 */
+  }
+  
+  /* Translate */
+  .smk-translate {
+	transform: translate(50px,100px);
+	-webkit-transform: translate(50px,100px); /* Chrome & Safari */
+	-moz-transform: translate(50px,100px); /* Firefox */
+	-o-transform: translate(50px,100px); /* Opera */
+	-ms-transform: translate(50px,100px); /* IE 9 */
+  }
+  
+  /* Rotate */
+  .smk-rotate {
+	transform: rotate(7deg);
+	-webkit-transform: rotate(7deg); /* Chrome & Safari */
+    transition: rotate(7deg);
+    -moz-transition: rotate(7deg); /* Firefox */
+	-o-transition: rotate(7deg); /* Opera */
+	-ms-transform: rotate(7deg); /* IE 9 */
+  }
