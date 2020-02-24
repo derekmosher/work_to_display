@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta data-template-name="300x600">
+  <meta name="ad.size" content="width=300,height=600">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+
+  <!-- <script type="text/javascript" src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.1.0_min.js"></script> -->
+  <script type="text/javascript" src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/EasePack.min.js"></script>
+  <!-- <script src="./js/Glitch.js"></script> -->
+  <!-- <script src="./js/SplitText.min.js"></script> -->
+  
+  <script type="text/javascript">
+        var clickTag = "https://www.google.com/"; 
+  </script>
+
+
+</head>
+  <body>
+    <div id="main-container">
+        <!-- Part 1 -->
+        <img id="bg" style="position:absolute;" src="images/bg.jpg" alt="textBox1">
+        <img id="motoDot" style="position:absolute;" src="images/motoDot.svg" alt="img">
+        <img id="motoLogo" style="position:absolute;" src="images/motoLogo.svg" alt="img">
+
+        <!-- Part 2 -->
+        <!-- <canvas id="canvas" width="300" height="600"></canvas> -->
+        <!-- <canvas id="canvasBlue" width="300" height="600"></canvas> -->
+        <!-- <img id="c" style="position:absolute;" src="images/comp.png" alt="textBox1"> -->
+        <div id="batGrp">
+            <img id="phone0" style="position:absolute;" src="images/phone0.png" alt="textBox1">
+            <img id="phone0b" style="position:absolute;" src="images/phone0b.png" alt="textBox1">
+              <div id="countdownLoc">
+                  <image id="num100" src="" style="left:0px"></image>
+                  <image id="num10" src=""style="left:0px"></image>
+                  <image id="num1" src=""style="left:0px"></image>
+                  <image id="num%" src=""style="left:0px"></image>
+              </div> 
+          </div>
+        <div id="txt_cam1">OVER TWO DAYS</div>
+        <div id="txt_cam2">OF BATTERY LIFE</div> 
+        <div id="txt_cam3"></div>
+
+        <!-- Part 3 -->
+        <div id = "phone">
+            <img id="phone2" style="position:absolute;" src="images/phone2.png" alt="textBox1">
+            <img id="phone1" style="position:absolute;" src="images/phone1.png" alt="textBox1">
+        </div>
+
+        <!-- Part 4 -->
+        <!-- <div id="txt_beast">ABSOLUTE</br> BEAST</div>  -->
+        <img id="txt_beast" src="images/txt_beast.svg" alt="img">
+
+        <img id="motoLogo2" style="position:absolute;" src="images/motoLogo.svg" alt="img">
+
+        <!-- <img id="motoLogo2" style="position:absolute;" src="images/motoLogo.svg" alt="img">
+        <img id="txt_beast" style="position:absolute;" src="images/txt_beast.png" alt="img">
+        
+         -->
+         <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.16 72.36"><defs><style>.cls-1{fill:#0b1b24;}.cls-2{fill:#fff;}</style></defs><title>Asset 2</title><g id="Layer_2" data-name="Layer 2"><g id="cta"><g id="cta_bg"><rect class="cls-1" width="226.08" height="71.34" rx="18"/></g><g id="cta_outline"><path class="cls-2" d="M213.16,72.36H13a13,13,0,0,1-13-13V13A13,13,0,0,1,13,0H213.16a13,13,0,0,1,13,13V59.36A13,13,0,0,1,213.16,72.36ZM13,2A11,11,0,0,0,2,13V59.36a11,11,0,0,0,11,11H213.16a11,11,0,0,0,11-11V13a11,11,0,0,0-11-11Z"/></g><g id="cta_txt"><path class="cls-2" d="M25.84,27.72h3V41.93h8.89v2.71H25.84Z"/><path class="cls-2" d="M41.77,27.72H54.32v2.66H44.75v4.4h8.48v2.66H44.75V42h9.69v2.66H41.77Z"/><path class="cls-2" d="M64.93,27.6h2.76l7.44,17H72l-1.71-4.09h-8l-1.74,4.09h-3Zm4.26,10.32-2.93-6.77-2.9,6.77Z"/><path class="cls-2" d="M79,27.72h7.54a6.84,6.84,0,0,1,4.88,1.69,5.14,5.14,0,0,1,1.4,3.65v0a5.07,5.07,0,0,1-4,5.12l4.57,6.41h-3.5l-4.16-5.9H82v5.9H79Zm7.32,8.39c2.13,0,3.48-1.11,3.48-2.83v-.05c0-1.81-1.31-2.8-3.5-2.8H82v5.68Z"/><path class="cls-2" d="M97.45,27.72h2.76l9.06,11.7V27.72h2.93V44.64h-2.49l-9.33-12v12H97.45Z"/><path class="cls-2" d="M125.74,27.72h3.17l5.14,8,5.15-8h3.17V44.64h-3V32.5l-5.35,8H134l-5.3-7.93V44.64h-2.92Z"/><path class="cls-2" d="M146.94,36.23v0a8.67,8.67,0,0,1,8.87-8.75,8.58,8.58,0,0,1,8.82,8.7v0a8.85,8.85,0,0,1-17.69,0Zm14.58,0v0a5.8,5.8,0,0,0-5.76-6,5.72,5.72,0,0,0-5.7,6v0a5.79,5.79,0,0,0,5.75,6A5.73,5.73,0,0,0,161.52,36.23Z"/><path class="cls-2" d="M169.21,27.72h7.54a6.82,6.82,0,0,1,4.88,1.69,5.1,5.1,0,0,1,1.4,3.65v0a5.06,5.06,0,0,1-4,5.12l4.57,6.41h-3.51l-4.16-5.9h-3.72v5.9h-3Zm7.32,8.39c2.13,0,3.48-1.11,3.48-2.83v-.05c0-1.81-1.3-2.8-3.5-2.8h-4.33v5.68Z"/><path class="cls-2" d="M187.66,27.72H200.2v2.66h-9.57v4.4h8.48v2.66h-8.48V42h9.69v2.66H187.66Z"/></g></g></g></svg> -->
+         <div id="bannerCover"></div>
+         <div id="exit"></div>
+         <svg id="cta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.16 72.36"><defs><style>.cls-1{opacity:1;}.cls-2{fill:#0b1b24;}.cls-3{fill:#fff;}</style></defs><title>cta</title>
+          <g id="cta_bg" class="cls-1">
+            <rect id='wat' class="cls-2" width="226.08" height="71.34" rx="18"/></g><g id="cta_outline">
+            <path class="cls-3" d="M712.58,432.18H512.42a13,13,0,0,1-13-13V372.82a13,13,0,0,1,13-13H712.58a13,13,0,0,1,13,13v46.36A13,13,0,0,1,712.58,432.18ZM512.42,361.82a11,11,0,0,0-11,11v46.36a11,11,0,0,0,11,11H712.58a11,11,0,0,0,11-11V372.82a11,11,0,0,0-11-11Z" transform="translate(-499.42 -359.82)"/></g>
+            <g id="cta_txt">
+            <path class="cls-3" d="M525.26,387.54h3v14.21h8.9v2.71H525.26Z" transform="translate(-499.42 -359.82)"/>
+            <path class="cls-3" d="M541.19,387.54h12.55v2.66h-9.57v4.4h8.48v2.66h-8.48v4.54h9.69v2.66H541.19Z" transform="translate(-499.42 -359.82)"/><path class="cls-3" d="M564.35,387.42h2.76l7.44,17h-3.14l-1.72-4.09h-8L560,404.46h-3Zm4.26,10.32L565.68,391l-2.9,6.77Z" transform="translate(-499.42 -359.82)"/><path class="cls-3" d="M578.42,387.54H586a6.84,6.84,0,0,1,4.88,1.69,5.14,5.14,0,0,1,1.4,3.65v.05a5.07,5.07,0,0,1-4,5.12l4.57,6.41h-3.5l-4.16-5.9H581.4v5.9h-3Zm7.33,8.39c2.13,0,3.48-1.11,3.48-2.83v-.05c0-1.81-1.31-2.8-3.51-2.8H581.4v5.68Z" transform="translate(-499.42 -359.82)"/>
+            <path class="cls-3" d="M596.87,387.54h2.76l9.06,11.7v-11.7h2.93v16.92h-2.49l-9.33-12v12h-2.93Z" transform="translate(-499.42 -359.82)"/>
+            <path class="cls-3" d="M625.16,387.54h3.16l5.15,8,5.15-8h3.17v16.92h-3V392.33l-5.34,8h-.09l-5.3-7.93v12.09h-2.92Z" transform="translate(-499.42 -359.82)"/>
+            <path class="cls-3" d="M646.36,396.05V396a8.85,8.85,0,0,1,17.69-.05V396a8.85,8.85,0,0,1-17.69.05Zm14.58,0V396a5.8,5.8,0,0,0-5.76-6,5.71,5.71,0,0,0-5.7,6V396a5.79,5.79,0,0,0,5.75,6A5.72,5.72,0,0,0,660.94,396.05Z" transform="translate(-499.42 -359.82)"/>
+            <path class="cls-3" d="M668.63,387.54h7.54a6.82,6.82,0,0,1,4.88,1.69,5.14,5.14,0,0,1,1.4,3.65v.05a5.07,5.07,0,0,1-4,5.12l4.56,6.41h-3.5l-4.16-5.9H671.6v5.9h-3Zm7.32,8.39c2.13,0,3.48-1.11,3.48-2.83v-.05c0-1.81-1.3-2.8-3.5-2.8H671.6v5.68Z" transform="translate(-499.42 -359.82)"/><path id='wat' class="cls-3" d="M687.07,387.54h12.55v2.66h-9.57v4.4h8.48v2.66h-8.48v4.54h9.69v2.66H687.07Z" transform="translate(-499.42 -359.82)"/></g></svg>
+
+      </div>
+        
+    <script src="./logic.js"></script>
+</body>
+</html>
