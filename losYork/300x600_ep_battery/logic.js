@@ -167,7 +167,7 @@ function goCountdown(){
   var stopAt = 80;
   var delayBy = 0.06
   var type = ".svg";
-  document.getElementById('num%').src ='./images/num%'+type;
+  document.getElementById('num%').src ='./images/numPercent'+type;
 
 
   for(var i=startAt;i<=stopAt;i++){
