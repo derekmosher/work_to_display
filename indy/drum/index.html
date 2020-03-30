@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta data-template-name="1920x1080">
+  	<meta name="ad.size" content="width=1920,height=1080">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="./js/utility.js"></script>
+    <script type="text/javascript" src="./js/gsap.min.js"></script>
+    <link rel="shortcut icon" href="#" />
+	</head>
+	<body>
+		<div id="main-container">
+      <img id="bg2" src="images/bg2.jpg">
+      <div id='p2'>
+        <div id="about1" class="aboutMe"> Kenny Aronoff came up with his solo on John Mellencamp’s 
+          “Jack and Diane” on the spot in the recording studio.</div>
+        <div id="about2"class="aboutMe"> Ginger Baker composed Toad as an instrumental he would play
+          with many projects over the years. It was significant and influential as one of the first
+          rock drum solos ever recorded</div>
+        <div id="about3"class="aboutMe"> Chris Johnson has been playing with Lady Gaga during her
+          live performances since 2016. His drumming style was developed over many years growing up playing in church.</div>
+        <div id="about4"class="aboutMe">Brian Melick designed his LEGO drum set after attending a 
+          LEGO convention with his son. This video features Melick playing a solo on his personal 
+          LEGO kit during a recent concert.</div>
+          <!--  -->
+            <div id="video-container">
+              <div id="blackBox"></div>
+              <video id="video">
+                    <source id="vid_mp4" src="" type="video/mp4"></source>
+              </video>
+              <img id="spin" src="images/spin.png">
+            </div>
+            
+
+          <div id="vid-btns-container">
+            <button id="back-btn" class="vid-btns"></button>
+            <button id="replay-btn" class="vid-btns"></button>
+            <button id="play-btn" class="vid-btns"></button>
+              <button id="pause-btn" class="vid-btns"></button>
+              <button id="unmute-btn" class="vid-btns"></button>
+              <button id="mute-btn" class="vid-btns"></button>
+            <button id="next-btn" class="vid-btns"></button>
+
+          </div>
+          <img id="btn_home" src="images/icons/icon_home.svg">
+      </div>
+
+        <div id='p1'>
+          <img  src="images/bg.jpg">
+              <img id="p1_bg" src="images/p1_bg.png">
+              <div id ="nav_container1" class='nav_container'>
+                  <button id="btn_nav1" class='btn_nav'>Kenny Aronoff</button>
+              </div>
+              <div id ="nav_container2"class='nav_container'>
+                  <button id="btn_nav2" class='btn_nav'>Ginger Baker</button>
+              </div>
+              <div id ="nav_container3"class='nav_container'>
+                <button id="btn_nav3" class='btn_nav'>Chris Johnson</button>
+              </div>
+              <div id ="nav_container4"class='nav_container'>
+                <button id="btn_nav4" class='btn_nav'>Brian Melick</button>
+              </div>
+        </div>
+        
+
+
+
+
+
+      <div id="bannerCover"></div>
+		</div>
+		<script src="logic.js"></script>
+	</body>
+</html>
