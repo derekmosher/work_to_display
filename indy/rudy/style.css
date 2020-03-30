@@ -1,0 +1,164 @@
+body, body * {
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	padding: 0;
+  margin: 0;
+}
+div,img,video,p,svg,button,iframe{
+  position: absolute;
+}
+#main-container {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    border: 1px solid #808080;  
+    box-sizing: border-box;
+    background: #1f1f1f;
+}
+@font-face {
+  font-family: font1;
+  src: url(fonts/Arial.ttf);
+}
+@font-face {
+  font-family: font2;
+  src: url(fonts/Arial_Bold.ttf);
+}
+#p1, #p2{
+  height:100%;
+  width:100%;
+}
+/* ---------------------------------------- */
+
+.player{
+  width:640px;
+  height:520px;
+}
+#player1{
+  top:15px;
+  left:240px;
+}
+#player2{
+  top:15px;
+  left:1060px;
+}
+#player3{
+  top:550px;
+  left:240px;
+}
+#player4{
+  top:550px;
+  left:1060px;
+}
+/* ---------------------------------------- */
+
+.nav_container{
+  padding: 0;
+  margin: 0;
+  width:472px;
+  height:112px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#nav_container1{
+  top:748px;
+  left:428px;
+}
+#nav_container2{
+  top:748px;
+  left:1017px;
+}
+#nav_container3{
+  top:897px;
+  left:428px;
+}
+#nav_container4{
+  top:897px;
+  left:1017px;
+}
+.btn_nav{
+  font-family: font2;
+  width:472px;
+  height:112px;
+  border-radius: 4px; /*rounding caps*/
+  background: #454344;
+  color: #ffc92f;
+  border: 6px solid #afd786;
+  padding: 6px 0px; 
+  text-align: center;
+  text-decoration: none;
+  font-size: 56px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+.btn_nav:hover{
+  background: #afd786;
+  color: #454344;
+  border: 6px solid #454344;
+
+}
+
+/* ---------------P2 ------------------------- */
+#btn_home{
+  width: 100px;
+  height: 100px;
+  transform: translate(-50px, 0px);
+  top:30px;
+  left:4.5%;
+  opacity: 0.8;
+}
+#btn_home:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+       #vid-btns-container {
+        top: 950px;
+        width:100%;
+        height:100px;
+        /* background-color: red; */
+        /*display: none;*/
+        /* visibility: hidden; */
+      }
+      .vid-btns {   
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        background-size:cover;
+        width: 100px;
+        height: 100px;
+        transform: translate(-50px, 0px);
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      #back-btn {
+        background-image:url(images/icons/icon_back.svg);
+        visibility: visible;
+        left:4.5%;
+      }
+      #back-btn:hover {
+          opacity: 1;
+      }
+      #next-btn {
+        background-image:url(images/icons/icon_next.svg);
+        visibility: visible;
+        left:95.5%;
+      }
+      #next-btn:hover {
+          opacity: 1;
+      }
+
+/* ---------- TOP ---------------------- */
+
+#bannerCover{
+  visibility: visible;
+  opacity: 1;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #000; 
+  pointer-events: none;
+}
+
+
