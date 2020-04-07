@@ -9,7 +9,7 @@ function init() {
 }
 
 function setupDom() {
-  console.log('set up dom Parent')
+  // console.log('set up dom Parent')
   // P1 ///////////////////////////////////////////
   T.p1 = document.getElementById('p1');
   T.btn_nav1 = document.getElementById('btn_nav1');
@@ -27,7 +27,7 @@ function setupDom() {
 
   for (var i = 0; i < T.aboutMeClass.length; i++) {
       centerOnY(T.aboutMeClass[i], 100)
-      console.log(T.aboutMeClass[i])
+      // console.log(T.aboutMeClass[i])
   }
 
   T.playerArr = [
@@ -66,7 +66,7 @@ function addListeners() {
   T.btn_nav1.addEventListener('click', function(){ onNavClickHandler(1);}, false);
   T.btn_nav2.addEventListener('click',  function(){ onNavClickHandler(5);}, false);
   T.btn_nav3.addEventListener('click',  function(){ onNavClickHandler(6); }, false);
-  T.btn_nav4.addEventListener('click',  function(){ onNavClickHandler(8); }, false);
+  T.btn_nav4.addEventListener('click',  function(){ onNavClickHandler(9); }, false);
   T.btn_home.addEventListener('click', goHome, false);
   //
   T.myVideo.vidBackBtn.addEventListener('click', backHandler, false);
@@ -103,15 +103,16 @@ function onNavClickHandler(me) {
 //------------------------------------------------------------------------------
   // LISTEN -  for iframe video players
   window.addEventListener('message', function(e) {
-    console.log(' came from kid = '+ e.data.data.id)
+    // console.log(' Txt came from kid = '+ e.data.data.id)
      if(e.data.event_id === 'switchVideoPlayer'){
       turnOffOtherPlayers(e.data.data.id)
     }
   });
 
  function sendData (me){
+  //  console.log( 'sendData . page='+me)
    var num = me -1
-  console.log(' sendData = ' + T.pageArr[num-1] )
+
   // turn off and hide ALL
   turnOffOtherPlayers(0)//turn off all.
   for(var i=0; i<4;i++){
@@ -120,18 +121,20 @@ function onNavClickHandler(me) {
  //
   for(var i=0; i<T.pageArr[num].length;i++){
       T.playerArr[i].style.visibility='visible' 
-      var data = { videoNum: i+1, text: T.pageArr[num][i]  }
+      var data = { text: T.pageArr[num][i]  }
       T.playerArr[i].contentWindow.dataReceive(data);
       T.playerArr[i].contentWindow.setID(i+1);
       T.playerArr[i].contentWindow.resetBtnsOff();
   }
 }
+
+
 function turnOffOtherPlayers(me){
-  console.log("turnOffOtherPlayers. but not me = " + me)
+  // console.log("turnOffOtherPlayers. but not me = " + me)
 
   for(var i=1; i<5;i++){
     if(i!=me){
-      console.log("turn off player num" + i)
+      // console.log("turn off player num" + i)
       T.playerArr[i-1].contentWindow.dataTurnOffVid();
     } 
   }
@@ -167,6 +170,7 @@ function goEndFrameAnimation() {
 
 T.pageArr = [
   [
+     // Page 1 - Rolls  //////////////////////////////
   "1. Single Stroke Roll",
   "2. Single Stroke Four",
   "3. Single Stroke Seven",
@@ -186,13 +190,13 @@ T.pageArr = [
   "14. Fifteen Stroke Roll",
   "15. Seventeen Stroke Roll",
 ],[
-  // Page 5 - Paradiddle
+  // Page 5 - Paradiddle //////////////////////////////
   "16. Single Paradiddle",
   "17. Double Paradiddle",
   "18. Triple Paradiddle",
   "19. Single Paradiddle-Diddle",
 ],[
-  // Page 6 - flam
+  // Page 6 - flam ///////////////////////////////////
   "20. Flam",
   "21. Flam Accent",
   "22. Flam Tap",
@@ -203,11 +207,11 @@ T.pageArr = [
   "26. Flam Paradiddle-Diddle",
   "27. Pataflafla",
 ],[
-  // Page 8 - Drag
   "28. Swiss Army Triplet",
   "29. Inverted Flam Tap",
   "30. Flam Drag",
 ],[
+  // Page 8 - Drag ///////////////////////////////
   "31. Drag",
   "32. Single Drag Tap",
   "33. Double Drag Tap",
@@ -219,7 +223,7 @@ T.pageArr = [
   "38. Single Ratamacue",
 ],[
   "39. Double Ratamacue",
-  "40.Triple Ratamacue",
+  "40. Triple Ratamacue",
 ],[
   //Page 12
   "Steve Smith plays paradiddle combinations on drum set",
