@@ -94,10 +94,11 @@ function testActive(){
   }
 }
   function dataReceive(e) {
-      console.log(' data received ')
+    //console.clear()
+      console.log(' dataReceived from Parent ===================')
       console.log(e) 
-      T.title.innerHTML = "hit it " + e.text
-      T.vid_filename = e.videoNum
+      T.title.innerHTML =  e.text
+      T.vid_filename = e.text.substring(0, e.text.indexOf('.'));
       setUpPlayer()
   }
   function setID(me){
@@ -158,7 +159,7 @@ function goPlayVideo() {
 }
 
 function goEndVideo() {
-  console.log('goEndVideo')
+  //console.log('goEndVideo')
   T.videoPlaying = false
   // T.myVideo.vidControls.style.visibility = 'hidden';
   // T.myVideo.vidControls.style.display = 'none';
@@ -291,7 +292,7 @@ function addVideo() {
   T.myVideo.vid.load();
 }
 function setupCounter(){
-  console.log('setup counter = ' +T.myVideo.vid.duration)
+  //console.log('setup counter = ' +T.myVideo.vid.duration)
   var min = Math.floor( T.myVideo.vid.duration / 60 )
   var sec = Math.floor(T.myVideo.vid.duration % 60 )
   T.totalTime =  min+":"+sec
