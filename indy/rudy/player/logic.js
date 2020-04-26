@@ -1,219 +1,321 @@
 var T = {};
+T.id = 1 ;  //this gets reset from parent 1 - 4.
+T.vid_path = "media/";
+T.vid_filename = "1";
+T.imActive = false;
+T.sliderValue = 0
+
 
 function init() {
   T.autoplay = false; //Has to be true. Figure out why later.
   setupDom();
   addListeners();
-  goIntroAnimation();
+  goIntroAnimation()
+  setUpPlayer()
 }
 
 function setupDom() {
-  console.log('set up dom Parent')
-  // P1 ///////////////////////////////////////////
-  T.p1 = document.getElementById('p1');
-  T.btn_nav1 = document.getElementById('btn_nav1');
-  T.btn_nav2 = document.getElementById('btn_nav2');
-  T.btn_nav3 = document.getElementById('btn_nav3');
-  T.btn_nav4 = document.getElementById('btn_nav4');
-  T.btn_nav1.myNum = 1;
-  T.btn_nav2.myNum = 2;
-  T.btn_nav3.myNum = 3;
-  T.btn_nav4.myNum = 4;
-  //P2 /////////////////////////////////////////////
-  T.p2 = document.getElementById('p2');
-  T.btn_home = document.getElementById('btn_home');
-  T.btn_back = document.getElementById('btn_back');
-  T.btn_next = document.getElementById('btn_next');
-  T.aboutMeClass = document.getElementsByClassName('aboutMe')
-
-  for (var i = 0; i < T.aboutMeClass.length; i++) {
-      centerOnY(T.aboutMeClass[i], 100)
-      console.log(T.aboutMeClass[i])
-  }
-
-  T.playerArr = [
-      document.getElementById("player1"),
-      document.getElementById("player2"),
-      document.getElementById("player3"),
-      document.getElementById("player4"),
-  ]
-  ///////////////
   T.myVideo = {};
+  T.myVideo.vidContainer = document.getElementById('video-container');
+  T.myVideo.vid = document.getElementById('video');
   T.myVideo.vidControls = document.getElementById('vid-btns-container');
-  T.myVideo.player1 = document.getElementById('player1');
-  T.myVideo.player2 = document.getElementById('player2');
-  T.myVideo.player3 = document.getElementById('player3');
-  T.myVideo.player4 = document.getElementById('player4');
+  
+  T.myVideo.vidPlayBtn = document.getElementById('play-btn');
+  T.myVideo.vidReplayBtn = document.getElementById('replay-btn');
+  T.myVideo.vidPauseBtn = document.getElementById('pause-btn');
+  T.myVideo.vidUnmuteBtn = document.getElementById('unmute-btn');
+  T.myVideo.vidMuteBtn = document.getElementById('mute-btn');
+  T.myVideo.vidProgressbar = document.getElementById('progress-bar');
+  T.myVideo.vid_sound = document.getElementById('vid_sound');
+  T.myVideo.counter = document.getElementById('counter');
   ////
-  T.bannerCover = document.getElementById('bannerCover');
 
+  T.title = document.getElementById('title');
+  // T.btn_bar = document.getElementById('btn_bar');
   //vars:
   T.videoPlaying = false;
   T.play_thumb_alpha = 0.7;
-  T.currentPage = 0;
+  T.totalTime = 0;
+  //
+  T.slider = document.getElementById("myRange");
+
 }
 //-----------------------------------
 // listeners 
 //-----------------------------------
 function addListeners() {
-  // console.log("addListeners()");
-  T.btn_nav1.addEventListener('click', function(){ onNavClickHandler(1);}, false);
-  T.btn_nav2.addEventListener('click',  function(){ onNavClickHandler(5);}, false);
-  T.btn_nav3.addEventListener('click',  function(){ onNavClickHandler(6); }, false);
-  T.btn_nav4.addEventListener('click',  function(){ onNavClickHandler(8); }, false);
-  //
-  T.btn_home.addEventListener('click', goHome, false);
-  T.btn_back.addEventListener('click', backHandler, false);
-  T.btn_next.addEventListener('click', nextHandler, false);
-  //
+  T.myVideo.vid.addEventListener('click', btnClick_pausePlayHandler, false);
+  T.myVideo.vidPlayBtn.addEventListener('click', btnClick_pausePlayHandler, false);
+  T.myVideo.vidPauseBtn.addEventListener('click', btnClick_pausePlayHandler, false);
+  T.myVideo.vidMuteBtn.addEventListener('click', btnClick_muteUnmuteHandler, false);
+  T.myVideo.vidUnmuteBtn.addEventListener('click', btnClick_muteUnmuteHandler, false);
+
+  T.myVideo.vidReplayBtn.addEventListener('click', btnClick_replayHandler, false);
+  T.myVideo.vid.addEventListener('ended', videoEndHandler, false);
+  T.myVideo.vid.addEventListener('timeupdate', videoTimeUpdateHandler, false);
+  T.myVideo.vid.addEventListener('loadedmetadata', setupCounter,false);
+    // Update the current slider value (each time you drag the slider handle)
+  T.slider.oninput = function() {
+    console.log("slider miving. vid playing=  " +T.videoPlaying)
+      T.sliderValue  = this.value;
+      T.myVideo.vid.removeEventListener('timeupdate', videoTimeUpdateHandler, false);
+     T.myVideo.vid.pause();
+      T.myVideo.vid.currentTime = T.myVideo.vid.duration * (this.value/100);
+  }
+    
+  T.slider.addEventListener('mouseup', function() {
+      console.log("slider UP  ")
+      T.myVideo.vid.addEventListener('timeupdate', videoTimeUpdateHandler, false);
+      if( T.videoPlaying)  T.myVideo.vid.play()  
+  });
+}
+function btnClick_muteUnmuteHandler(e){
+  muteUnmuteHandler();
+  testActive();
+}
+function btnClick_pausePlayHandler(e){
+  pausePlayHandler();
+  testActive();
+}
+function btnClick_replayHandler(e) {
+  stopHandler();
+  pausePlayHandler()
+  testActive();
 }
 
-function goHome() {
-  T.p1.style.visibility = "visible";
-  T.p2.style.visibility = "hidden"
-  turnOffOtherPlayers(0) // turn off all
-}
-function backHandler() {
-  var me = T.currentPage -1;
-  if(me<1)me = T.pageArr.length
-  gotoPage(me)
-}
-function nextHandler() {
-  var me = T.currentPage +1;
-  if(me>T.pageArr.length)me = 1
-  gotoPage(me)
-}
-function onNavClickHandler(me) {
-  T.p1.style.visibility = 'hidden'
-  T.p2.style.visibility = 'visible'
-  gotoPage(me)
- }
- function gotoPage(me){
-    T.currentPage = me
-    sendData(me)
- }
+
 //------------------------------------------------------------------------------
 //  iframe / parent communication
 //------------------------------------------------------------------------------
-  // LISTEN -  for iframe video players
-  window.addEventListener('message', function(e) {
-    console.log(' came from kid = '+ e.data.data.id)
-     if(e.data.event_id === 'switchVideoPlayer'){
-      turnOffOtherPlayers(e.data.data.id)
-    }
-  });
-
- function sendData (me){
-   var num = me -1
-  console.log(' sendData = ' + T.pageArr[num-1] )
-  // turn off and hide ALL
-  turnOffOtherPlayers(0)//turn off all.
-  for(var i=0; i<4;i++){
-    T.playerArr[i].style.visibility='hidden' 
-  }
- //
-  for(var i=0; i<T.pageArr[num].length;i++){
-      T.playerArr[i].style.visibility='visible' 
-      var data = { text: T.pageArr[num][i]  }
-      T.playerArr[i].contentWindow.dataReceive(data);
-      T.playerArr[i].contentWindow.setID(i+1);
-      T.playerArr[i].contentWindow.resetBtnsOff();
+function testActive(){
+  if(!T.isActive) {
+    T.isActive = true;
+    console.log( ' send2Parent. id= '+T.id)
+    send2Parent(T.id)
   }
 }
-function turnOffOtherPlayers(me){
-  console.log("turnOffOtherPlayers. but not me = " + me)
-
-  for(var i=1; i<5;i++){
-    if(i!=me){
-      console.log("turn off player num" + i)
-      T.playerArr[i-1].contentWindow.dataTurnOffVid();
-    } 
+  function dataReceive(e) {
+      console.log(' data received ')
+      console.log(e) 
+      T.title.innerHTML =  e.text
+      T.vid_filename = e.text.substring(0,e.text.indexOf("."))
+      setUpPlayer()
   }
-}
+  function setID(me){
+    T.id = me
+  }
+  function resetBtnsOff(){
+    T.isActive = false;
+    stopHandler();
+    mute();
+  }
+  function dataTurnOffVid(e){
+    console.log( ' dataTurnOffVid. id= '+T.id);
+    T.isActive = false;
+    mute();
+    stopHandler();
+  }
+  function send2Parent(){
+    console.log( ' send2 parent')
+    window.parent.postMessage({
+          event_id: 'switchVideoPlayer',
+          data: {
+            id: T.id, 
+            v2: 'value2'
+          }
+      }, "*" 
+    ); 
+ }
+
+ function setUpPlayer(){
+  addVideo();
+ }
 
 //------------------------------------------------------------------------------
 // Animation 
 //------------------------------------------------------------------------------
-
 function goIntroAnimation() {
 
-  gsap.to(T.bannerCover, 0.4, { delay:0.1,opacity: 0});
-  var d=0.2;
-  var spd = 0.8;
-  var ease1 = Power1.easeOut; 
-  d+=0.5;
   gsap.delayedCall(6, goEndFrameAnimation);
 }
-function goEndFrameAnimation() {
-    // T.myVideo.vidContainer = 'hidden'
+
+  function goEndFrameAnimation() {
+    T.myVideo.vidContainer = 'hidden'
 }
 
 //----------------------------------------------------------------------------
-// Data
+// VIDEO  
 //-----------------------------------------------------------------------------
+function goPlayVideo() {
+  console.log('go play Video')
+  T.videoPlaying = true;
+ // T.myVideo.vidContainer.style.visibility = 'visible';
+  T.myVideo.vidPauseBtn.style.visibility = 'visible';
+  T.myVideo.vidPlayBtn.style.visibility = 'hidden';
+  T.myVideo.vidControls.style.visibility = 'visible';
+  //T.myVideo.vidControls.style.display = 'inline';
+  T.myVideo.vidControls.style.pointerEvent = 'auto';
+  // spinnerAnimation()
+}
 
-T.pageArr = [
-  [
-  "1. Single Stroke Roll",
-  "2. Single Stroke Four",
-  "3. Single Stroke Seven",
-  "4. Multiple Bounce Roll"
-],[
-  "5. Triple Stroke Roll",
-  "6. Double Stroke Open Roll",
-  "7. Five Stroke Roll",
-  "8. Six Stroke Roll",
-  ],[
-  "9. Seven Stroke Roll",
-  "10. Nine Stroke Roll",
-  "11. Ten Stroke Roll",
-  "12. Eleven Stroke Roll",
-],[
-  "13. Thirteen Stroke Roll",
-  "14. Fifteen Stroke Roll",
-  "15. Seventeen Stroke Roll",
-],[
-  // Page 5 - Paradiddle
-  "16. Single Paradiddle",
-  "17. Double Paradiddle",
-  "18. Triple Paradiddle",
-  "19. Single Paradiddle-Diddle",
-],[
-  // Page 6 - flam
-  "20. Flam",
-  "21. Flam Accent",
-  "22. Flam Tap",
-  "23. Flamacue",
-],[
-  "24. Flam Paradiddle",
-  "25. Single Flammed Mill",
-  "26. Flam Paradiddle-Diddle",
-  "27. Pataflafla",
-],[
-  // Page 8 - Drag
-  "28. Swiss Army Triplet",
-  "29. Inverted Flam Tap",
-  "30. Flam Drag",
-],[
-  "31. Drag",
-  "32. Single Drag Tap",
-  "33. Double Drag Tap",
-  "34. Lesson 25",
-],[
-  "35. Single Dragadiddle",
-  "36. Drag Paradiddle #1",
-  "36. Drag Paradiddle #2",
-  "38. Single Ratamacue",
-],[
-  "39. Double Ratamacue",
-  "40.Triple Ratamacue",
-],[
-  //Page 12
-  "Steve Smith plays paradiddle combinations on drum set",
-  "U.S. Army OId Guard Fife and Drum Corps",
-  "The Middlesex County Volunteers Fife & Drums",
-]
-]
+function goEndVideo() {
+  console.log('goEndVideo')
+  T.videoPlaying = false
+  // T.myVideo.vidControls.style.visibility = 'hidden';
+  // T.myVideo.vidControls.style.display = 'none';
+  T.myVideo.vidControls.style.pointerEvent = 'none';
+  goEndFrameAnimation()
+}
+
+function goVideoIniter() {
+  console.log('goVideoIniter')
+  T.myVideo.vidMuteBtn.style.visibility = 'hidden';
+  T.myVideo.vidPauseBtn.style.visibility = 'hidden';
+  T.myVideo.vidPlayBtn.style.visibility = 'hidden';
+  //
+  if (T.autoplay) {
+    if (T.myVideo.vid.readyState >= 2) {
+      startMuted(null);
+    } else {
+      T.myVideo.hasCanPlay = true;
+      T.myVideo.vid.addEventListener('canplay', startMuted, false);
+    }
+    // HACK: Safari experiences video rendering issues, fixed by forcing a viewport refresh
+    T.myVideo.vidMuteBtn.style.visibility = 'visible';
+    setTimeout(function () {
+      T.myVideo.vidMuteBtn.style.visibility = 'hidden';
+    }, 200);
+  } else {
+    T.myVideo.vidMuteBtn.style.visibility = 'visible';
+    T.myVideo.vidUnmuteBtn.style.visibility = 'hidden';
+    T.myVideo.vidPauseBtn.style.visibility = 'hidden';
+    T.myVideo.vidPlayBtn.style.visibility = 'visible';
+    T.myVideo.vid.volume = 1; // Muted by default
+    T.myVideo.vid.currentTime = 0;
+    //T.myVideo.vid.load(); 
+    T.myVideo.vid.play();
+  }
+
+ // T.myVideo.vidContainer.style.visibility = 'visible';
+}
+
+//Triggered once the video player is ready to play:
+function startMuted(e) {
+  // Leaving the listener can cause issues on Chrome / Firefox
+  if (T.myVideo.hasCanPlay) {
+    T.myVideo.vid.removeEventListener('canplay', startMuted);
+    T.myVideo.hasCanPlay = false;
+  }
+  // If paused then play
+  T.myVideo.vid.volume = 0; // Muted by default
+  T.myVideo.vid.currentTime = 0;
+  T.myVideo.vid.play();
+  T.myVideo.vidPlayBtn.style.visibility = 'hidden';
+}
+
+//Play pause toggle:
+function pausePlayHandler(e) {
+  console.log("pausePlayHandler = " ) 
+  // Under IE10, a video is not 'paused' after it ends.
+  if (T.myVideo.vid.paused || T.myVideo.vid.ended) {
+    if (T.isClick) {
+      T.myVideo.vid.volume = 1.0;
+      T.myVideo.vidMuteBtn.style.visibility = 'visible';
+      T.myVideo.vidUnmuteBtn.style.visibility = 'hidden';
+      T.isClick = false;
+    }
+    // If paused then play
+    T.myVideo.vid.play();
+    unMute();
+    T.videoPlaying = true;
+    T.myVideo.vidPauseBtn.style.visibility = 'visible';
+    T.myVideo.vidPlayBtn.style.visibility = 'hidden';
+  } else {
+    T.myVideo.vid.pause();
+    T.videoPlaying = false;
+    T.myVideo.vidPauseBtn.style.visibility = 'hidden';
+    T.myVideo.vidPlayBtn.style.visibility = 'visible';
+  }
+
+}
+
+//Mutes or unmute the video player.
+function muteUnmuteHandler(e) {
+  if (T.myVideo.vid.volume == 0.0) {
+   unMute();
+    // T.myVideo.vid.volume = 1.0;
+    // T.myVideo.vidMuteBtn.style.visibility = 'visible';
+    // T.myVideo.vidUnmuteBtn.style.visibility = 'hidden';
+  } else {
+   mute();
+    // T.myVideo.vid.volume = 0.0;
+    // T.myVideo.vidMuteBtn.style.visibility = 'hidden';
+    // T.myVideo.vidUnmuteBtn.style.visibility = 'visible';
+  }
+}
+function mute(e) {
+    T.myVideo.vid.volume = 0.0;
+    T.myVideo.vidMuteBtn.style.visibility = 'hidden';
+    T.myVideo.vidUnmuteBtn.style.visibility = 'visible';
+}
+function unMute(e) {
+  T.myVideo.vid.volume = 1.0;
+  T.myVideo.vidMuteBtn.style.visibility = 'visible';
+  T.myVideo.vidUnmuteBtn.style.visibility = 'hidden';
+}
+
+//Stops the video:
+function stopHandler(e) {
+  // send2Parent(T.id)
+  T.myVideo.vid.currentTime = 0;
+  T.myVideo.vid.pause();
+  T.myVideo.vidPauseBtn.style.visibility = 'hidden';
+  T.myVideo.vidPlayBtn.style.visibility = 'visible';
+  T.isClick = true;
+  goEndVideo()
+}
+//On Video End:
+function videoEndHandler(e) {
+  T.myVideo.vid.pause();
+  T.myVideo.vidPauseBtn.style.visibility = 'hidden';
+  T.myVideo.vidPlayBtn.style.visibility = 'visible';
+  T.isClick = true;
+  goEndVideo();
+}
+
+function videoTimeUpdateHandler(e) {
+  T.myVideo.counter.innerHTML = Math.floor(T.myVideo.vid.currentTime) + " / " + T.totalTime ;
+  var currentPercent = T.myVideo.vid.currentTime / T.myVideo.vid.duration
+ // console.log(currentPercent)
+  var newX = Math.floor(100 *currentPercent)
+  //console.log(newX)
+  T.slider.value=newX
+  //TweenMax.set(T.btn_bar,{x:newX})
+  if (T.myVideo.vid.currentTime > T.vid_triggerTime) {};
+  if (T.myVideo.vid.currentTime > 1.8 && T.vid_dtt_hit == false) {};
+}
+
+function addVideo() {
+  console.log('add video')
+  var srcNode2 = document.getElementById('vid_mp4');
+  srcNode2.setAttribute('src', T.vid_path + T.vid_filename + ".mp4");
+  T.myVideo.vid.load();
+}
+function setupCounter(){
+  console.log('setup counter = ' +T.myVideo.vid.duration)
+  var min = Math.floor( T.myVideo.vid.duration / 60 )
+  var sec = Math.floor(T.myVideo.vid.duration % 60 )
+  T.totalTime =  min+":"+sec
+  T.myVideo.counter.innerHTML = T.myVideo.vid.currentTime + " / " + T.totalTime;
+}
+function moveVideoPosition(num){
+  T.myVideo.vid.currentTime = T.myVideo.vid.duration * num;
+  T.myVideo.vid.play()
+
+//  console.log('setup counter = ' +T.myVideo.vid.duration)
+
+}
+
 ////
 window.addEventListener('load', init);
 ////

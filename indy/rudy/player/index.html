@@ -11,107 +11,38 @@
     <script type="text/javascript" src="./js/gsap.min.js"></script>
     <link rel="shortcut icon" href="#" />
 
-    <style>
-      .grid-container {
-        height:100%;
-        width:100%;
-        display: grid;
-        grid-template-columns: 10% auto 10% auto 10%;
-        grid-template-rows: 10% auto 10% auto 10%;
-        grid-gap: 1px;
-        /* background-color: #2196F3; */
-        padding: 0px;
-        /* padding-bottom: 100px; */
-        overflow: visible;
-      }
-      
-      .grid-container > div {
-        position: relative;
-        overflow: visible;
-        /* background-color: rgba(255, 255, 255, 0.8); */
-        border: 1px solid black;
-        text-align: center;
-        font-size: 30px;
-       
-      }
-      </style>
+
+
 	</head>
 	<body>
 		<div id="main-container">
-      <img class="bg" src="images/bg.jpg">
-     
-      <div id='p2'>
 
-
-        <iframe id= "player1" class= "player" src="player/index.html"></iframe>
- 
-        <iframe id= "player2" class= "player" src="player/index.html"></iframe>
-
-        <iframe id= "player3" class= "player" src="player/index.html"></iframe> 
-  
-        <iframe id= "player4" class= "player" src="player/index.html"></iframe> 
-
-
-          <!-- <div class="grid-container">
-            <div></div>
-            <div></div>
-            <div></div>  
-            <div></div>
-            <div></div>
             
-            <div></div>
-            <div><iframe id= "player1" class= "player" src="player/index.html"></iframe> </div>
-            <div></div>  
-            <div><iframe id= "player2" class= "player" src="player/index.html"></iframe></div>
-            <div></div>
-            
-            <div></div>
-            <div></div>
-            <div></div>  
-            <div></div>
-            <div></div>
-            
-            <div></div>
-            <div><iframe id= "player3" class= "player" src="player/index.html"></iframe> </div>
-            <div></div>  
-            <div><iframe id= "player4" class= "player" src="player/index.html"></iframe> </div>
-            <div></div>
-            
-            <div></div>
-            <div></div>
-            <div></div>  
-            <div></div>
-            <div></div>
-          
-          </div> -->
-          <img id="btn_back" class="btn_nav_p2" src="images/icon_back.svg">
-          <img id="btn_next" class="btn_nav_p2" src="images/icon_next.svg">
-          <img id="btn_home" class="btn_nav_p2" src="images/icon_home.svg">
+            <div id="video-container">
+              <div id='title'>00 - Temp text</div>
+              <!-- <div id="blackBox"></div> -->
+              <video id="video" >
+                    <source id="vid_mp4" src="" type="video/mp4"></source>
+                    
+              </video>
+              <!-- <img id="spin" src="images/spin.png"> -->
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
+                <div id='counter'>0:00 / 2:00</div>
+              </div>
+              
+              
+              <div id="vid-btns-container">
+                  <button id="replay-btn" class="vid-btns"></button>
+                  <button id="play-btn" class="vid-btns"></button>
+                  <button id="pause-btn" class="vid-btns"></button>
+                  <button id="unmute-btn" class="vid-btns"></button>
+                  <button id="mute-btn" class="vid-btns"></button>
+    
+              </div>
 
-      </div>
+          </div>
 
-        <div id='p1'>
-          <img class="bg" src="images/bg.jpg">
-              <div id="title">IT’S RUDIMENTARY</div>
-              <div id ="nav_container1" class='nav_container'>
-                  <button id="btn_nav1" class='btn_nav'>Rolls</button>
-              </div>
-              <div id ="nav_container2"class='nav_container'>
-                  <button id="btn_nav2" class='btn_nav'>Paradiddles</button>
-              </div>
-              <div id ="nav_container3"class='nav_container'>
-                <button id="btn_nav3" class='btn_nav'>Flams</button>
-              </div>
-              <div id ="nav_container4"class='nav_container'>
-                <button id="btn_nav4" class='btn_nav'>Drags</button>
-              </div>
-              <div id ="nav_container5"class='nav_container'>
-                <button id="btn_nav5" class='btn_nav'>Rudiments in Action</button>
-              </div>
-        </div>
-        
-
-      <div id="bannerCover"></div>
 		</div>
 		<script src="logic.js"></script>
 	</body>
