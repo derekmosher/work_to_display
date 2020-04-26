@@ -1,7 +1,7 @@
 var T = {};
 T.id = 1 ;  //this gets reset from parent 1 - 4.
 T.vid_path = "media/";
-T.vid_filename = "vid1";
+T.vid_filename = "1";
 T.imActive = false;
 T.sliderValue = 0
 
@@ -11,6 +11,7 @@ function init() {
   setupDom();
   addListeners();
   goIntroAnimation()
+  setUpPlayer()
 }
 
 function setupDom() {
@@ -94,11 +95,10 @@ function testActive(){
   }
 }
   function dataReceive(e) {
-    //console.clear()
-      console.log(' dataReceived from Parent ===================')
+      console.log(' data received ')
       console.log(e) 
       T.title.innerHTML =  e.text
-      T.vid_filename = e.text.substring(0, e.text.indexOf('.'));
+      T.vid_filename = e.text.substring(0,e.text.indexOf("."))
       setUpPlayer()
   }
   function setID(me){
@@ -159,7 +159,7 @@ function goPlayVideo() {
 }
 
 function goEndVideo() {
-  //console.log('goEndVideo')
+  console.log('goEndVideo')
   T.videoPlaying = false
   // T.myVideo.vidControls.style.visibility = 'hidden';
   // T.myVideo.vidControls.style.display = 'none';
@@ -168,6 +168,7 @@ function goEndVideo() {
 }
 
 function goVideoIniter() {
+  console.log('goVideoIniter')
   T.myVideo.vidMuteBtn.style.visibility = 'hidden';
   T.myVideo.vidPauseBtn.style.visibility = 'hidden';
   T.myVideo.vidPlayBtn.style.visibility = 'hidden';
@@ -225,6 +226,7 @@ function pausePlayHandler(e) {
     }
     // If paused then play
     T.myVideo.vid.play();
+    unMute();
     T.videoPlaying = true;
     T.myVideo.vidPauseBtn.style.visibility = 'visible';
     T.myVideo.vidPlayBtn.style.visibility = 'hidden';
@@ -240,19 +242,26 @@ function pausePlayHandler(e) {
 //Mutes or unmute the video player.
 function muteUnmuteHandler(e) {
   if (T.myVideo.vid.volume == 0.0) {
-    T.myVideo.vid.volume = 1.0;
-    T.myVideo.vidMuteBtn.style.visibility = 'visible';
-    T.myVideo.vidUnmuteBtn.style.visibility = 'hidden';
+   unMute();
+    // T.myVideo.vid.volume = 1.0;
+    // T.myVideo.vidMuteBtn.style.visibility = 'visible';
+    // T.myVideo.vidUnmuteBtn.style.visibility = 'hidden';
   } else {
-    T.myVideo.vid.volume = 0.0;
-    T.myVideo.vidMuteBtn.style.visibility = 'hidden';
-    T.myVideo.vidUnmuteBtn.style.visibility = 'visible';
+   mute();
+    // T.myVideo.vid.volume = 0.0;
+    // T.myVideo.vidMuteBtn.style.visibility = 'hidden';
+    // T.myVideo.vidUnmuteBtn.style.visibility = 'visible';
   }
 }
 function mute(e) {
     T.myVideo.vid.volume = 0.0;
     T.myVideo.vidMuteBtn.style.visibility = 'hidden';
     T.myVideo.vidUnmuteBtn.style.visibility = 'visible';
+}
+function unMute(e) {
+  T.myVideo.vid.volume = 1.0;
+  T.myVideo.vidMuteBtn.style.visibility = 'visible';
+  T.myVideo.vidUnmuteBtn.style.visibility = 'hidden';
 }
 
 //Stops the video:
@@ -287,12 +296,13 @@ function videoTimeUpdateHandler(e) {
 }
 
 function addVideo() {
+  console.log('add video')
   var srcNode2 = document.getElementById('vid_mp4');
   srcNode2.setAttribute('src', T.vid_path + T.vid_filename + ".mp4");
   T.myVideo.vid.load();
 }
 function setupCounter(){
-  //console.log('setup counter = ' +T.myVideo.vid.duration)
+  console.log('setup counter = ' +T.myVideo.vid.duration)
   var min = Math.floor( T.myVideo.vid.duration / 60 )
   var sec = Math.floor(T.myVideo.vid.duration % 60 )
   T.totalTime =  min+":"+sec
