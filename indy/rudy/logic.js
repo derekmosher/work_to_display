@@ -5,11 +5,10 @@ function init() {
   setupDom();
   addListeners();
   goIntroAnimation();
-
 }
 
 function setupDom() {
-  // console.log('set up dom Parent')
+  console.log('set up dom Parent')
   // P1 ///////////////////////////////////////////
   T.p1 = document.getElementById('p1');
   T.btn_nav1 = document.getElementById('btn_nav1');
@@ -23,11 +22,13 @@ function setupDom() {
   //P2 /////////////////////////////////////////////
   T.p2 = document.getElementById('p2');
   T.btn_home = document.getElementById('btn_home');
+  T.btn_back = document.getElementById('btn_back');
+  T.btn_next = document.getElementById('btn_next');
   T.aboutMeClass = document.getElementsByClassName('aboutMe')
 
   for (var i = 0; i < T.aboutMeClass.length; i++) {
       centerOnY(T.aboutMeClass[i], 100)
-      // console.log(T.aboutMeClass[i])
+      console.log(T.aboutMeClass[i])
   }
 
   T.playerArr = [
@@ -36,12 +37,9 @@ function setupDom() {
       document.getElementById("player3"),
       document.getElementById("player4"),
   ]
-
   ///////////////
   T.myVideo = {};
   T.myVideo.vidControls = document.getElementById('vid-btns-container');
-  T.myVideo.vidBackBtn = document.getElementById('back-btn');
-  T.myVideo.vidNextBtn = document.getElementById('next-btn');
   T.myVideo.player1 = document.getElementById('player1');
   T.myVideo.player2 = document.getElementById('player2');
   T.myVideo.player3 = document.getElementById('player3');
@@ -53,24 +51,20 @@ function setupDom() {
   T.videoPlaying = false;
   T.play_thumb_alpha = 0.7;
   T.currentPage = 0;
-  //
 }
-
-
 //-----------------------------------
 // listeners 
 //-----------------------------------
 function addListeners() {
   // console.log("addListeners()");
-
   T.btn_nav1.addEventListener('click', function(){ onNavClickHandler(1);}, false);
   T.btn_nav2.addEventListener('click',  function(){ onNavClickHandler(5);}, false);
   T.btn_nav3.addEventListener('click',  function(){ onNavClickHandler(6); }, false);
-  T.btn_nav4.addEventListener('click',  function(){ onNavClickHandler(9); }, false);
-  T.btn_home.addEventListener('click', goHome, false);
+  T.btn_nav4.addEventListener('click',  function(){ onNavClickHandler(8); }, false);
   //
-  T.myVideo.vidBackBtn.addEventListener('click', backHandler, false);
-  T.myVideo.vidNextBtn.addEventListener('click', nextHandler, false);
+  T.btn_home.addEventListener('click', goHome, false);
+  T.btn_back.addEventListener('click', backHandler, false);
+  T.btn_next.addEventListener('click', nextHandler, false);
   //
 }
 
@@ -103,16 +97,15 @@ function onNavClickHandler(me) {
 //------------------------------------------------------------------------------
   // LISTEN -  for iframe video players
   window.addEventListener('message', function(e) {
-    // console.log(' Txt came from kid = '+ e.data.data.id)
+    console.log(' came from kid = '+ e.data.data.id)
      if(e.data.event_id === 'switchVideoPlayer'){
       turnOffOtherPlayers(e.data.data.id)
     }
   });
 
  function sendData (me){
-  //  console.log( 'sendData . page='+me)
    var num = me -1
-
+  console.log(' sendData = ' + T.pageArr[num-1] )
   // turn off and hide ALL
   turnOffOtherPlayers(0)//turn off all.
   for(var i=0; i<4;i++){
@@ -127,14 +120,12 @@ function onNavClickHandler(me) {
       T.playerArr[i].contentWindow.resetBtnsOff();
   }
 }
-
-
 function turnOffOtherPlayers(me){
-  // console.log("turnOffOtherPlayers. but not me = " + me)
+  console.log("turnOffOtherPlayers. but not me = " + me)
 
   for(var i=1; i<5;i++){
     if(i!=me){
-      // console.log("turn off player num" + i)
+      console.log("turn off player num" + i)
       T.playerArr[i-1].contentWindow.dataTurnOffVid();
     } 
   }
@@ -149,14 +140,7 @@ function goIntroAnimation() {
   gsap.to(T.bannerCover, 0.4, { delay:0.1,opacity: 0});
   var d=0.2;
   var spd = 0.8;
-  var ease1 = Power1.easeOut;
-
-  gsap.to(T.btn_nav1, 1, { 
-      delay:d+0.2, 
-      opacity: 1,
-      ease:ease1
-  });
- 
+  var ease1 = Power1.easeOut; 
   d+=0.5;
   gsap.delayedCall(6, goEndFrameAnimation);
 }
@@ -170,7 +154,6 @@ function goEndFrameAnimation() {
 
 T.pageArr = [
   [
-     // Page 1 - Rolls  //////////////////////////////
   "1. Single Stroke Roll",
   "2. Single Stroke Four",
   "3. Single Stroke Seven",
@@ -190,13 +173,13 @@ T.pageArr = [
   "14. Fifteen Stroke Roll",
   "15. Seventeen Stroke Roll",
 ],[
-  // Page 5 - Paradiddle //////////////////////////////
+  // Page 5 - Paradiddle
   "16. Single Paradiddle",
   "17. Double Paradiddle",
   "18. Triple Paradiddle",
   "19. Single Paradiddle-Diddle",
 ],[
-  // Page 6 - flam ///////////////////////////////////
+  // Page 6 - flam
   "20. Flam",
   "21. Flam Accent",
   "22. Flam Tap",
@@ -207,11 +190,11 @@ T.pageArr = [
   "26. Flam Paradiddle-Diddle",
   "27. Pataflafla",
 ],[
+  // Page 8 - Drag
   "28. Swiss Army Triplet",
   "29. Inverted Flam Tap",
   "30. Flam Drag",
 ],[
-  // Page 8 - Drag ///////////////////////////////
   "31. Drag",
   "32. Single Drag Tap",
   "33. Double Drag Tap",
@@ -223,7 +206,7 @@ T.pageArr = [
   "38. Single Ratamacue",
 ],[
   "39. Double Ratamacue",
-  "40. Triple Ratamacue",
+  "40.Triple Ratamacue",
 ],[
   //Page 12
   "Steve Smith plays paradiddle combinations on drum set",

@@ -4,17 +4,22 @@ body, body * {
 	outline: 0;
 	padding: 0;
   margin: 0;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10+ and Edge */
+  user-select: none; /* Standard syntax */
 }
 div,img,video,p,svg,button,iframe{
   position: absolute;
 }
 #main-container {
-    width: 1920px;
-    height: 1080px;
-    overflow: hidden;
-    border: 1px solid #808080;  
+  width: 100%;
+  height: 100%;
+    /* width: 1920px;
+    height: 1080px; */
+    /* overflow: hidden; */
+    border: 10px solid #ef5a2a;  
     box-sizing: border-box;
-    background: #1f1f1f;
+    background: #fff;
 }
 @font-face {
   font-family: font1;
@@ -24,131 +29,149 @@ div,img,video,p,svg,button,iframe{
   font-family: font2;
   src: url(fonts/Arial_Bold.ttf);
 }
-#p1, #p2{
+@font-face {
+  font-family: font3;
+  src: url(fonts/Poster_Sans.ttf);
+}
+
+/* ---------------------------------------- */
+.bg, #p1, #p2{
   height:100%;
   width:100%;
-}
-/* ---------------------------------------- */
+  /* background-color: red; */
 
-.player{
-  width:640px;
-  height:520px;
 }
-#player1{
-  top:15px;
-  left:240px;
-}
-#player2{
-  top:15px;
-  left:1060px;
-}
-#player3{
-  top:550px;
-  left:240px;
-}
-#player4{
-  top:550px;
-  left:1060px;
-}
-/* ---------------------------------------- */
 
-.nav_container{
-  padding: 0;
-  margin: 0;
-  width:472px;
-  height:112px;
+/* ---------------------------------------- */
+#title{
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: font3;
+  width:100%;
+  height:40%; 
+  color: #fff;
+  padding: 0px 0px; 
+  text-align: center;
+  text-decoration: none;
+  font-size: 80%;
+  font-size: 15.5vw;
+  margin: 0px 0px;
+  /* background-color: red; */
+}
+.nav_container{
+  padding: 0;
+  margin: 0;
+  /* width:472px; */
+  width:30%;
+  height:12%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px; 
+  background-image: linear-gradient(90deg,#deecf1 50%,#c6e2e7  50%); /* Standard syntax (must be last) */
+  opacity: 0.8;
+}
+.nav_container:hover{
+  opacity:1;
 }
 #nav_container1{
-  top:748px;
-  left:428px;
+  top:40%;
+  left:15%;
 }
 #nav_container2{
-  top:748px;
-  left:1017px;
+  top:40%;
+  left:55%;
 }
 #nav_container3{
-  top:897px;
-  left:428px;
+  top:60%;
+  left:15%;
 }
 #nav_container4{
-  top:897px;
-  left:1017px;
+  top:60%;
+  left:55%;
 }
+#nav_container5{
+  top:80%;
+  left:35%;
+}
+  /* deecf1 lite blue */ 
+  /* c6e2e7  dark blue */ 
+  /* 293939  grey */
+  /* 384949  dark grey */
 .btn_nav{
   font-family: font2;
-  width:472px;
-  height:112px;
-  border-radius: 4px; /*rounding caps*/
-  background: #454344;
-  color: #ffc92f;
-  border: 6px solid #afd786;
+  width:100%;
+  height:100%;
+  background-color:transparent;
+  opacity: 1.0;
   padding: 6px 0px; 
   text-align: center;
   text-decoration: none;
-  font-size: 56px;
+  /* font-size: 76px; */
+  font-size: 2.5vw;
   margin: 0px 0px;
   cursor: pointer;
 }
 .btn_nav:hover{
-  background: #afd786;
-  color: #454344;
-  border: 6px solid #454344;
-
-}
-
-/* ---------------P2 ------------------------- */
-#btn_home{
-  width: 100px;
-  height: 100px;
-  transform: translate(-50px, 0px);
-  top:30px;
-  left:4.5%;
-  opacity: 0.8;
-}
-#btn_home:hover{
   opacity: 1;
-  cursor: pointer;
 }
 
-       #vid-btns-container {
-        top: 950px;
-        width:100%;
-        height:100px;
-        /* background-color: red; */
-        /*display: none;*/
-        /* visibility: hidden; */
-      }
-      .vid-btns {   
-        background-color: Transparent;
-        background-repeat:no-repeat;
-        background-size:cover;
-        width: 100px;
-        height: 100px;
-        transform: translate(-50px, 0px);
-        opacity: 0.8;
-        cursor: pointer;
-      }
-      #back-btn {
-        background-image:url(images/icons/icon_back.svg);
-        visibility: visible;
-        left:4.5%;
-      }
-      #back-btn:hover {
-          opacity: 1;
-      }
-      #next-btn {
-        background-image:url(images/icons/icon_next.svg);
-        visibility: visible;
-        left:95.5%;
-      }
-      #next-btn:hover {
-          opacity: 1;
-      }
+/* ---------------Part 2 ------------------------- */
+.btn_nav_p2{
+  width: 4%;
+  height: auto;
+  transform: translate(0%, 0%);
+  opacity: 0.8;
+  cursor: pointer;
+  /* background-color: red; */
+}
+.btn_nav_p2:hover{
+  opacity: 1;
+}
+#btn_home{
+  /* transform: translate(0%, 0%); */
+  top:30px;
+  left:30px;
+}
+#btn_next{
+  right:30px;
+  bottom:30px;
+}
+#btn_back{
+  left:30px;
+  bottom:30px;
+}
+/* ---------------Part 2 Video Containers---------- */
 
+    .player{
+      width:30%;
+      height:100%;
+      top:0px;
+      left:0px; 
+      /* background-color: turquoise; */
+      overflow:visible;
+    }
+
+    #player1{
+      top:3%;
+      left:15%;
+    }
+    #player2{
+      top:3%;
+      left:55%;
+    }
+    #player3{
+      top:52%;
+      left:15%;
+      /* background-color:red; */
+    }
+    #player4{
+      top:52%;
+      left:55%;
+    }
 /* ---------- TOP ---------------------- */
 
 #bannerCover{
