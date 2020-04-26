@@ -7,186 +7,181 @@ body, body * {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10+ and Edge */
   user-select: none; /* Standard syntax */
-  /* background-color: hotpink; */
-  overflow: visible;
 }
-div,img,video,p,svg,button,input{
+div,img,video,p,svg,button,iframe{
   position: absolute;
 }
 #main-container {
-  /* width: 100%; */
-
-  max-height: 100%;
+  width: 100%;
   height: 100%;
-  width:100%;
-  /* overflow: hidden; */
-  box-sizing: border-box;
-  overflow: visible;
-  /* background: #1f1f1f; */
+    /* width: 1920px;
+    height: 1080px; */
+    /* overflow: hidden; */
+    border: 0px solid #ef5a2a;  
+    box-sizing: border-box;
+    background: #fff;
 }
 @font-face {
   font-family: font1;
-  src: url(fonts/Poster-Sans.ttf);
+  src: url(fonts/Arial.ttf);
 }
 @font-face {
   font-family: font2;
-  src: url(fonts/Gotham-Book.otf);
+  src: url(fonts/Arial_Bold.ttf);
 }
-#title{
-  position: relative;
-  font-family: font1;
+@font-face {
+  font-family: font3;
+  src: url(fonts/Poster_Sans.ttf);
+}
+
+/* ---------------------------------------- */
+.bg, #p1, #p2{
+  height:100%;
   width:100%;
-  /* height:100px; */
+  /* background-color: red; */
+
+}
+
+/* ---------------------------------------- */
+#title{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: font3;
+  width:100%;
+  height:40%; 
   color: #fff;
-  /* padding: 2px 0px;  */
+  padding: 0px 0px; 
   text-align: center;
   text-decoration: none;
-  font-size: 40px;
-  font-size: 6.0vw;
+  font-size: 80%;
+  font-size: 15.5vw;
   margin: 0px 0px;
-  /* cursor: pointer; */
+  /* background-color: red; */
 }
-#counter{
-  top:10%;
-  right:0px;
+.nav_container{
+  padding: 0;
+  margin: 0;
+  /* width:472px; */
+  width:30%;
+  height:12%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px; 
+  background-image: linear-gradient(90deg,#deecf1 50%,#c6e2e7  50%); /* Standard syntax (must be last) */
+  opacity: 0.8;
+}
+.nav_container:hover{
+  opacity:1;
+}
+#nav_container1{
+  top:40%;
+  left:15%;
+}
+#nav_container2{
+  top:40%;
+  left:55%;
+}
+#nav_container3{
+  top:60%;
+  left:15%;
+}
+#nav_container4{
+  top:60%;
+  left:55%;
+}
+#nav_container5{
+  top:80%;
+  left:35%;
+}
+  /* deecf1 lite blue */ 
+  /* c6e2e7  dark blue */ 
+  /* 293939  grey */
+  /* 384949  dark grey */
+.btn_nav{
   font-family: font2;
   width:100%;
-  height:20px;
-  /* border-radius: 4px; rounding caps */
-  /* background: #000; */
-  color: #000;
-  padding: 0px 0px; 
-  text-align: right;
+  height:100%;
+  background-color:transparent;
+  opacity: 1.0;
+  padding: 6px 0px; 
+  text-align: center;
   text-decoration: none;
-  font-size: 18px;
+  /* font-size: 76px; */
+  font-size: 2.5vw;
   margin: 0px 0px;
-  
+  cursor: pointer;
 }
-.slidecontainer {
-  position: relative;
-  width: 100%; /* Width of the outside container */
+.btn_nav:hover{
+  opacity: 1;
+}
+
+/* ---------------Part 2 ------------------------- */
+.btn_nav_p2{
+  width: 4%;
   height: auto;
-  /* background-color: yellow; */
+  transform: translate(0%, 0%);
+  opacity: 0.8;
+  cursor: pointer;
+  /* background-color: red; */
 }
-/* The slider itself */
-.slider {
-  position: relative;
-  /* top: 412px; */
-  -webkit-appearance: none;  /* Override default CSS styles */
-  appearance: none;
-  width: 100%; /* Full-width */
-  height: 20%; /* Specified height */
-  background: #d3d3d3; /* Grey background */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-  transition: opacity .2s;
+.btn_nav_p2:hover{
+  opacity: 1;
+}
+#btn_home{
+  /* transform: translate(0%, 0%); */
+  top:30px;
+  left:30px;
+}
+#btn_next{
+  right:30px;
+  bottom:30px;
+}
+#btn_back{
+  left:30px;
+  bottom:30px;
+}
+/* ---------------Part 2 Video Containers---------- */
+
+    .player{
+      width:30%;
+      height:45%;
+      top:0px;
+      left:0px; 
+      /* background-color: turquoise; */
+      overflow:visible;
+    }
+
+    #player1{
+      top:3%;
+      left:15%;
+    }
+    #player2{
+      top:3%;
+      left:55%;
+    }
+    #player3{
+      top:52%;
+      left:15%;
+      /* background-color:red; */
+    }
+    #player4{
+      top:52%;
+      left:55%;
+    }
+/* ---------- TOP ---------------------- */
+
+#bannerCover{
+  visibility: visible;
+  opacity: 1;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #000; 
+  pointer-events: none;
 }
 
-/* Mouse-over effects */
-.slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
-}
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
-  appearance: none;
-  width: 25px; /* Set a specific slider handle width */
-  height: 18px; /* Slider handle height */
-  background: rgb(58, 58, 58); /* Green background */
-  cursor: pointer; /* Cursor on hover */
-}
-
-.slider::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
-  height: 18px; /* Slider handle height */
-  background: rgb(98, 99, 98); /* Green background */
-  cursor: pointer; /* Cursor on hover */
-}
-/* ---------------------------------------- */
-
-/*//////////   VIDEO   ////////////*/
-        #video-container {
-          height: 100%;
-          width: 100%;
-          /* background-color:red; */
-          border: none;
-        cursor: pointer;
-       
-        }
-        #blackBox{
-          height: 80%;
-          width: 100%;
-          background: #000;
-        }
-        #video{
-          position: relative;
-          height: auto;
-          width: 100%;
-          top:0px;
-          left:0px;
-        }
-
-       #vid-btns-container {
-        position: relative;
-        width:100%;
-        height:100px;
-        /* background-color:green; */
-        /*display: none;*/
-        /* visibility: hidden; */
-      }
-      .vid-btns {   
-        background-color: Transparent;
-        background-repeat:no-repeat;
-        background-size:cover;
-        width: 70px;
-        height: 70px;
-        transform: translate(-50px, 0px);
-        opacity: 0.8;
-        cursor: pointer;
-      }
-
-      #replay-btn {
-        background-image:url(images/icon_replay2.svg);
-        visibility: visible;
-        left:30%;
-      }
-      #replay-btn:hover {
-          opacity: 1;
-      }
-        #play-btn {
-          background-image:url(images/icon_play.svg);
-          visibility: visible;
-          left:50%;
-          opacity: 0.8;
-        }
-        #play-btn:hover {
-            opacity: 1;
-        }
-        #pause-btn {
-          background-image:url(images/icon_pause.svg);
-          left:50%;
-          opacity: 0.8;
-          visibility: hidden;
-        }
-        #pause-btn:hover {
-            opacity: 1;
-        }
-        #unmute-btn {
-          background-image:url(images/icon_volume1.svg);
-          left:70%;
-          opacity: 0.8;
-        }
-        #unmute-btn:hover {
-            opacity: 1;
-          }
-        #mute-btn{
-          background-image:url(images/icon_volume2.svg);
-          visibility: hidden;
-          left:70%;
-          opacity: 0.8;
-        }
-        #mute-btn:hover {
-            opacity: 1;
-        }
