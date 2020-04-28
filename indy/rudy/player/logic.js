@@ -56,7 +56,7 @@ function addListeners() {
   T.myVideo.vid.addEventListener('loadedmetadata', setupCounter,false);
     // Update the current slider value (each time you drag the slider handle)
   T.slider.oninput = function() {
-    console.log("slider miving. vid playing=  " +T.videoPlaying)
+    // console.log("slider miving. vid playing=  " +T.videoPlaying)
       T.sliderValue  = this.value;
       T.myVideo.vid.removeEventListener('timeupdate', videoTimeUpdateHandler, false);
      T.myVideo.vid.pause();
@@ -64,7 +64,7 @@ function addListeners() {
   }
     
   T.slider.addEventListener('mouseup', function() {
-      console.log("slider UP  ")
+      // console.log("slider UP  ")
       T.myVideo.vid.addEventListener('timeupdate', videoTimeUpdateHandler, false);
       if( T.videoPlaying)  T.myVideo.vid.play()  
   });
@@ -90,15 +90,26 @@ function btnClick_replayHandler(e) {
 function testActive(){
   if(!T.isActive) {
     T.isActive = true;
-    console.log( ' send2Parent. id= '+T.id)
+    //console.log( ' send2Parent. id= '+T.id)
     send2Parent(T.id)
   }
 }
   function dataReceive(e) {
-      console.log(' data received ')
-      console.log(e) 
+      //console.log(' data received ')
+      if(e.text )
       T.title.innerHTML =  e.text
       T.vid_filename = e.text.substring(0,e.text.indexOf("."))
+
+      // cut off numbers for last group:
+      if (e.text.indexOf("41. ")==0){
+        T.title.innerHTML = e.text.substring(3,e.text.length)
+      }
+      if (e.text.indexOf("42. ")==0){
+        T.title.innerHTML = e.text.substring(3,e.text.length)
+      }
+      if (e.text.indexOf("43. ")==0){
+        T.title.innerHTML = e.text.substring(3,e.text.length)
+      }
       setUpPlayer()
   }
   function setID(me){
@@ -110,13 +121,13 @@ function testActive(){
     mute();
   }
   function dataTurnOffVid(e){
-    console.log( ' dataTurnOffVid. id= '+T.id);
+    //console.log( ' dataTurnOffVid. id= '+T.id);
     T.isActive = false;
     mute();
     stopHandler();
   }
   function send2Parent(){
-    console.log( ' send2 parent')
+    //console.log( ' send2 parent')
     window.parent.postMessage({
           event_id: 'switchVideoPlayer',
           data: {
@@ -147,7 +158,7 @@ function goIntroAnimation() {
 // VIDEO  
 //-----------------------------------------------------------------------------
 function goPlayVideo() {
-  console.log('go play Video')
+  //console.log('go play Video')
   T.videoPlaying = true;
  // T.myVideo.vidContainer.style.visibility = 'visible';
   T.myVideo.vidPauseBtn.style.visibility = 'visible';
@@ -159,7 +170,7 @@ function goPlayVideo() {
 }
 
 function goEndVideo() {
-  console.log('goEndVideo')
+  //console.log('goEndVideo')
   T.videoPlaying = false
   // T.myVideo.vidControls.style.visibility = 'hidden';
   // T.myVideo.vidControls.style.display = 'none';
@@ -168,7 +179,7 @@ function goEndVideo() {
 }
 
 function goVideoIniter() {
-  console.log('goVideoIniter')
+  //console.log('goVideoIniter')
   T.myVideo.vidMuteBtn.style.visibility = 'hidden';
   T.myVideo.vidPauseBtn.style.visibility = 'hidden';
   T.myVideo.vidPlayBtn.style.visibility = 'hidden';
@@ -215,7 +226,7 @@ function startMuted(e) {
 
 //Play pause toggle:
 function pausePlayHandler(e) {
-  console.log("pausePlayHandler = " ) 
+  //console.log("pausePlayHandler = " ) 
   // Under IE10, a video is not 'paused' after it ends.
   if (T.myVideo.vid.paused || T.myVideo.vid.ended) {
     if (T.isClick) {
@@ -296,13 +307,13 @@ function videoTimeUpdateHandler(e) {
 }
 
 function addVideo() {
-  console.log('add video')
+  //console.log('add video')
   var srcNode2 = document.getElementById('vid_mp4');
   srcNode2.setAttribute('src', T.vid_path + T.vid_filename + ".mp4");
   T.myVideo.vid.load();
 }
 function setupCounter(){
-  console.log('setup counter = ' +T.myVideo.vid.duration)
+  //console.log('setup counter = ' +T.myVideo.vid.duration)
   var min = Math.floor( T.myVideo.vid.duration / 60 )
   var sec = Math.floor(T.myVideo.vid.duration % 60 )
   T.totalTime =  min+":"+sec
@@ -312,7 +323,7 @@ function moveVideoPosition(num){
   T.myVideo.vid.currentTime = T.myVideo.vid.duration * num;
   T.myVideo.vid.play()
 
-//  console.log('setup counter = ' +T.myVideo.vid.duration)
+//  //console.log('setup counter = ' +T.myVideo.vid.duration)
 
 }
 
