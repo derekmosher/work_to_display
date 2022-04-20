@@ -13,6 +13,13 @@
    
   "items_design": [
     {
+      "title": "WynnBet Casino",
+      "description": "Design",
+      "thumbPath": "https://derekmosher.github.io/work_to_display/wynn/casino/thumb_wb_casino.jpg",
+      "filePath": "https://derekmosher.github.io/work_to_display/wynn/casino/index.html",
+      "w": 700,
+      "h": 590
+    },{
       "title": "Creable",
       "description": "Concept, Design, Animation",
       "thumbPath": "https://derekmosher.github.io/work_to_display/creable/thumb2.jpg",
