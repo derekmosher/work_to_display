@@ -1,0 +1,211 @@
+/*************** MAIN ELEMENTS ***************/
+body {
+    margin: 0;
+    padding: 0;
+    display: block;
+    pointer-events: none;
+}
+div,img,svg{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+}
+#wrapper {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 970px;
+    height: 250px;
+    overflow: hidden;
+    background-color: #fff;
+    pointer-events: none;
+}
+#bannerCover {
+    width: inherit;
+    height: inherit;
+    background: #fff ;
+    pointer-events: none;
+}
+#border {
+    /* border: 2px solid #19510b; */
+    border: 1px solid #000;
+    opacity: 0.9;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: inherit;
+    height: inherit;
+    pointer-events: none;
+}
+#bgexit {
+    width: inherit;
+    height: inherit;
+    cursor:pointer;
+    pointer-events: auto;
+    /* background-color: #ff0000; */
+}
+
+#bg {
+    top:0px;
+    left:0px;
+}
+#pic_box{
+    top: 00px;
+    left: 0px;
+}
+#bar1,#bar2,#bar3{
+    width: 60px;
+    height: 10px;
+    background-color:#DA291C;
+}
+#bar1{
+    top: 21px;
+    left: 532px;
+}
+#bar2{
+    top: 209px;
+    left: 906px;
+}
+#bar3{
+    top: 229px;
+    left: 572px;
+}
+/******************** CTA ********************/
+#cta {
+    top: 199px;
+    left: 197px;
+    width: 160px;
+    height: 34px;
+    border: 1px solid;
+    color:#FFF;
+    background-color:#DA291C;
+    border-color:#DA291C;
+     border-radius:0px 0px 0px 16px;
+    cursor: pointer;
+
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    
+    text-align: center;
+    line-height: 35px;
+    letter-spacing: 0.4pt; 
+    font-size: 18px;
+    /* // */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/********************** TEXT **********************/
+#logo_blueAlly{
+    top: 18px;
+    left: 307px;
+    width: 131px;
+    height: auto; 
+    /* filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.8));  */
+}
+    #divider{
+        top: 31px;
+        left: 281px;
+        width: 2px;
+        height: 24px;
+        background-color: black;
+        opacity: 0.3;
+    }
+    #logo_fortinet{
+        top: 22px;
+        left: 107px;
+        width: 165px;
+        height: auto; 
+        /* filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 1.0))drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.9));  */
+    } 
+#picGroup {
+    top:0px;
+    left:0px;
+}
+
+#text11{
+    /* display: none; */
+    top: 74px;
+    left: 0px;
+    width: 562px;
+    height: auto;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 36px;
+    letter-spacing: 1.2pt;
+    line-height: 45px;
+    text-align: center;
+    color:#000;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* background-color: red; */
+}
+#text_red{
+    color:#DA291C;
+}
+#text12{
+    /* display: none; */
+    top: 124px;
+    left: 0px;
+    width: 562px;
+    height: auto;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 0.8pt;
+    line-height: 30px;
+    text-align: center;
+     color:#000;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#text21{
+    display: none;
+    top: 358px;
+    left: 0px;
+    width:300px;
+    height: auto;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 36px;
+    letter-spacing: 0.4pt;
+    line-height: 39px;
+    text-align: center;
+     color:#000;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#text22{
+    display: none;
+    top: 482px;
+    left: 0px;
+    width:300px;
+    height: auto;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 1.4pt;
+    line-height: 24px;
+    text-align: center;
+     color:#000;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
