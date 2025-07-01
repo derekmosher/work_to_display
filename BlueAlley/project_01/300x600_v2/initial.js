@@ -77,7 +77,9 @@ function politeInit(){
             bug_box1 = select('#bug_box1'),
             bug_box2 = select('#bug_box2'),
 
-            text3_arr = [select('#text31'),select('#text32'),select('#text33'),select('#text34'),select('#text35')],
+            // text3_arr = [select('#text31'),select('#text32'),select('#text33'),select('#text34'),select('#text35')],
+            text3_arr = [select('#text32'),select('#text33'),select('#text34'),select('#text35')],
+
 
             // logo_barra = select('#logo_barracuda'),
             logo_barra_fin = select('#logo_barra_fin'),
