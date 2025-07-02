@@ -83,8 +83,11 @@ function politeInit(){
 
             // logo_barra = select('#logo_barracuda'),
             logo_barra_fin = select('#logo_barra_fin'),
+            logo_blueAlly = select('#logo_blueAlly'),
 
             logo_barra_bg = select('#logo_barra_bg'),
+            logo_barracuda2 = select('#logo_barracuda2'),
+
             logo_barra_text1 = select('#logo_barra_text1'),
             logo_barra_text2 = select('#logo_barra_text2'),
             //
@@ -139,8 +142,13 @@ function politeInit(){
 
             .to(p2, {duration:0.6, alpha: 1,x:"-=300" ,ease:"power4.out"}, ">0.7")
 
-            .staggerFrom(text3_arr, 0.5, {alpha: 0, scale:"0.65", ease:"back.out(4.2)"}, 0.1, "<0.4")
+
+
+            .from(logo_barracuda2, {duration:0.9, alpha: 0,ease:"none"}, "<0.4")
+            .staggerFrom(text3_arr, 0.5, {alpha: 0, scale:"0.65", ease:"back.out(4.2)"}, 0.1, "<0.1")
             .from(cta, {duration:0.9, alpha: 0, scale:0.7,ease:"back.out(2.2)"}, "<0.8")
+            .from(logo_blueAlly, {duration:0.9, alpha: 0,ease:"none"}, "<0.5")
+
 
 
 		}
