@@ -84,7 +84,7 @@ div,img,svg{
     color:#FFF;
 }
 #textGroup1{
-    top: -5px;
+    top: -10px;
 }
 /* Your */
 #text11{
@@ -127,7 +127,7 @@ div,img,svg{
 }
 /* -------------------------------------- */
 #text21{
-    top: 85px;
+    top: 84px;
     left: 60px;
     font-weight: 600;
     font-size: 64px;
@@ -135,14 +135,14 @@ div,img,svg{
 }
 /* spam  - 25 px gap*/
 #text22{
-    top: 85px;
+    top: 84px;
     left: 388px;
     font-weight: 600;
     font-size: 64px;
     letter-spacing: 3px;
 }
 #text23{
-    top: 85px;
+    top: 84px;
     left: 593px;
     font-weight: 600;
     font-size: 64px;
