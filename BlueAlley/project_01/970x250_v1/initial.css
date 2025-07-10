@@ -18,12 +18,12 @@ div,img,svg{
     width: 970px;
     height: 250px;
     overflow: hidden;
-    background-color: #fff;
+    background-color: black;
 }
 #bannerCover {
     width: inherit;
     height: inherit;
-    background: #fff ;
+    background: black ;
     pointer-events: none;
 }
 #border {
@@ -46,13 +46,13 @@ div,img,svg{
 }
 /********************** TEXT **********************/
 #logo_barracuda{
-    top: 21px;
+    top: 18px;
     left: 327px;
     width: 160px;
     height: auto; 
 }
 #divider{
-    top: 35px;
+    top: 32px;
     left: 507px;
     width: 1px;
     opacity: 0.8;
@@ -61,7 +61,7 @@ div,img,svg{
     background-color: #fff;
 }
 #logo_blueAlly{
-    top: 27px;
+    top: 24px;
     left: 530px;
     width: 118px;
     height: auto; 
@@ -166,8 +166,8 @@ div,img,svg{
     height: auto; 
 }
 #icon_mail2{
-    top: 174px;
-    left: 435px;
+    top: 171px;
+    left: 495px;
     rotate: 7deg;
     width:90px; 
     height: auto; 
@@ -175,14 +175,14 @@ div,img,svg{
 /* top  */
 #icon_mail3{
     top: 35px;
-    left: 795px;
+    left: 810px;
     rotate: 18deg;
     width:90px; 
     height: auto; 
 }
 #icon_mail4{
     top: 155px;
-    left: 700px;
+    left: 750px;
     rotate: -14deg;
     width:90px; 
     height: auto; 
@@ -248,7 +248,7 @@ div,img,svg{
 }
 /******************** CTA ********************/
 #cta , #cta2{
-    top: 208px;
+    top: 200px;
     left:360px;
     width: 250px;
     height: 32px;
