@@ -230,17 +230,7 @@ div,img,svg{
     letter-spacing: 2px;
     color:#77d31b;
 }
-#text35{
-    display: none;
-    top: 56px;
-    left: 26px;
-    width: 320px;
-    font-weight: 600;
-    font-size: 22px;
-    text-align: left;
-    letter-spacing: 18px;
-    /* background-color: red; */
-}
+
 /******************** CTA ********************/
 #cta , #cta2{
     top: 71px;

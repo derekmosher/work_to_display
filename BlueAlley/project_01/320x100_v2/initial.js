@@ -65,7 +65,7 @@ function politeInit(){
             bug_box1 = select('#bug_box1'),
             bug_box2 = select('#bug_box2'),
 
-            text3_arr = [select('#text33'),select('#text34'),select('#text35')],
+            text3_arr = [select('#text33'),select('#text34')],
             logo_blueAlly = select('#logo_blueAlly'),
             logo_barracuda = select('#logo_barracuda'),
             divider = select('#divider'),
@@ -114,13 +114,11 @@ function politeInit(){
             //Part 3
             .staggerFrom(text3_arr, 0.5, {alpha: 0, scale:"0.65", ease:"back.out(4.2)"}, 0.2, ">-0.15")
 
-            .from(cta, {duration:0.9, alpha: 0, scale:0.7,ease:"back.out(2.2)"}, "<0.7")
+            .from(cta, {duration:0.9, alpha: 0, scale:0.7,ease:"back.out(2.2)"}, "<0.3")
             .from(logo_barracuda, {duration:0.9, alpha: 0,ease:"none"}, "<0.2")
             .from(divider, {duration:1.1, alpha: 0,ease:"power4.out"}, "<0.05")
             .from(logo_blueAlly, {duration:1.1, alpha: 0,ease:"power4.out"}, "<0.05")
             // .to(bannerCover, {duration:1, alpha:0, ease:"none"},">0.3")
-
-
 		}
         animate()
        
