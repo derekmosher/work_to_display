@@ -1,0 +1,279 @@
+/*************** MAIN ELEMENTS ***************/
+body {
+    margin: 0;
+    padding: 0;
+    display: block;
+    pointer-events: none;
+}
+div,img,svg{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+}
+#wrapper {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 600px;
+    overflow: hidden;
+    background-color: #000;
+}
+#bannerCover {
+    width: inherit;
+    height: inherit;
+    background: #000 ;
+    pointer-events: none;
+}
+#border {
+    /* 19510b */
+    /* border: 2px solid #4a8b2c; */
+    border: 2px solid #19510b;
+    /* opacity: 0.4; */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: inherit;
+    height: inherit;
+    pointer-events: none;
+}
+#bgexit {
+    width: 300px;
+    height: 600px;
+    cursor:pointer;
+    pointer-events: auto;
+    /* background-color: #ff0000; */
+}
+/********************** TEXT **********************/
+/* #p1,#p2 { */
+    /* top side, left side 0,  */
+    /* clip: rect(0px,0px,250px,0px); */
+    /* clip: rect(0px,300px,250px,0px); */
+/* } */
+/* -------------------------------------- */
+.textGroup{
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color:#FFF;
+}
+#textGroup1{
+    top: -2px;
+}
+/* Your */
+#text11{
+    top: 202px;
+    left: 14px;
+    font-weight: 600;
+    font-size: 34px;
+    letter-spacing: 3px;
+}
+/* Email */
+#text12{
+    top: 244px;
+    left: 14px;
+    font-weight: 800;
+    font-size: 44px;
+    letter-spacing: 2.2px;
+    color:#77d31b;
+}
+/* Is */
+#text13{
+    top: 298px;
+    left: 14px;
+    font-size: 34px;
+    letter-spacing: 3px;
+}
+#text14{
+    top: 298px;
+    left: 57px;
+    font-weight: 600;
+    font-size: 34px;
+    letter-spacing: 3px;
+}
+/* Secure */
+#text15{
+    top: 342px;
+    left: 14px;
+    font-weight: 600;
+    font-size: 36px;
+    letter-spacing: 0.5px;
+}
+/* -------------------------------------- */
+#text21{
+    top: 229px;
+    left: 12px;
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing:1.2px;
+}
+/* spam  - 25 px gap*/
+#text22{
+    top: 269px;
+    left: 12px;
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+#text23{
+    top: 309px;
+    left: 12px;
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 0px;
+}
+#icon_fish{
+    top: -64px;
+    left: 23px;
+    width: 97px;
+    height: auto;
+}
+#icon_mailGroup{
+    scale: 0.2;
+}
+ #icon_mail1{
+    top: 80px;
+    left: 37px;
+    rotate: 10deg;
+}
+#icon_mail2{
+    top: 360px;
+    left: 64px;
+    rotate: -12deg;
+} 
+#icon_mail3{
+    top: 510px;
+    left: 30px;
+    rotate: 22deg;
+}
+#bug_box1{
+    top: -200px;
+    left: 10px;
+    height: 100px;
+    width: 100px;
+    rotate: -24deg;
+    /* rotate: -20deg; off right */
+    /* rotate: 80deg; off */
+    background-color: red;
+}
+#bug_box2{
+    top: 720px;
+    left: 130px;
+    height: 100px;
+    width: 100px;
+    rotate: -185deg;
+    /* rotate: -20deg; off right */
+    /* rotate: 80deg; off */
+    background-color: blue;
+}
+#icon_bug1,#icon_bug2{
+    top: 220px;
+    left: 220px;
+}
+/* -------------- Part 3 -  END - Text 3 ------------ */
+#text3{
+    top: -7px;
+}
+#text32{
+    top: 210px;
+    left: 11px;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 6.2px;
+}
+#text33{
+    top: 233px;
+    left: 10px;
+    font-weight: 600;
+    font-size: 45px;
+    letter-spacing:4.5px;
+    color:#77d31b;
+}
+#text34{
+    top: 289px;
+    left: 10px;
+    font-weight: 600;
+    font-size: 27px;
+    letter-spacing: 2.0px;
+    color:#77d31b;
+}
+#divider{
+    top: 333px;
+    left: 20px;
+    width: 120px;
+    opacity: 0.8;
+    height: 1px;
+    overflow: hidden;
+    background-color: #fff;
+}
+#text35{
+    top: 344px;
+    left: 1px;
+    width:160px;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 6.3px;
+    line-height: 27px;
+    /* background-color: red; */
+}
+/******************** CTA ********************/
+#cta , #cta2{
+    top: 490px;
+    left: 11px;
+    width: 136px;
+    height: 28px;
+    line-height: 30px;
+    letter-spacing: 0.4pt;
+    cursor: pointer;
+    border: 2px solid;
+    color:#fff;
+    background-color:#4a8b2c;
+    /* border-radius:2px; */
+    border-radius:2px 2px 8px 2px;
+    border-color:#82c341;
+    text-align: center;
+
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#cta2{
+    opacity:0;
+    filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.9)); 
+}
+#logo_barracuda{
+    top: 19px;
+    left: 20px;
+    width: 120px;
+    height: auto; 
+}
+#logo_barracuda_fin{
+    top: 0px;
+    left: 0px;
+}
+#logo_blueAlly{
+    top: 542px;
+    left: 30px;
+    width: 108px;
+    height: auto; 
+}
+/******************** BACKGROUND ***************/
+#bg_green {
+    top:0px;
+    overflow: hidden;
+}
+#bg_shade{
+    opacity: 0.6;
+}
+/******************** LOGO ********************/
