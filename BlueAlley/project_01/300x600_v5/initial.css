@@ -18,12 +18,12 @@ div,img,svg{
     width: 300px;
     height: 600px;
     overflow: hidden;
-    background-color: #fff;
+    background-color: #000;
 }
 #bannerCover {
     width: inherit;
     height: inherit;
-    background: #fff ;
+    background: #000 ;
     pointer-events: none;
 }
 #border {
@@ -38,14 +38,14 @@ div,img,svg{
     pointer-events: none;
 }
 #bgexit {
-    width: 300px;
-    height: 600px;
+    width: inherit;
+    height: inherit;
     cursor:pointer;
     pointer-events: auto;
     /* background-color: #ff0000; */
 }
 /********************** TEXT **********************/
-#logo_barracuda2{
+#logo_barracuda{
     top: 39px;
     left: 55px;
     width: 190px;
@@ -67,11 +67,9 @@ div,img,svg{
     letter-spacing: 1px;
     color:#FFF;
 }
-
 #textGroup1{
     top: -5px;
 }
-
 /* Your */
 #text11{
     top: 140px;
@@ -188,36 +186,17 @@ div,img,svg{
 }
 /* -------------- Part 3 -  END - Text 3 ------------ */
 #text3{
-    top: 16px;
-}
-#text31{
-    top: 148px;
-    left: 4px;
-    width:300px;
-    font-weight: 600;
-    font-size: 35px;
-    letter-spacing: 5.7px;
-    /* background-color: red; */
-}
-#divider{
-    top: 204px;
-    left: 50px;
-    width: 200px;
-    opacity: 0.8;
-    height: 1px;
-    overflow: hidden;
-    background-color: #fff;
-    background-color: #77d31b
+    top: -7px;
 }
 #text32{
-    top: 217px;
+    top: 180px;
     left: 23px;
     font-weight: 600;
     font-size: 30px;
     letter-spacing: 14px;
 }
 #text33{
-    top: 242px;
+    top: 206px;
     left: 21px;
     font-weight: 600;
     font-size: 84px;
@@ -225,11 +204,29 @@ div,img,svg{
     color:#77d31b;
 }
 #text34{
-    top: 331px;
+    top: 295px;
     left: 22px;
     font-weight: 600;
     font-size: 49px;
     letter-spacing: 6px;
+}
+#divider{
+    top: 366px;
+    left: 50px;
+    width: 200px;
+    opacity: 0.8;
+    height: 1px;
+    overflow: hidden;
+    background-color: #fff;
+}
+#text35{
+    top: 379px;
+    left: 1px;
+    width:300px;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 6px;
+    /* background-color: red; */
 }
 /******************** CTA ********************/
 #cta , #cta2{
@@ -258,13 +255,14 @@ div,img,svg{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
 }
 #cta2{
     opacity:0;
     filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.9)); 
 }
 #logo_blueAlly{
-    top: 540px;
+    top: 539px;
     left: 87px;
     width: 115px;
     height: auto; 
@@ -276,5 +274,7 @@ div,img,svg{
 }
 #bg_shade{
     opacity: 0.6;
+
 }
+
 /******************** LOGO ********************/
