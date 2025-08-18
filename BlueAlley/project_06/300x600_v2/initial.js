@@ -51,7 +51,6 @@ function politeInit(){
             p1 = select('#p1'),
             p2 = select('#p2'),
             p3 = select('#p3'),
-            wire = select('#wire'),
 
 
             text11 = [select('#text11')],
@@ -75,17 +74,17 @@ function politeInit(){
                 select('#iphone'),
                 select('#ipad'),
             ],
-            // bug_box1 = select('#bug_box1'),
-            // bug_box2 = select('#bug_box2'),
-            text3_arr = [select('#text32')],
-            logo_blueAlly = select('#logo_blueAlly'),
-            logo_cisco = select('#logo_cisco'),
+            logo_arr = [
+                select('#divider'),
+                select('#logo_blueAlly'),
+                select('#logo_cisco')
+            ],
             //
+            wire = select('#wire'),
+            pic = select('#pic'),
             bgexit = select('#bgexit'),
             cta = select('#cta'), 
-            // cta2 = select('#cta2'), 
             colors ={},
-            glowNow = false,
             tl = gsap.timeline();
             /************** Modify VARIABLES ********************/
             colors.cta_bg_over = "#f1f5f7";
@@ -127,18 +126,19 @@ function politeInit(){
             // .from(network2, 0.6, {alpha: 0, scale:"0.25", ease:"back.out(2.2)"}, "<0.2")
             .from(text31, 0.7, {alpha: 0, scale:"0.65", ease:"back.out(2.2)"}, ">-0.9")
             // Out P3
-            .to([text31,guy,network2,wire], 0.4, {alpha:0, ease:"power1.out"},">2.0")
-            .to([p3], 0.4, {alpha:0, ease:"power1.out"},"<0.4")
+            .to([text31,guy,network2,wire,p3], 0.4, {alpha:0, ease:"power1.out"},">2.0")
+            // .to([p3], 0.4, {alpha:0, ease:"power1.out"},"<0.4")
 
             // In P4
-            .from(pic, 0.7, {alpha: 0, ease:"power1.out"}, "<0.2")
-            .from(text41, 0.7, {alpha: 0, scale:"0.65", ease:"back.out(2.2)"}, "<0.2")
+            .from(logo_arr, 0.7, {alpha: 0, ease:"power1.out"}, ">0")
+            .from(pic, 0.7, {alpha: 0, ease:"power1.out"}, "<0.1")
+            .from(text41, 0.7, {alpha: 0, scale:"0.65", ease:"back.out(2.2)"}, "<0.1")
             .from(text42, 0.7, {alpha: 0, scale:"0.65", ease:"back.out(2.2)"}, "<0.1")
             .from(cta, 0.7, {alpha: 0, scale:"0.65", ease:"back.out(2.2)"}, "<0.1")
 
             //// exit ////
-            .from(text22, 0.5, {alpha: 0, scale:"0.65", ease:"back.out(4.2)"}, ">0")
-            .staggerFrom(text23, 0.5, {alpha: 0, scale:"0.65", ease:"back.out(4.2)"}, 0.1, ">0")
+            // .from(text22, 0.5, {alpha: 0, scale:"0.65", ease:"back.out(4.2)"}, ">0")
+            // .staggerFrom(text23, 0.5, {alpha: 0, scale:"0.65", ease:"back.out(4.2)"}, 0.1, ">0")
 		}
         animate()
        
