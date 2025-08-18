@@ -125,7 +125,7 @@ function politeInit(){
             // In P3
             // .from(guy, 0.7, {alpha: 0, scale:"0.65", ease:"back.out(2.2)"}, "<0.4")
             // .from(network2, 0.6, {alpha: 0, scale:"0.25", ease:"back.out(2.2)"}, "<0.2")
-            .from(text31, 0.7, {alpha: 0, scale:"0.65", ease:"back.out(2.2)"}, "<0.0")
+            .from(text31, 0.7, {alpha: 0, scale:"0.65", ease:"back.out(2.2)"}, ">-0.9")
             // Out P3
             .to([text31,guy,network2,wire], 0.4, {alpha:0, ease:"power1.out"},">2.0")
             .to([p3], 0.4, {alpha:0, ease:"power1.out"},"<0.4")
