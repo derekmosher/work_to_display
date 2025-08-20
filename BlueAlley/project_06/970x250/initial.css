@@ -1,0 +1,271 @@
+/*************** MAIN ELEMENTS ***************/
+body {
+    margin: 0;
+    padding: 0;
+    display: block;
+    pointer-events: none;
+}
+div,img,svg{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+}
+#wrapper {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 970px;
+    height: 250px;
+    overflow: hidden;
+    background-color: #f1f5f7;
+}
+#bannerCover {
+    width: inherit;
+    height: inherit;
+    background: #f1f5f7 ;
+    pointer-events: none;
+}
+#border {
+    /* 19510b */
+    /* border: 2px solid #4a8b2c; */
+    border: 1px solid #07182D;
+    opacity: 0.6;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: inherit;
+    height: inherit;
+    pointer-events: none;
+}
+#bgexit {
+    width: inherit;
+    height: inherit;
+    cursor:pointer;
+    pointer-events: auto;
+    /* background-color: #ff0000; */
+}
+/********************** TEXT **********************/
+.textGroup{
+    top: 77px;
+    left: 0px;
+    width: 536px;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 50px;
+    color:#07182D;
+}
+/* -------------------------------------- */
+#p1{
+    width: 970px;
+    height: inherit;
+    background-color: #f1f5f7;
+}
+#text11{
+    top: 77px;
+    left:-20px;
+}
+#teacher{
+    top: 80px;
+    left: 486px;
+    width: 145px;
+    /* scale */
+    height: auto;
+}
+#teacher_board{
+    top: 10px;
+    left: 573px;
+    width: 289px;
+    height: 175px;
+}
+#teacher_chart{
+    top: 33px;
+    left: 632px;
+    width: 160px;
+    height: auto;
+}
+#s1{
+    top: 131px;
+    left: 823px;
+    width: 169px;
+    height: auto;
+}
+#s2{
+    top: 133px;
+    left: 740px;
+    width: 152px;
+    height: auto;
+}
+#s3{
+    top: 75px;
+    left: 859px;
+    width: 153px;
+    height: auto;
+}
+#s4{
+    top: 68px;
+    left: 808px;
+    width: 132px;
+    height: auto;
+}
+#s5{
+    top: 5px;
+    left: 857px;
+    width: 136px;
+    height: auto;
+}
+/* -------------------------------------- */
+/* -------------------------------------- */
+#p2{
+    width: 970px;
+    height: inherit;
+    background-color: #f1f5f7;
+}
+#text21{
+    top: 77px;
+}
+/* #p1,#p2 { */
+    /* (top right), (right side), left side 0,  */
+    /* clip: rect(0px,0px,250px,0px); */
+    /* clip: rect(0px,300px,250px,0px); */
+/* } */
+#network1{
+    top: -3px;
+    left: 0px;
+    width: 970px;
+    height: 250px;
+    opacity: 0.8;
+    clip: rect(250px,970px,250px,0px);
+    background-color: red;
+}
+#ipad{
+    top: 139px;
+    left: 861px;
+    width: 105px;
+    height: auto;
+    rotate: -7deg;
+}
+#imac{
+    top: 100px;
+    left: 674px;
+    width: 157px;
+    height: auto;
+}
+#iphone{
+    top: 156px;
+    left: 535px;
+    width: 102px;
+    height: auto;
+    rotate: 6deg;
+}
+/* -------------------------------------- */
+/* -------------------------------------- */
+#p3{
+    width: 970px;
+    height: inherit;
+    background-color: #f1f5f7;
+}
+#text31{
+    top: 77px;
+}
+#guy{
+    top: 43px;
+    left: 650px;
+    width: 201px;
+    height: auto;
+    transform: scaleX(-1);
+}
+#network2{
+    top: -18px;
+    left: 516px;
+    width: 442px;
+    height: auto;
+}
+/* -------------------------------------- */
+/* -------------------------------------- */
+#p4{
+    width: 970px;
+    height: inherit;
+    background-color: #f1f5f7;
+}
+#logo_cisco{
+    top: 16px;
+    left: 155px;
+    width: 68px;
+    height: auto; 
+}
+#divider{
+    top: 19px;
+    left: 255px;
+    width: 1px;
+    opacity: 0.6;
+    height: 30px;
+    overflow: hidden;
+    background-color: #07182D;
+}
+#logo_blueAlly{
+    top: 14px;
+    left: 281px;
+    width: 108px;
+    height: auto; 
+}
+#pic{
+    top: 0px;
+    left:540px;
+}
+#text41{
+    top: 64px;
+    left: 0px;
+    width: 536px;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 1.2px;
+}
+#text42{
+    top: 146px;
+    left: 0px;
+    width: 536px;
+    /*  */
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    /*  */
+    font-size: 21px;
+    text-align: center;
+    letter-spacing: 1.2px;
+    line-height: 25px;
+    color:#07182D;
+}
+/******************** CTA ********************/
+#cta {
+    top: 204px;
+    left: 164px;
+    width: 202px;
+    height: 32px;
+    line-height: 32px;
+    letter-spacing: 0.4pt;
+    cursor: pointer;
+    border: 2px solid;
+    color: #f1f5f7;
+    background-color:#0460ff;
+    /* border-radius:2px; */
+    border-radius:24px;
+    border-color:#0460ff;
+    text-align: center;
+
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/******************** LOGO ********************/
