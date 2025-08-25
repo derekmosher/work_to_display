@@ -1,0 +1,301 @@
+/*************** MAIN ELEMENTS ***************/
+body {
+    margin: 0;
+    padding: 0;
+    display: block;
+    pointer-events: none;
+}
+div,img,svg{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+}
+#wrapper {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 728px;
+    height: 90px;
+    overflow: hidden;
+    background-color: #f1f5f7;
+}
+#bannerCover {
+    width: inherit;
+    height: inherit;
+    background: #f1f5f7 ;
+    pointer-events: none;
+}
+#border {
+    /* 19510b */
+    /* border: 2px solid #4a8b2c; */
+    border: 1px solid #07182D;
+    opacity: 0.6;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: inherit;
+    height: inherit;
+    pointer-events: none;
+}
+#bgexit {
+    width: inherit;
+    height: inherit;
+    cursor:pointer;
+    pointer-events: auto;
+    /* background-color: #ff0000; */
+}
+/********************** TEXT **********************/
+.textGroup{
+    top: 15px;
+    left: 16px;
+    width: 330px;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 29px;
+    text-align: left;
+    letter-spacing: 0.1px;
+    line-height: 32px;
+    color:#07182D;
+}
+/* -------------------------------------- */
+#p1{
+    width: 728px;
+    height: inherit;
+    /* background-color: #f1f5f7; */
+}
+/* #text11{ 
+    top: 17px;
+    left: 14px;
+ } */
+#teacher{
+    top: 7px;
+    left: 316px;
+    width: 100px;
+    /* scale */
+    height: auto;
+}
+#teacher_board{
+    top: -18px;
+    left: 391px;
+    width: 168px;
+    height: 102px;
+}
+#teacher_chart{
+    top: -9px;
+    left: 429px;
+    width: 97px;
+    height: auto;
+}
+#s1{
+    top: 12px;
+    left: 647px;
+    width: 95px;
+    height: auto;
+}
+#s2{
+    top: 15px;
+    left: 596px;
+    width: 93px;
+    height: auto;
+}
+#s3{
+    top: 23px;
+    left: 548px;
+    width: 86px;
+    height: auto;
+}
+#s4{
+    display: none;
+    top: 68px;
+    left: 808px;
+    width: 132px;
+    height: auto;
+}
+#s5{
+    display: none;
+    top: 5px;
+    left: 857px;
+    width: 136px;
+    height: auto;
+}
+/* -------------------------------------- */
+/* -------------------------------------- */
+#p2{
+    width: 728px;
+    height: inherit;
+    /* background-color: #f1f5f7; */
+}
+/* #text21{
+    top: 17px;
+    left: 14px;
+} */
+/* #p1,#p2 { */
+    /* (top right), (right side), left side 0,  */
+    /* clip: rect(0px,0px,250px,0px); */
+    /* clip: rect(0px,300px,250px,0px); */
+/* } */
+#network1{
+    top: -131px;
+    left: 339px;
+    width: 398px;
+    height: 210px;
+    opacity: 0.8;
+    clip: rect(0px, 398px,  210px, 0 );   
+    /* clip: rect(210px, 398px,  210px, 0 );    */
+    /* background-color: red; */
+}
+/* #wire{
+    top:-70px;
+    left: 737px;
+    width: 1.5px;
+    height: 63px;
+    overflow: hidden;
+}
+#wire2{
+    opacity: 0.7;
+    width: inherit;
+    height: inherit;
+    background-color: #07182D;
+} */
+#ipad{
+    top: 13px;
+    left: 622px;
+    width: 75px;
+    height: auto;
+    rotate: -10deg;
+}
+#imac{
+    top: -12px;
+    left: 491px;
+    width: 109px;
+    height: auto;
+}
+#iphone{
+    top: 19px;
+    left: 394px;
+    width: 77px;
+    height: auto;
+    rotate: 8deg;
+}
+/* -------------------------------------- */
+/* -------------------------------------- */
+#p3{
+    width: 728px;
+    height: inherit;
+    background-color: #f1f5f7;
+}
+#text31{
+    top: 17px;
+    left: 14px;
+}
+#guy{
+    /* top: 1px; - 180  */
+    top: -181px; 
+    left: 445px;
+    width: 114px;
+    height: auto;
+}
+#network2{
+    /* top: -15px; - 180 */
+    top: -195px;
+    left: 320px;
+    width: 362px;
+    height: auto;
+}
+/* -------------------------------------- */
+/* -------------------------------------- */
+#p4{
+    width: 728px;
+    height: inherit;
+    background-color: #f1f5f7;
+}
+#blue_bg{
+    top: 0px;
+    left: 0px;
+    width: 524px;
+    height: 90px;
+    background-color: #0460ff;
+}
+
+#logo_cisco{
+    top: 10px;
+    left: 546px;
+    width: 53px;
+    height: auto; 
+}
+#divider{
+    top: 14px;
+    left: 613px;
+    width: 1px;
+    opacity: 0.6;
+    height: 22px;
+    overflow: hidden;
+    background-color: #07182D;
+}
+#logo_blueAlly{
+    top: 9px;
+    left: 627px;
+    width: 86px;
+    height: auto; 
+}
+#pic{
+    top: 0px;
+    left: 0px;
+}
+#text41{
+    top: 6px;
+    left: 168px;
+    width: 356px;
+    font-size: 25px;
+    line-height: 27px;
+    letter-spacing: 1.6px;
+    color:#f1f5f7;
+    text-align: center;
+    /* background-color: red; */
+}
+#text42{
+    top: 66px;
+    left: 168px;
+    width: 356px;
+    /*  */
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    /*  */
+    font-size: 17px;
+    text-align: center;
+    letter-spacing: 0.6px;
+    line-height: 15px;
+    color:#f1f5f7;
+}
+/******************** CTA ********************/
+#cta {
+    top: 50px;
+    left: 542px;
+    width: 166px;
+    height: 28px;
+    line-height: 29px;
+    letter-spacing: 0.2pt;
+    cursor: pointer;
+    border: 2px solid;
+    color: #f1f5f7;
+    background-color:#0460ff;
+    /* border-radius:2px; */
+    border-radius:20px;
+    border-color:#0460ff;
+    text-align: center;
+
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/******************** LOGO ********************/
