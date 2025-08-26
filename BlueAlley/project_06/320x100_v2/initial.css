@@ -166,9 +166,11 @@ div,img,svg{
 }
 
 #logo_cisco{
-    top: 8px;
-    left: 217px;
+    top: 9px;
+    left: 220px;
     width: 62px;
+    width: 53px;
+
     height: auto; 
 }
 #divider{
