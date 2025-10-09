@@ -74,7 +74,7 @@ function politeInit(){
             if( bannerAnimationDone == 0)return;
             console.log("over bgexit")
             if(overme==1) return;
-            // gsap.set( text1,{x:"+=102px"})
+            overme=1;
             gsap.to(cta, {duration:0.6, 
                 y:"15px",
                 onStart: function(){ overme=1;},
@@ -100,6 +100,7 @@ function politeInit(){
         });
         bgexit.addEventListener('mouseout', (e) => {
             if( bannerAnimationDone == 0)return;
+            if(overme == 0) return;
             console.log("out")
             gsap.to(cta, {duration:0.6, 
                 y:"0px",
@@ -111,10 +112,17 @@ function politeInit(){
             ) ;
             gsap.to([text_head,text_sub], {duration:0.6, 
                 y:"0px",
+                overwrite:true,
                 ease:"power1.out"}  
             ) ;
             gsap.to([text1], {duration:0.6, 
                 alpha:0,
+                onComplete: function(){ 
+                    gsap.set(text1, {
+                        x: "0" ,
+                        overwrite:true,
+                    })
+                },
                 ease:"power1.out"}  
             ) ;
             

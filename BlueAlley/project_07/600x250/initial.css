@@ -60,7 +60,7 @@ div,img,svg{
 
     left: 43px;
     width: 334px;
-    height: 24px;
+    height: 26px;
     border: 1px solid;
     color:#FFF;
     background-color:#479ad4;
@@ -73,8 +73,8 @@ div,img,svg{
     font-style: normal;
     
     text-align: center;
-    line-height: 24px;
-    letter-spacing: 0.4pt; 
+    line-height: 26px;
+    letter-spacing: 0.2pt; 
     font-size: 14px;
     /* // */
     -webkit-user-select: none;
@@ -110,9 +110,7 @@ div,img,svg{
 
 /********************** text **********************/
 #text_head{
-    top: 125px; 
-    top: 140px; 
-    left: 46px;
+    top: 143px; 
     left: 44px;
 
     width: 562px;
@@ -133,12 +131,8 @@ div,img,svg{
     user-select: none;
 }
 #text_sub{
-    top: 80px;
     top: 95px;
-
-    left: 46px;
     left: 44px;
-
     width: 562px;
     height: auto;
     font-family: "DM Sans", sans-serif;
@@ -158,8 +152,7 @@ div,img,svg{
     /* background-color: red; */
 }
 #text1{
-    /* display: none; */
-    top: 165px;
+    top: 169px;
     left: 46px;
     width: 1000px;
     height: auto;
