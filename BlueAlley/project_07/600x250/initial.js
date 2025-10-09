@@ -28,6 +28,7 @@ function politeInit(){
             cta = select('#cta'), 
             colors ={},
             overme = 0,
+            bannerAnimationDone = 0,
             tl = gsap.timeline();
 
             /************** Modify VARIABLES ********************/
@@ -54,10 +55,14 @@ function politeInit(){
             //
             .from([text_sub],{duration:1.8,alpha:0,ease:"power1.out"}, "<0.3")
             .from([text_head],{duration:1.8,alpha:0,ease:"power1.out"}, "<0.3")
-            .from(cta, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0.3")
-            //
-            //
-
+            .from(
+                cta, {
+                    duration:0.8, 
+                    alpha: 0, 
+                    scale:1,
+                    ease:"power1.out",
+                    onComplete: function(){ bannerAnimationDone = 1},
+                }, "<0.3")
 		}
         animate()
        
@@ -66,7 +71,7 @@ function politeInit(){
         
 /********************  EVENTS  ********************/ 
         bgexit.addEventListener('mouseover', (e) => {
-
+            if( bannerAnimationDone == 0)return;
             console.log("over bgexit")
             if(overme==1) return;
             // gsap.set( text1,{x:"+=102px"})
@@ -94,6 +99,7 @@ function politeInit(){
             });
         });
         bgexit.addEventListener('mouseout', (e) => {
+            if( bannerAnimationDone == 0)return;
             console.log("out")
             gsap.to(cta, {duration:0.6, 
                 y:"0px",
