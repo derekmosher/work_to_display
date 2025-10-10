@@ -68,7 +68,7 @@ div,img,svg{
     border-radius:40px;
     cursor: pointer;
 
-    font-family: "Inter", sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-weight: 900;
     font-style: normal;
     
@@ -154,11 +154,11 @@ div,img,svg{
 #text1{
     top: 169px;
     left: 46px;
-    width: 1000px;
+    width: auto;
     height: auto;
+    white-space: nowrap;
     opacity: 0;
-
-    font-family: "Inter", sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 19px;

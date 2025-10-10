@@ -17,7 +17,6 @@ function politeInit(){
             text_head = select('#text_head'),
             text1 = select('#text1'),
 
-
             logo_blueAlly = select('#logo_blueAlly'),
             divider = select('#divider'),
             logo_cisco = select('#logo_cisco'),
@@ -49,9 +48,9 @@ function politeInit(){
 
             .from([pic1],{duration:1.1, alpha:1,ease:"power4.out"}, "<0.3")
             //
-            .from(logo_cisco, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0.4")
-            .from(divider, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0.1")
-            .from(logo_blueAlly, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0.1")
+            .from(logo_cisco, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0.2")
+            .from(divider, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0.0")
+            .from(logo_blueAlly, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0.0")
             //
             .from([text_sub],{duration:1.8,alpha:0,ease:"power1.out"}, "<0.3")
             .from([text_head],{duration:1.8,alpha:0,ease:"power1.out"}, "<0.3")
@@ -68,75 +67,104 @@ function politeInit(){
        
 /******************  //end of MAIN ANIMATION  ******************/    
     
-        
+/********************  Scroller  ********************/ 
+    let myTimer;
+    let speed = 1;
+    let position = 0;
+
+    function gogo() {
+        position -= speed; // Move left by speed pixels
+        gsap.set(text1,{
+            x: position + "px",
+        })
+        if(position< -1756) position = -848;
+        // starts 46  .  loop to -848 . loop if -1756
+    }
+
+    function scroll(go){
+        if (go) {
+            myTimer = setInterval(gogo, 15)
+        } else{
+            clearInterval(myTimer);
+            // console.log('stop scroll ')
+        }
+    }
+
 /********************  EVENTS  ********************/ 
-        bgexit.addEventListener('mouseover', (e) => {
-            if( bannerAnimationDone == 0)return;
-            console.log("over bgexit")
-            if(overme==1) return;
-            overme=1;
-            gsap.to(cta, {duration:0.6, 
-                y:"15px",
-                onStart: function(){ overme=1;},
-                // color: colors.cta_text_over,
-                // borderColor: colors.cta_border_over,
-                // background: colors.cta_bg_over,
-                ease:"power1.out"}  
-            ) ;
-            gsap.to([text_head,text_sub], {duration:0.6, 
-                y:"-15px",
-                ease:"power1.out"}  
-            ) ;
-            gsap.to([text1], {duration:0.6, 
-                alpha:1,
-                ease:"power1.out"}  
-            ) ;
-            gsap.fromTo(text1, 
-                { x: "0" }, 
-                { x:"-=530", 
-                duration: 17,
-                ease:"power1.out"   
-            });
-        });
-        bgexit.addEventListener('mouseout', (e) => {
-            if( bannerAnimationDone == 0)return;
-            if(overme == 0) return;
-            console.log("out")
-            gsap.to(cta, {duration:0.6, 
-                y:"0px",
-                onComplete: function(){ overme=0;},
-                // color: colors.cta_text,
-                //  borderColor: colors.cta_border,
-                //  background: colors.cta_bg,
-                 ease:"power1.out"}  
-            ) ;
-            gsap.to([text_head,text_sub], {duration:0.6, 
-                y:"0px",
-                overwrite:true,
-                ease:"power1.out"}  
-            ) ;
-            gsap.to([text1], {duration:0.6, 
-                alpha:0,
-                onComplete: function(){ 
-                    gsap.set(text1, {
-                        x: "0" ,
-                        overwrite:true,
-                    })
-                },
-                ease:"power1.out"}  
-            ) ;
-            
-        });
+function goOver(){
+    if( bannerAnimationDone == 0)return;
+    if(overme==1) return;
+    overme=1;
+    scroll(true)
+    gsap.to(cta, {duration:0.6, 
+        y:"8px",
+        ease:"power1.out"}  
+    ) ;
+    gsap.to([text_head,text_sub], {duration:0.6, 
+        y:"-8px",
+        ease:"power1.out"}  
+    ) ;
+    gsap.fromTo(text1, 
+        { alpha: 0 }, 
+        { alpha:1,
+        duration:0.6, 
+        ease:"none"}  
+    ) ;
+};
+bgexit.addEventListener('mouseover', goOver)
 
-        let type = 'click';
-        // // ((Modernizr.touchevents)&&(!isChrome)) ? 'touchend' : 'click',
-        let clickable = selectAll('.clickable');
 
-        clickable.forEach(element => element.addEventListener(type, function(e) {
-            console.log("click")
-            return false;
-        }, false));
-	};
+function goOut(){
+    if( bannerAnimationDone == 0)return;
+    if(overme == 0) return;
+    overme=0;
+    scroll(false)
+    gsap.to(cta, {duration:0.4, 
+        y:"0px",
+        ease:"power1.out"}  
+    ) ;
+    gsap.to([text_head,text_sub], {duration:0.3, 
+        y:"0px",
+        overwrite:true,
+        ease:"power1.out"}  
+    ) ;
+    gsap.to([text1], { duration:0.3, alpha:0, });
+};
+
+bgexit.addEventListener('mouseout', goOut)
+
+/********************  Mobile?  ********************/ 
+let isMobile = false;
+function isMobileUserAgent() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent)) {
+        isMobile = true;
+        bgexit.removeEventListener('mouseover', goOver)
+        bgexit.removeEventListener('mouseout', goOut)
+        console.log('removed mouseover, mouseout')
+        return true;
+    }
+    return false;
+}
+
+console.log("Is mobile (User Agent):", isMobileUserAgent());
+/******************** ********************/ 
+
+
+bgexit.addEventListener('click', (e) => {
+    console.log("click")
+    return false;
+});
+
+// let type = 'click';
+// // ((Modernizr.touchevents)&&(!isChrome)) ? 'touchend' : 'click',
+// let clickable = selectAll('.clickable');
+
+// clickable.forEach(element => element.addEventListener(type, function(e) {
+//     console.log("click")
+//     return false;
+// }, false));
+};
 /****************** //end of  EVENTS  ******************/   
 politeInit()
 }
