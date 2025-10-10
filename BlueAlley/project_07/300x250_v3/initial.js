@@ -134,35 +134,37 @@ function politeInit(){
 
         bgexit.addEventListener('mouseout', goOut)
 
-        /********************  Mobile?  ********************/ 
+/********************  Mobile?  ********************/ 
         let isMobile = false;
         function isMobileUserAgent() {
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
             if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent)) {
-            return true;
-            let isMobile = true;
-            bgexit.removeEventListener('mouseover', goOver)
-            bgexit.removeEventListener('mouseout', goOut)
-            console.log('removed mouseover, mouseout')
+                isMobile = true;
+                bgexit.removeEventListener('mouseover', goOver)
+                bgexit.removeEventListener('mouseout', goOut)
+                console.log('removed mouseover, mouseout')
+                return true;
             }
             return false;
         }
+
         console.log("Is mobile (User Agent):", isMobileUserAgent());
-        /******************** ********************/ 
-    
+/******************** ********************/ 
 
-        let type = 'click';
-        // // ((Modernizr.touchevents)&&(!isChrome)) ? 'touchend' : 'click',
-        let clickable = selectAll('.clickable');
+bgexit.addEventListener('click', (e) => {
+    console.log("click")
+    return false;
+});
 
-        clickable.forEach(element => element.addEventListener(type, function(e) {
-            console.log("click")
-            return false;
-        }, false));
-	};
+// let type = 'click';
+// // ((Modernizr.touchevents)&&(!isChrome)) ? 'touchend' : 'click',
+// let clickable = selectAll('.clickable');
 
-
-
+// clickable.forEach(element => element.addEventListener(type, function(e) {
+//     console.log("click")
+//     return false;
+// }, false));
+};
 /****************** //end of  EVENTS  ******************/   
 politeInit()
 }
