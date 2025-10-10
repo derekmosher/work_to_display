@@ -53,8 +53,8 @@ function politeInit(){
             .from(divider, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0")
             .from(logo_blueAlly, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0")
             //
-            .from([text_sub],{duration:1.8,alpha:0,ease:"power1.out"}, "<0.3")
             .from([text_head],{duration:1.8,alpha:0,ease:"power1.out"}, "<0.3")
+            .from([text_sub],{duration:1.8,alpha:0,ease:"power1.out"}, "<0.3")
             .from(
                 cta, {
                     duration:0.8, 
