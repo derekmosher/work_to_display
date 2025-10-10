@@ -88,6 +88,16 @@ function scroll(go){
         // console.log('stop scroll ')
     }
 }
+let isMobile = false;
+function isMobileUserAgent() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent)) {
+      return true;
+      let isMobile = true;
+    }
+    return false;
+}
+console.log("Is mobile (User Agent):", isMobileUserAgent());
 
 /********************  EVENTS  ********************/ 
     bgexit.addEventListener('mouseover', (e) => {
