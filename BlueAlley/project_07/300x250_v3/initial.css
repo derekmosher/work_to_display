@@ -148,8 +148,9 @@ div,img,svg{
 #text1{
     top: 201px;
     left: 30px;
-    width: 1000px;
+    width: auto;
     height: auto;
+    white-space: nowrap;
     opacity: 0;
     font-family: "Inter", sans-serif;
     font-weight: 300;

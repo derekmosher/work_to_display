@@ -69,59 +69,65 @@ function politeInit(){
 /******************  //end of MAIN ANIMATION  ******************/    
     
         
+/********************  Scroller  ********************/ 
+let myTimer;
+let speed = 1;
+let position = 0;
+
+function gogo() {
+    position -= speed; // Move left by speed pixels
+    gsap.set(text1,{
+        x: position + "px",
+    })
+    if(position< -1295) position = -615;
+}
+
+function scroll(go){
+    if (go) {
+        myTimer = setInterval(gogo, 15)
+    } else{
+        clearInterval(myTimer);
+        // console.log('stop scroll ')
+    }
+}
+
 /********************  EVENTS  ********************/ 
-        bgexit.addEventListener('mouseover', (e) => {
-            if( bannerAnimationDone == 0)return;
-            if(overme==1) return;
-            overme=1;
-            gsap.to(cta, {duration:0.6, 
-                y:"8px",
-                ease:"power1.out"}  
-            ) ;
-            gsap.to([text_head,text_sub], {duration:0.6, 
-                y:"-8px",
-                ease:"power1.out"}  
-            ) ;
-            gsap.fromTo(text1, 
-                { alpha: 0 }, 
-                { alpha:1,
-                duration:0.6, 
-                ease:"none"}  
-            ) ;
-            gsap.fromTo(text1, 
-                { x: "0" }, 
-                { x:"-=410", 
-                duration: 18,
-                ease:"power1.out"   
-            });
-        });
-        bgexit.addEventListener('mouseout', (e) => {
-            if( bannerAnimationDone == 0)return;
-            if(overme == 0) return;
-            overme=0;
-            gsap.to(cta, {duration:0.4, 
-                y:"0px",
-                // color: colors.cta_text,
-                //  borderColor: colors.cta_border,
-                //  background: colors.cta_bg,
-                ease:"power1.out"}  
-            ) ;
-            gsap.to([text_head,text_sub], {duration:0.3, 
-                y:"0px",
-                overwrite:true,
-                ease:"power1.out"}  
-            ) ;
-            gsap.to([text1], {duration:0.3, 
-                alpha:0,
-                onComplete: function(){ 
-                    gsap.set(text1, {
-                        x: "0" ,
-                        overwrite:true,
-                    })
-                },
-                ease:"power1.out"}  
-            ) ;
-        });
+    bgexit.addEventListener('mouseover', (e) => {
+        if( bannerAnimationDone == 0)return;
+        if(overme==1) return;
+        overme=1;
+        scroll(true)
+        gsap.to(cta, {duration:0.6, 
+            y:"8px",
+            ease:"power1.out"}  
+        ) ;
+        gsap.to([text_head,text_sub], {duration:0.6, 
+            y:"-8px",
+            ease:"power1.out"}  
+        ) ;
+        gsap.fromTo(text1, 
+            { alpha: 0 }, 
+            { alpha:1,
+            duration:0.6, 
+            ease:"none"}  
+        ) ;
+    });
+    bgexit.addEventListener('mouseout', (e) => {
+        if( bannerAnimationDone == 0)return;
+        if(overme == 0) return;
+        overme=0;
+        scroll(false)
+        gsap.to(cta, {duration:0.4, 
+            y:"0px",
+            ease:"power1.out"}  
+        ) ;
+        gsap.to([text_head,text_sub], {duration:0.3, 
+            y:"0px",
+            overwrite:true,
+            ease:"power1.out"}  
+        ) ;
+        gsap.to([text1], { duration:0.3, alpha:0, });
+    });
 
         let type = 'click';
         // // ((Modernizr.touchevents)&&(!isChrome)) ? 'touchend' : 'click',
