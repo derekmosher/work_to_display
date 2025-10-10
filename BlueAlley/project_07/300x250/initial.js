@@ -17,7 +17,6 @@ function politeInit(){
             text_head = select('#text_head'),
             text1 = select('#text1'),
 
-
             logo_blueAlly = select('#logo_blueAlly'),
             divider = select('#divider'),
             logo_cisco = select('#logo_cisco'),
@@ -49,9 +48,9 @@ function politeInit(){
 
             .from([pic1],{duration:1.1, alpha:1,ease:"power4.out"}, "<0.3")
             //
-            .from(logo_cisco, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0.4")
-            .from(divider, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0.1")
-            .from(logo_blueAlly, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0.1")
+            .from(logo_cisco, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0.2")
+            .from(divider, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0")
+            .from(logo_blueAlly, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0")
             //
             .from([text_sub],{duration:1.8,alpha:0,ease:"power1.out"}, "<0.3")
             .from([text_head],{duration:1.8,alpha:0,ease:"power1.out"}, "<0.3")
@@ -71,10 +70,7 @@ function politeInit(){
         
 /********************  EVENTS  ********************/ 
         bgexit.addEventListener('mouseover', (e) => {
-
-            
             if( bannerAnimationDone == 0)return;
-            console.log("over bgexit")
             if(overme==1) return;
             overme=1;
             gsap.to(cta, {duration:0.6, 
@@ -88,27 +84,22 @@ function politeInit(){
             gsap.fromTo(text1, 
                 { alpha: 0 }, 
                 { alpha:1,
-                delay:0,
                 duration:0.6, 
                 ease:"none"}  
             ) ;
             gsap.fromTo(text1, 
                 { x: "0" }, 
                 { x:"-=410", 
-                delay:0,
                 duration: 18,
                 ease:"power1.out"   
             });
         });
         bgexit.addEventListener('mouseout', (e) => {
-            console.log("out1")
             if( bannerAnimationDone == 0)return;
-            console.log("out2")
             if(overme == 0) return;
-            console.log("out3")
+            overme=0;
             gsap.to(cta, {duration:0.4, 
                 y:"0px",
-                onComplete: function(){ overme=0;},
                 // color: colors.cta_text,
                 //  borderColor: colors.cta_border,
                 //  background: colors.cta_bg,
@@ -121,7 +112,12 @@ function politeInit(){
             ) ;
             gsap.to([text1], {duration:0.3, 
                 alpha:0,
-                overwrite:true,
+                onComplete: function(){ 
+                    gsap.set(text1, {
+                        x: "0" ,
+                        overwrite:true,
+                    })
+                },
                 ease:"power1.out"}  
             ) ;
             
