@@ -107,11 +107,8 @@ div,img,svg{
 
 /********************** text **********************/
 #text_head{
-    top: 125px; 
     top: 404px; 
-    left: 46px;
     left: 0px;
-
     width: 300px;
     height: auto;
     font-family: "DM Sans", sans-serif;
@@ -130,12 +127,8 @@ div,img,svg{
     user-select: none;
 }
 #text_sub{
-    top: 80px;
     top: 340px;
-
-    left: 46px;
-    left: 44px;
-
+    left: 0px;
     width: 300px;
     height: auto;
     font-family: "DM Sans", sans-serif;
@@ -145,7 +138,7 @@ div,img,svg{
     font-size: 20px;
     letter-spacing: 0.2pt;
     line-height: 30px;
-    text-align: left;
+    text-align: center;
     color:#616264;
     cursor: pointer;
     -webkit-user-select: none;
@@ -155,7 +148,6 @@ div,img,svg{
     /* background-color: red; */
 }
 #text1{
-    /* display: none; */
     top: 480px;
     left: 38px;
     width: 1000px;
