@@ -66,86 +66,102 @@ function politeInit(){
         animate()
        
 /******************  //end of MAIN ANIMATION  ******************/    
+
+ 
 /********************  Scroller  ********************/ 
-    let myTimer;
-    let speed = 1;
-    let position = 0;
+let myTimer;
+let speed = 1;
+let position = 0;
 
-    function gogo() {
-        position -= speed; // Move left by speed pixels
-        gsap.set(text1,{
-            x: position + "px",
-        })
-        if(position< -1295) position = -615;
-    }
+function gogo() {
+    position -= speed; // Move left by speed pixels
+    gsap.set(text1,{
+        x: position + "px",
+    })
+    if(position< -1295) position = -615;
+}
 
-    function scroll(go){
-        if (go) {
-            myTimer = setInterval(gogo, 15)
-        } else{
-            clearInterval(myTimer);
-            // console.log('stop scroll ')
-        }
+function scroll(go){
+    if (go) {
+        myTimer = setInterval(gogo, 15)
+    } else{
+        clearInterval(myTimer);
+        // console.log('stop scroll ')
     }
-
-    let isMobile = false;
-    function isMobileUserAgent() {
-        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-        if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent)) {
-          return true;
-          let isMobile = true;
-        }
-        return false;
-    }
-    console.log("Is mobile (User Agent):", isMobileUserAgent());
+}
 
 /********************  EVENTS  ********************/ 
-        bgexit.addEventListener('mouseover', (e) => {
-            if( bannerAnimationDone == 0)return;
-            if(overme==1) return;
-            overme=1;
-            scroll(true)
-            gsap.to(cta, {duration:0.6, 
-                y:"8px",
-                ease:"power1.out"}  
-            ) ;
-            gsap.to([text_head,text_sub], {duration:0.6, 
-                y:"-8px",
-                ease:"power1.out"}  
-            ) ;
-            gsap.fromTo(text1, 
-                { alpha: 0 }, 
-                { alpha:1,
-                duration:0.6, 
-                ease:"none"}  
-            ) ;
-        });
-        bgexit.addEventListener('mouseout', (e) => {
-            if( bannerAnimationDone == 0)return;
-            if(overme == 0) return;
-            overme=0;
-            scroll(false)
-            gsap.to(cta, {duration:0.4, 
-                y:"0px",
-                ease:"power1.out"}  
-            ) ;
-            gsap.to([text_head,text_sub], {duration:0.3, 
-                y:"0px",
-                overwrite:true,
-                ease:"power1.out"}  
-            ) ;
-            gsap.to([text1], { duration:0.3, alpha:0, });
-        });
+function goOver(){
+    if( bannerAnimationDone == 0)return;
+    if(overme==1) return;
+    overme=1;
+    scroll(true)
+    gsap.to(cta, {duration:0.6, 
+        y:"8px",
+        ease:"power1.out"}  
+    ) ;
+    gsap.to([text_head,text_sub], {duration:0.6, 
+        y:"-8px",
+        ease:"power1.out"}  
+    ) ;
+    gsap.fromTo(text1, 
+        { alpha: 0 }, 
+        { alpha:1,
+        duration:0.6, 
+        ease:"none"}  
+    ) ;
+};
+bgexit.addEventListener('mouseover', goOver)
 
-        let type = 'click';
-        // // ((Modernizr.touchevents)&&(!isChrome)) ? 'touchend' : 'click',
-        let clickable = selectAll('.clickable');
 
-        clickable.forEach(element => element.addEventListener(type, function(e) {
-            console.log("click")
-            return false;
-        }, false));
-	};
+function goOut(){
+    if( bannerAnimationDone == 0)return;
+    if(overme == 0) return;
+    overme=0;
+    scroll(false)
+    gsap.to(cta, {duration:0.4, 
+        y:"0px",
+        ease:"power1.out"}  
+    ) ;
+    gsap.to([text_head,text_sub], {duration:0.3, 
+        y:"0px",
+        overwrite:true,
+        ease:"power1.out"}  
+    ) ;
+    gsap.to([text1], { duration:0.3, alpha:0, });
+};
+
+bgexit.addEventListener('mouseout', goOut)
+
+/********************  Mobile?  ********************/ 
+let isMobile = false;
+function isMobileUserAgent() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent)) {
+    return true;
+    let isMobile = true;
+    bgexit.removeEventListener('mouseover', goOver)
+    bgexit.removeEventListener('mouseout', goOut)
+    console.log('removed mouseover, mouseout')
+    }
+    return false;
+}
+console.log("Is mobile (User Agent):", isMobileUserAgent());
+/******************** ********************/ 
+
+
+let type = 'click';
+// // ((Modernizr.touchevents)&&(!isChrome)) ? 'touchend' : 'click',
+let clickable = selectAll('.clickable');
+
+clickable.forEach(element => element.addEventListener(type, function(e) {
+    console.log("click")
+    return false;
+}, false));
+};
+
+
+
 /****************** //end of  EVENTS  ******************/   
 politeInit()
 }

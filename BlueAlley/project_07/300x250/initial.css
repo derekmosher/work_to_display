@@ -123,6 +123,7 @@ div,img,svg{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    background-color: red;
 }
 #text_sub{
     top: 137px;
