@@ -77,6 +77,8 @@ div,img,svg{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    pointer-events: auto;
+
 }
 /********************** Logos **********************/
 #logo_blueAlly{
