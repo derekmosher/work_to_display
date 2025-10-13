@@ -17,6 +17,7 @@ function politeInit(){
             text_head = select('#text_head'),
             text1 = select('#text1'),
 
+
             logo_blueAlly = select('#logo_blueAlly'),
             divider = select('#divider'),
             logo_cisco = select('#logo_cisco'),
@@ -67,29 +68,29 @@ function politeInit(){
         animate()
        
 /******************  //end of MAIN ANIMATION  ******************/    
-    
+       
 /********************  Scroller  ********************/ 
-    let myTimer;
-    let speed = 1;
-    let position = 0;
+let myTimer;
+let speed = 1;
+let position = 0;
 
-    function gogo() {
-        position -= speed; // Move left by speed pixels
-        gsap.set(text1,{
-            x: position + "px",
-        })
-        if(position< -1756) position = -848;
-        // starts 46  .  loop to -848 . loop if -1756
-    }
+function gogo() {
+    position -= speed; // Move left by speed pixels
+    gsap.set(text1,{
+        x: position + "px",
+    })
+    if(position< -1756) position = -848;
+    // starts 46  .  loop to -848 . loop if -1756
+}
 
-    function scroll(go){
-        if (go) {
-            myTimer = setInterval(gogo, 15)
-        } else{
-            clearInterval(myTimer);
-            // console.log('stop scroll ')
-        }
+function scroll(go){
+    if (go) {
+        myTimer = setInterval(gogo, 15)
+    } else{
+        clearInterval(myTimer);
+        // console.log('stop scroll ')
     }
+}
 
 /********************  EVENTS  ********************/ 
 function goOver(){
@@ -176,16 +177,17 @@ cta.addEventListener('mouseout', goOutCTA)
 /********************  Mobile?  ********************/ 
 let isMobile = false;
 function isMobileUserAgent() {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent)) {
-        isMobile = true;
-        bgexit.removeEventListener('mouseover', goOver)
-        bgexit.removeEventListener('mouseout', goOut)
-        console.log('removed mouseover, mouseout')
-        return true;
-    }
-    return false;
+const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent)) {
+    isMobile = true;
+    bgexit.removeEventListener('mouseover', goOver)
+    bgexit.removeEventListener('mouseout', goOut)
+    console.log('removed mouseover, mouseout')
+    return true;
 }
+return false;
+}
+
 console.log("Is mobile (User Agent):", isMobileUserAgent());
 /******************** ********************/ 
 
