@@ -28,17 +28,18 @@ function politeInit(){
             cta = select('#cta'), 
             colors ={},
             overme = 0,
+            overmeCTA = 0,
+
             bannerAnimationDone = 0,
             tl = gsap.timeline();
 
             /************** Modify VARIABLES ********************/
-            
             colors.cta_bg = "#479ad4";
-            colors.cta_bg_over = "#fff";
+            colors.cta_bg_over = "#36bf78";
             colors.cta_text = "#fff";
-            colors.cta_text_over = "#479ad4";
+            colors.cta_text_over = "#fff";
             colors.border = "#479ad4";
-            colors.border_over = "479ad4";
+            colors.border_over = "#36bf78";
 
 /***************** //end of VARIABLES  *****************/
     
@@ -92,9 +93,12 @@ function scroll(go){
 
 /********************  EVENTS  ********************/ 
 function goOver(){
+    console.log('over banner');
     if( bannerAnimationDone == 0)return;
+    if(overmeCTA == 1) return;
     if(overme==1) return;
     overme=1;
+    //
     scroll(true)
     gsap.to(cta, {duration:0.6, 
         y:"8px",
@@ -104,20 +108,20 @@ function goOver(){
         y:"-8px",
         ease:"power1.out"}  
     ) ;
-    gsap.fromTo(text1, 
-        { alpha: 0 }, 
+    gsap.to(text1, 
         { alpha:1,
         duration:0.6, 
         ease:"none"}  
     ) ;
 };
-bgexit.addEventListener('mouseover', goOver)
-
 
 function goOut(){
+    console.log('out banner');
     if( bannerAnimationDone == 0)return;
+    if(overmeCTA == 1) return;
     if(overme == 0) return;
     overme=0;
+    //
     scroll(false)
     gsap.to(cta, {duration:0.4, 
         y:"0px",
@@ -131,7 +135,43 @@ function goOut(){
     gsap.to([text1], { duration:0.3, alpha:0, });
 };
 
-bgexit.addEventListener('mouseout', goOut)
+
+function goOverCTA(){
+    overmeCTA = 1;
+    bgexit.removeEventListener('mouseout', goOutDelay)
+    bgexit.removeEventListener('mouseover', goOverDelay)
+    // overme == 1;
+    console.log('over cta');
+    gsap.to(cta, {duration:0.3, 
+        background: colors.cta_bg_over,
+        color: colors.cta_text_over,
+        borderColor: colors.cta_border_over,
+        ease:"power1.out"}  
+    ) ;
+}
+function goOutCTA(){
+    overmeCTA = 0;
+    console.log('out cta');
+    gsap.to(cta, {duration:0.3, 
+        background: colors.cta_bg,
+        color: colors.cta_text,
+        borderColor: colors.cta_border,
+        ease:"power1.out"}  
+    ) ;
+    bgexit.addEventListener('mouseout', goOutDelay)
+    bgexit.addEventListener('mouseover', goOverDelay)
+}
+
+function goOverDelay (){
+    gsap.delayedCall(0.1, goOver);
+}
+function goOutDelay (){
+    gsap.delayedCall(0.1, goOut);
+}
+bgexit.addEventListener('mouseout', goOutDelay)
+bgexit.addEventListener('mouseover', goOverDelay)
+cta.addEventListener('mouseover', goOverCTA)
+cta.addEventListener('mouseout', goOutCTA)
 
 /********************  Mobile?  ********************/ 
 let isMobile = false;
@@ -146,15 +186,22 @@ function isMobileUserAgent() {
     }
     return false;
 }
-
 console.log("Is mobile (User Agent):", isMobileUserAgent());
 /******************** ********************/ 
 
-
-bgexit.addEventListener('click', (e) => {
-    console.log("click")
+cta.addEventListener('click', (e) => {   
+    let url = "https://www.blueally.com/e-rate-review/cisco-solutions-with-e-rate-funding/"
+    window.open(url, "_blank");
+    console.log("click me")
     return false;
 });
+bgexit.addEventListener('click', (e) => {   
+    let url = "https://www.blueally.com/e-rate-review/cisco-solutions-with-e-rate-funding/"
+    window.open(url, "_blank");
+    console.log("click me")
+    return false;
+});
+
 
 // let type = 'click';
 // // ((Modernizr.touchevents)&&(!isChrome)) ? 'touchend' : 'click',
