@@ -17,7 +17,6 @@ function politeInit(){
             text_head = select('#text_head'),
             text1 = select('#text1'),
 
-
             logo_blueAlly = select('#logo_blueAlly'),
             divider = select('#divider'),
             logo_cisco = select('#logo_cisco'),
@@ -51,11 +50,11 @@ function politeInit(){
             .from([pic1],{duration:1.1, alpha:1,ease:"power4.out"}, "<0.3")
             //
             .from(logo_cisco, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0.2")
-            .from(divider, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0.0")
-            .from(logo_blueAlly, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0.0")
+            .from(divider, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0")
+            .from(logo_blueAlly, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0")
             //
-            .from([text_head],{duration:1.8,alpha:0,ease:"power1.out"}, "<0.3")
             .from([text_sub],{duration:1.8,alpha:0,ease:"power1.out"}, "<0.3")
+            .from([text_head],{duration:1.8,alpha:0,ease:"power1.out"}, "<0.3")
             .from(
                 cta, {
                     duration:0.8, 
@@ -68,7 +67,8 @@ function politeInit(){
         animate()
        
 /******************  //end of MAIN ANIMATION  ******************/    
-    
+
+ 
 /********************  Scroller  ********************/ 
 let myTimer;
 let speed = 1;
@@ -186,6 +186,7 @@ function isMobileUserAgent() {
     }
     return false;
 }
+
 console.log("Is mobile (User Agent):", isMobileUserAgent());
 /******************** ********************/ 
 
@@ -199,7 +200,6 @@ bgexit.addEventListener('click', (e) => {
     window.open(clickTag, "_blank");
     return false;
 });
-
 
 // let type = 'click';
 // // ((Modernizr.touchevents)&&(!isChrome)) ? 'touchend' : 'click',

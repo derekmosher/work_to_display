@@ -17,7 +17,6 @@ function politeInit(){
             text_head = select('#text_head'),
             text1 = select('#text1'),
 
-
             logo_blueAlly = select('#logo_blueAlly'),
             divider = select('#divider'),
             logo_cisco = select('#logo_cisco'),
@@ -54,8 +53,8 @@ function politeInit(){
             .from(divider, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0.0")
             .from(logo_blueAlly, {duration:0.8, alpha: 0, scale:1,ease:"power1.out"}, "<0.0")
             //
-            .from([text_head],{duration:1.8,alpha:0,ease:"power1.out"}, "<0.3")
             .from([text_sub],{duration:1.8,alpha:0,ease:"power1.out"}, "<0.3")
+            .from([text_head],{duration:1.8,alpha:0,ease:"power1.out"}, "<0.3")
             .from(
                 cta, {
                     duration:0.8, 
@@ -70,26 +69,27 @@ function politeInit(){
 /******************  //end of MAIN ANIMATION  ******************/    
     
 /********************  Scroller  ********************/ 
-let myTimer;
-let speed = 1;
-let position = 0;
+    let myTimer;
+    let speed = 1;
+    let position = 0;
 
-function gogo() {
-    position -= speed; // Move left by speed pixels
-    gsap.set(text1,{
-        x: position + "px",
-    })
-    if(position< -1295) position = -615;
-}
-
-function scroll(go){
-    if (go) {
-        myTimer = setInterval(gogo, 15)
-    } else{
-        clearInterval(myTimer);
-        // console.log('stop scroll ')
+    function gogo() {
+        position -= speed; // Move left by speed pixels
+        gsap.set(text1,{
+            x: position + "px",
+        })
+        if(position< -1756) position = -848;
+        // starts 46  .  loop to -848 . loop if -1756
     }
-}
+
+    function scroll(go){
+        if (go) {
+            myTimer = setInterval(gogo, 15)
+        } else{
+            clearInterval(myTimer);
+            // console.log('stop scroll ')
+        }
+    }
 
 /********************  EVENTS  ********************/ 
 function goOver(){
@@ -199,8 +199,6 @@ bgexit.addEventListener('click', (e) => {
     window.open(clickTag, "_blank");
     return false;
 });
-
-
 // let type = 'click';
 // // ((Modernizr.touchevents)&&(!isChrome)) ? 'touchend' : 'click',
 // let clickable = selectAll('.clickable');

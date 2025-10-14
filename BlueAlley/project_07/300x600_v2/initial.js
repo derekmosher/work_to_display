@@ -190,17 +190,16 @@ console.log("Is mobile (User Agent):", isMobileUserAgent());
 /******************** ********************/ 
 
 cta.addEventListener('click', (e) => {   
-    let url = "https://www.blueally.com/e-rate-review/cisco-solutions-with-e-rate-funding/"
-    window.open(url, "_blank");
-    console.log("click me")
+    console.log("EXIT. clickTag = " + clickTag)
+    window.open(clickTag, "_blank");
     return false;
 });
 bgexit.addEventListener('click', (e) => {   
-    let url = "https://www.blueally.com/e-rate-review/cisco-solutions-with-e-rate-funding/"
-    window.open(url, "_blank");
-    console.log("click me")
+    console.log("EXIT. clickTag = " + clickTag)
+    window.open(clickTag, "_blank");
     return false;
 });
+
 
 
 // let type = 'click';
