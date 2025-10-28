@@ -1,0 +1,198 @@
+/*************** MAIN ELEMENTS ***************/
+body {
+    margin: 0;
+    padding: 0;
+    display: block;
+    pointer-events: none;
+}
+div,img,svg{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+}
+#wrapper {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 728px;
+    height: 90px;
+    overflow: hidden;
+    background-color: #fafcfd;
+    /* background-color: #ff0000; */
+    pointer-events: none;
+}
+#bannerCover {
+    width: inherit;
+    height: inherit;
+    background: #fff ;
+    pointer-events: none;
+}
+#border {
+    /* border: 2px solid #19510b; */
+    border: 1px solid #272b6f;
+    opacity: 0.99;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: inherit;
+    height: inherit;
+    pointer-events: none;
+}
+#bgexit {
+    width: inherit;
+    height: inherit;
+    cursor:pointer;
+    pointer-events: auto;
+    /* background-color: #ff0000; */
+}
+#bg {
+    top:0px;
+    left:0px;
+}
+#pic1{
+    top: 0px;
+    left: 0px;
+}
+/******************** CTA ********************/
+#cta {
+    top: 63px;
+    left: 210px;
+    width: 290px;
+    height: 18px;
+    border: 1px solid;
+    color:#FFF;
+    background-color:#479ad4;
+    border-color:#479ad4;
+    border-radius:60px;
+    cursor: pointer;
+
+    font-family: "DM Sans", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    
+    text-align: center;
+    line-height: 18px;
+    letter-spacing: 0.5pt; 
+    font-size: 12px;
+    /* // */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: auto;
+}
+/********************** Logos **********************/
+#logo_blueAlly{
+    top: 57px;
+    left: 22px;
+    width: 81px;
+    height: auto; 
+    /* filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.8));  */
+}
+    #divider{
+        top: 50px;
+        left: 26px;
+        width: 62px;
+        height: 1px;
+        background-color: #fafcfd;
+        opacity: 0.3;
+    }
+    #logo_cisco{
+        top: 10px;
+        left: 29px;
+        width: 55px;
+        height: auto; 
+        /* filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 1.0))drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.9));  */
+    } 
+
+/********************** text **********************/
+#text_head{
+    top: 17px; 
+    left: 195px;
+    width: 562px;
+    height: auto;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 24px;
+    letter-spacing: 0.1pt;
+    line-height: 10px;
+    text-align: left;
+     color:#272b6f;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#text_sub{
+    top: 39px;
+    left: 186px;
+    width: 562px;
+    height: auto;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0.5pt;
+    line-height: 15px;
+    text-align: left;
+    color:#616264;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* background-color: red; */
+}
+#text1{
+    top: 51px;
+    left: 170px;
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+    opacity: 0;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 0.8pt;
+    line-height: 10px;
+    text-align: left;
+    color:#272b6f;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* background-color: red; */
+}
+#text1_altColor{
+    color:#479ad4;
+}
+#pic {
+    top:0px;
+    left:0px;
+}
+#fade {
+    top:0px;
+    left:150px;
+    width: 40px;
+    height: 90px;
+    background: #FAFCFD;
+    background: linear-gradient(90deg, rgba(250, 252, 253, 1) 0%, rgba(250, 252, 253, 1) 20%, rgba(250, 252, 253, 0) 100%);
+ /* background: red; */
+}
+#fade2 {
+    top:0px;
+    left:534px;
+    width: 60px;
+    height: 90px;
+    /* border: 1px solid #272b6f; */
+    background: #FAFCFD;
+    background: linear-gradient(270deg, rgba(250, 252, 253, 1) 0%, rgba(250, 252, 253, 1) 50%, rgba(250, 252, 253, 0) 100%);
+    /* background: red; */
+}
+
