@@ -55,11 +55,9 @@ div,img,svg{
 }
 /******************** CTA ********************/
 #cta {
-    top: 203px;
     top: 188px;
-
     left: 43px;
-    width: 334px;
+    width: 354px;
     height: 26px;
     border: 1px solid;
     color:#FFF;
@@ -111,9 +109,8 @@ div,img,svg{
 
 /********************** text **********************/
 #text_head{
-    top: 143px; 
+    top: 145px; 
     left: 44px;
-
     width: 562px;
     height: auto;
     font-family: "DM Sans", sans-serif;
@@ -132,7 +129,7 @@ div,img,svg{
     user-select: none;
 }
 #text_sub{
-    top: 95px;
+    top: 97px;
     left: 44px;
     width: 562px;
     height: auto;

@@ -101,7 +101,7 @@ function goOver(){
     //
     scroll(true)
     gsap.to(cta, {duration:0.6, 
-        y:"8px",
+        y:"11px",
         ease:"power1.out"}  
     ) ;
     gsap.to([text_head,text_sub], {duration:0.6, 
