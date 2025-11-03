@@ -55,7 +55,7 @@ div,img,svg{
 }
 /******************** CTA ********************/
 #cta {
-    top: 213px;
+    top: 212px;
     left: 60px;
     width: 170px;
     height: 18px;
@@ -106,7 +106,7 @@ div,img,svg{
 
 /********************** text **********************/
 #text_head{
-    top: 136px; 
+    top: 138px; 
     left: 0px;
     width: 300px;
     height: auto;
@@ -126,7 +126,7 @@ div,img,svg{
     user-select: none;
 }
 #text_sub{
-    top: 185px;
+    top: 187px;
     left: 0px;
     width: 300px;
     height: auto;
@@ -138,7 +138,7 @@ div,img,svg{
     letter-spacing: 0.6pt;
     line-height: 19px;
     text-align: center;
-    color:#479ad4;;
+    color:#479ad4;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
